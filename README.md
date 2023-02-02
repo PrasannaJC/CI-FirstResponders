@@ -1,2 +1,2 @@
-# Capstone_FirstResponders
+# CI-FirstResponders
 CSCI 4970 Capstone
