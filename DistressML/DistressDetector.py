@@ -24,7 +24,7 @@ print("Categorical data update for Matrix of Features \n", X)
 # This section is for the dependent variable yes/no.
 le = LabelEncoder()
 y = le.fit_transform(y)
-print("Categorical data update for Dependent variables \n", Y)
+print("Categorical data update for Dependent variables \n", y)
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
