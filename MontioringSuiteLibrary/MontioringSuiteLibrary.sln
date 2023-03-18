@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MontioringSuiteLibrary", "MontioringSuiteLibrary\MontioringSuiteLibrary.csproj", "{A147621C-922C-4A6C-B233-26FC71609CDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A147621C-922C-4A6C-B233-26FC71609CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A147621C-922C-4A6C-B233-26FC71609CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A147621C-922C-4A6C-B233-26FC71609CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A147621C-922C-4A6C-B233-26FC71609CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E98DAFAA-FC7B-4E56-94BC-42E30ABD68D3}
+	EndGlobalSection
+EndGlobal
