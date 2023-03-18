@@ -7,6 +7,9 @@ using Microsoft.Extensions.Options;
 
 namespace MontioringSuiteLibrary.Services
 {
+    /// <summary>
+    /// Concrete implementation of the first responder data service.
+    /// </summary>
     public class DataService : IDataService
     {
         private readonly IOptions<DataServiceConfiguration> _options;

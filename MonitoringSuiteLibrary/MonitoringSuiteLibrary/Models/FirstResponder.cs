@@ -4,6 +4,9 @@ using System.Text;
 
 namespace MontioringSuiteLibrary.Models
 {
+    /// <summary>
+    /// The implementation of a first responder.
+    /// </summary>
     public class FirstResponder
     {
         #region Constructors

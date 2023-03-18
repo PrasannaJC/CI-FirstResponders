@@ -4,8 +4,11 @@ using System.Text;
 
 namespace MontioringSuiteLibrary.Models
 {
-    // TODO: Implement location.
+    /// <summary>
+    /// The struct that represents a location.
+    /// </summary>
     public struct Location
     {
+        // TODO: Implement location.
     }
 }

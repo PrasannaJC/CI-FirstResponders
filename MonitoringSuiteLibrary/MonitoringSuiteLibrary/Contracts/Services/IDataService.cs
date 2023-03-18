@@ -5,8 +5,11 @@ using System.Text;
 
 namespace MontioringSuiteLibrary.Contracts.Services
 {
-  public interface IDataService
-  {
+    /// <summary>
+    /// Interface for data first responder data services. 
+    /// </summary>
+    public interface IDataService
+    {
         /// <summary>
         /// Gets a <see cref="IEnumerable{FirstResponder}"/> representing the first responders.
         /// </summary>
@@ -30,5 +33,5 @@ namespace MontioringSuiteLibrary.Contracts.Services
         /// </summary>
         /// <param name="firstResponder">The <see cref="FirstResponder"/> to add.</param>
         public void AddFirstResponder(FirstResponder firstResponder);
-  }
+    }
 }
