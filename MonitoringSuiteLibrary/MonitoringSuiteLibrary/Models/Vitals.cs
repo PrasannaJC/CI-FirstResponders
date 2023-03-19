@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MontioringSuiteLibrary.Models
+namespace MonitoringSuiteLibrary.Models
 {
     /// <summary>
     /// The struct that represents vitals.

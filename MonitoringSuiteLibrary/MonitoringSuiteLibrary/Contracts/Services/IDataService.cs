@@ -1,9 +1,9 @@
-﻿using MontioringSuiteLibrary.Models;
+﻿using MonitoringSuiteLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MontioringSuiteLibrary.Contracts.Services
+namespace MonitoringSuiteLibrary.Contracts.Services
 {
     /// <summary>
     /// Interface for data first responder data services. 

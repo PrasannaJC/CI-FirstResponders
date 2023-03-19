@@ -1,11 +1,11 @@
-﻿using MontioringSuiteLibrary.Contracts.Services;
-using MontioringSuiteLibrary.Models;
+﻿using MonitoringSuiteLibrary.Contracts.Services;
+using MonitoringSuiteLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Extensions.Options;
 
-namespace MontioringSuiteLibrary.Services
+namespace MonitoringSuiteLibrary.Services
 {
     /// <summary>
     /// Concrete implementation of the first responder data service.

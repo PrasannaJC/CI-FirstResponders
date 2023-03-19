@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MontioringSuiteLibrary.Models
+namespace MonitoringSuiteLibrary.Models
 {
     /// <summary>
     /// Stores the configuration information to be provided by the app using this library.
