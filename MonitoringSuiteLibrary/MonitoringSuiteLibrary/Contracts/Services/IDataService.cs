@@ -30,14 +30,14 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         /// </summary>
         /// <param name="firstResponderId">The id of the target first responder.</param>
         /// <returns>The current <see cref="Vitals"/> corresponding to the first responder.</returns>
-        public Vitals GetFirstResponderVitals(int firstResponderId);
+        public Vitals? GetFirstResponderVitals(int firstResponderId);
 
         /// <summary>
         /// Gets a <see cref="FirstResponder"/>s location.
         /// </summary>
         /// <param name="firstResponderId">The id of the target first responder.</param>
         /// <returns>The current <see cref="Location"/> corresponding to the first responder.</returns>
-        public Location GetFirstResponderLocation(int firstResponderId);
+        public Location? GetFirstResponderLocation(int firstResponderId);
 
         /// <summary>
         /// Sets a first responder as inactive.

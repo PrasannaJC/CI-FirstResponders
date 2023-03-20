@@ -36,11 +36,29 @@ namespace MonitoringSuiteLibrary.Services
         /// <exception cref="NotImplementedException"></exception>
         public IEnumerable<FirstResponder> GetFirstResponders()
         {
-            // TODO: Remove example usage of _options.
+            List<FirstResponder> firstResponders = new List<FirstResponder>();
+
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
-            throw new NotImplementedException();
+            MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString);
+            connection.Open();
+            MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers", connection);
+            connection.Close();
+
+            MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                int firstResponderId = reader.GetInt32(0);
+                Vitals? vitals = GetFirstResponderVitals(firstResponderId);
+                Location? location = GetFirstResponderLocation(firstResponderId);
+
+                firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
+                    reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), vitals, location));
+
+            }
+            return firstResponders;
         }
 
         /// <summary>
@@ -56,25 +74,65 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// TODO: Add description and implement <see cref="GetFirstResponderVitals(int)"/>.
+        /// 
         /// </summary>
         /// <param name="firstResponderId"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public Vitals GetFirstResponderVitals(int firstResponderId)
+        public Vitals? GetFirstResponderVitals(int firstResponderId)
         {
-            throw new NotImplementedException();
+            Vitals vitals;
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString);
+            connection.Open();
+            MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from vitals where w_id="+firstResponderId.ToString(), connection);
+            connection.Close();
+
+            MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                vitals = new Vitals(reader.GetDateTime(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetInt32(7));
+
+                return vitals;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         /// <summary>
-        /// TODO: Add description and implement <see cref="GetFirstResponderLocation(int)"/>.
+        /// 
         /// </summary>
         /// <param name="firstResponderId"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public Location GetFirstResponderLocation(int firstResponderId)
+        public Location? GetFirstResponderLocation(int firstResponderId)
         {
-            throw new NotImplementedException();
+            Location location;
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString);
+            connection.Open();
+            MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from locations where w_id=" + firstResponderId.ToString(), connection);
+            connection.Close();
+
+            MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                location = new Location(reader.GetDateTime(1), reader.GetDecimal(2), reader.GetDecimal(3), reader.GetDecimal(4));
+
+                return location;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         /// <summary>
