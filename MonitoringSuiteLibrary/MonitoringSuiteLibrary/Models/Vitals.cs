@@ -25,12 +25,12 @@ namespace MonitoringSuiteLibrary.Models
         public Vitals(DateTime timestamp, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)
         {
             this.Timestamp = timestamp;
-            this.Bloodoxy = bloodoxy;
-            this.Heartrate = heartrate;
-            this.Sysbp = sysbp;
-            this.Diabp = diabp;
-            this.Resprate = resprate;
-            this.Tempf = tempf;
+            this.BloodOxy = bloodoxy;
+            this.HeartRate = heartrate;
+            this.SysBP = sysbp;
+            this.DiaBP = diabp;
+            this.RespRate = resprate;
+            this.TempF = tempf;
         }
 
         #endregion
@@ -45,32 +45,32 @@ namespace MonitoringSuiteLibrary.Models
         /// <summary>
         /// Gets or sets the bloody oxygen level.
         /// </summary>
-        public int Bloodoxy { get; set; }
+        public int BloodOxy { get; set; }
 
         /// <summary>
         /// Gets or sets the heart rate.
         /// </summary>
-        public int Heartrate { get; set; }
+        public int HeartRate { get; set; }
 
         /// <summary>
         /// Gets or sets the systolic blood pressure level.
         /// </summary>
-        public int Sysbp { get; set; }
+        public int SysBP { get; set; }
 
         /// <summary>
         /// Gets or sets the diastolic blood pressure level.
         /// </summary>
-        public int Diabp { get; set; }
+        public int DiaBP { get; set; }
 
         /// <summary>
         /// Gets or sets the respiratory rate.
         /// </summary>
-        public int Resprate { get; set; }
+        public int RespRate { get; set; }
 
         /// <summary>
         /// Gets or sets the body temperature in fahrenheit.
         /// </summary>
-        public int Tempf { get; set; }
+        public int TempF { get; set; }
 
         #endregion
     }

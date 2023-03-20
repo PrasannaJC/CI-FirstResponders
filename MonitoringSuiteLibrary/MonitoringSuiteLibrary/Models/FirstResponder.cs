@@ -22,8 +22,8 @@ namespace MonitoringSuiteLibrary.Models
         /// <param name="height">The first responders height.</param>
         /// <param name="weight">The first responders weight.</param>
         /// <param name="active">The first responders active status.</param>
-        /// <param name="vitals">The first responders <see cref="MontioringSuiteLibrary.Models.Vitals"/>.</param>
-        /// <param name="location">The first responders <see cref="MontioringSuiteLibrary.Models.Location"/>.</param>
+        /// <param name="vitals">The first responders <see cref="MonitoringSuiteLibrary.Models.Vitals"/>.</param>
+        /// <param name="location">The first responders <see cref="MonitoringSuiteLibrary.Models.Location"/>.</param>
         public FirstResponder(int w_id, string fName, string lName, int age, char sex, double height, int weight, bool active, Vitals vitals, Location location)
         {
             this.FirstResponderId = w_id;
@@ -84,12 +84,12 @@ namespace MonitoringSuiteLibrary.Models
         public bool Active { get; }
 
         /// <summary>
-        /// Gets or sets the first responders <see cref="MontioringSuiteLibrary.Models.Vitals"/>.
+        /// Gets or sets the first responders <see cref="MonitoringSuiteLibrary.Models.Vitals"/>.
         /// </summary>
         public Vitals Vitals { get; set; }  
 
         /// <summary>
-        /// Gets or sets the first responders <see cref="MontioringSuiteLibrary.Models.Location"/>.
+        /// Gets or sets the first responders <see cref="MonitoringSuiteLibrary.Models.Location"/>.
         /// </summary>
         public Location Location { get; set; }
 
