@@ -9,9 +9,9 @@ using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
 using Microsoft.ML;
 
-namespace ML_Model
+namespace DistressDetector
 {
-    public partial class MLModel1
+    public partial class DistressDetect
     {
         /// <summary>
         /// Retrains model using the pipeline generated as part of the training process. For more information on how to load data, see aka.ms/loaddata.
@@ -39,7 +39,7 @@ namespace ML_Model
                                     .Append(mlContext.Transforms.ReplaceMissingValues(new []{new InputOutputColumnPair(@"Age", @"Age"),new InputOutputColumnPair(@"BloodOxy", @"BloodOxy"),new InputOutputColumnPair(@"HeartRate", @"HeartRate"),new InputOutputColumnPair(@"Systolic Blood Pressure", @"Systolic Blood Pressure"),new InputOutputColumnPair(@"Diastolic Blood Pressure", @"Diastolic Blood Pressure"),new InputOutputColumnPair(@"Respiratory Rate", @"Respiratory Rate"),new InputOutputColumnPair(@"Temperature", @"Temperature")}))      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Gender",@"Age",@"BloodOxy",@"HeartRate",@"Systolic Blood Pressure",@"Diastolic Blood Pressure",@"Respiratory Rate",@"Temperature"}))      
                                     .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))      
-                                    .Append(mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(new LbfgsLogisticRegressionBinaryTrainer.Options(){L1Regularization=1.638046F,L2Regularization=0.03125F,LabelColumnName=@"Distress",FeatureColumnName=@"Features"}));
+                                    .Append(mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(new LbfgsLogisticRegressionBinaryTrainer.Options(){L1Regularization=0.1959529F,L2Regularization=0.07159225F,LabelColumnName=@"Distress",FeatureColumnName=@"Features"}));
 
             return pipeline;
         }

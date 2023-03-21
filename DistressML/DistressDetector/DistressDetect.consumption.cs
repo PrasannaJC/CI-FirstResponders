@@ -5,18 +5,18 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-namespace ML_Model
+namespace DistressDetector
 {
-    public partial class MLModel1
+    public partial class DistressDetect
     {
         /// <summary>
-        /// model input class for MLModel1.
+        /// model input class for DistressDetect.
         /// </summary>
         #region model input class
         public class ModelInput
         {
             [ColumnName(@"Gender")]
-            public string Gender { get; set; }
+            public string? Gender { get; set; }
 
             [ColumnName(@"Age")]
             public float Age { get; set; }
@@ -47,13 +47,13 @@ namespace ML_Model
         #endregion
 
         /// <summary>
-        /// model output class for MLModel1.
+        /// model output class for DistressDetect.
         /// </summary>
         #region model output class
         public class ModelOutput
         {
             [ColumnName(@"Gender")]
-            public float[] Gender { get; set; }
+            public float[]? Gender { get; set; }
 
             [ColumnName(@"Age")]
             public float Age { get; set; }
@@ -80,7 +80,7 @@ namespace ML_Model
             public bool Distress { get; set; }
 
             [ColumnName(@"Features")]
-            public float[] Features { get; set; }
+            public float[]? Features { get; set; }
 
             [ColumnName(@"PredictedLabel")]
             public bool PredictedLabel { get; set; }
@@ -95,7 +95,7 @@ namespace ML_Model
 
         #endregion
 
-        private static string MLNetModelPath = Path.GetFullPath("MLModel1.zip");
+        private static string MLNetModelPath = Path.GetFullPath("DistressDetect.zip");
 
         public static readonly Lazy<PredictionEngine<ModelInput, ModelOutput>> PredictEngine = new Lazy<PredictionEngine<ModelInput, ModelOutput>>(() => CreatePredictEngine(), true);
 
