@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Extensions.Options;
+using System.Threading.Tasks;
 
 namespace MonitoringSuiteLibrary.Services
 {
@@ -30,33 +31,35 @@ namespace MonitoringSuiteLibrary.Services
         #region Public Methods
 
         /// <summary>
-        /// TODO: Add description and implement <see cref="GetFirstResponders"/>.
+        /// 
         /// </summary>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public IEnumerable<FirstResponder> GetFirstResponders()
+        public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync()
         {
+            await Task.CompletedTask;
+
             List<FirstResponder> firstResponders = new List<FirstResponder>();
 
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
-            MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString);
-            connection.Open();
-            MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers", connection);
-            connection.Close();
-
-            MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
-                int firstResponderId = reader.GetInt32(0);
-                Vitals? vitals = GetFirstResponderVitals(firstResponderId);
-                Location? location = GetFirstResponderLocation(firstResponderId);
+                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers", connection);
 
-                firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
-                    reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), vitals, location));
+                MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    int firstResponderId = reader.GetInt32(0);
+                    Vitals? vitals = await GetFirstResponderVitalsAsync(firstResponderId);
+                    Location? location = await GetFirstResponderLocationAsync(firstResponderId);
+
+                    firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
+                        reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), vitals, location));
+
+                }
             }
             return firstResponders;
         }
@@ -67,8 +70,9 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="eventId"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public IEnumerable<FirstResponder> GetFirstResponders(int eventId)
+        public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync(int eventId)
         {
+            await Task.CompletedTask;
             // TODO: We may need to be able to GetFirstResponders for a specific event.
             throw new NotImplementedException();
         }
@@ -79,28 +83,30 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="firstResponderId"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public Vitals? GetFirstResponderVitals(int firstResponderId)
+        public async Task<Vitals?> GetFirstResponderVitalsAsync(int firstResponderId)
         {
+            await Task.CompletedTask;
+
             Vitals vitals;
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
-            MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString);
-            connection.Open();
-            MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from vitals where w_id="+firstResponderId.ToString(), connection);
-            connection.Close();
-
-            MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
-                vitals = new Vitals(reader.GetDateTime(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetInt32(7));
+                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from vitals where w_id=" + firstResponderId.ToString(), connection);
 
-                return vitals;
-            }
-            else
-            {
-                return null;
+                MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    vitals = new Vitals(reader.GetDateTime(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetInt32(7));
+
+                    return vitals;
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
 
@@ -110,28 +116,30 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="firstResponderId"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public Location? GetFirstResponderLocation(int firstResponderId)
+        public async Task<Location?> GetFirstResponderLocationAsync(int firstResponderId)
         {
+            await Task.CompletedTask;
+
             Location location;
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
-            MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString);
-            connection.Open();
-            MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from locations where w_id=" + firstResponderId.ToString(), connection);
-            connection.Close();
-
-            MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
-                location = new Location(reader.GetDateTime(1), reader.GetDecimal(2), reader.GetDecimal(3), reader.GetDecimal(4));
+                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from locations where w_id=" + firstResponderId.ToString(), connection);
 
-                return location;
-            }
-            else
-            {
-                return null;
+                MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    location = new Location(reader.GetDateTime(1), reader.GetDecimal(2), reader.GetDecimal(3), reader.GetDecimal(4));
+
+                    return location;
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
 
@@ -140,8 +148,9 @@ namespace MonitoringSuiteLibrary.Services
         /// </summary>
         /// <param name="firstResponderId"></param>
         /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
-        public bool SetFirstResponderInactive(int firstResponderId)
+        public async Task<bool> SetFirstResponderInactiveAsync(int firstResponderId)
         {
+            await Task.CompletedTask;
             // TODO: Should somehow clear out the vitals and location information. 
             throw new NotImplementedException();
         }
@@ -154,8 +163,9 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="location">The initial location data to store for the first responder.</param>
         /// <returns>Whether or not setting the first responder as active was successful.</returns>
         /// <exception cref="NotImplementedException"></exception>
-        public bool SetFirstResponderActive(int firstResponderId, Vitals vitals, Location location)
+        public async Task<bool> SetFirstResponderActiveAsync(int firstResponderId, Vitals vitals, Location location)
         {
+            await Task.CompletedTask;
             throw new NotImplementedException();
         }
 
@@ -166,8 +176,9 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="location"></param>
         /// <returns>Whether or not the update was successful.</returns>
         /// <exception cref="NotImplementedException"></exception>
-        public bool UpdateFirstResponderLocation(int firstResponderId, Location location)
+        public async Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, Location location)
         {
+            await Task.CompletedTask;
             throw new NotImplementedException();
         }
 
@@ -178,8 +189,9 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="vitals"></param>
         /// <returns>Whether or not the update was successful.</returns>
         /// <exception cref="NotImplementedException"></exception>
-        public bool UpdateFirstResponderVitals(int firstResponderId, Vitals vitals)
+        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, Vitals vitals)
         {
+            await Task.CompletedTask;
             throw new NotImplementedException();
         }
 
