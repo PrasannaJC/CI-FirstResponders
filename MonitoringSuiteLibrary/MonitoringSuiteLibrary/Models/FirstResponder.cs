@@ -22,9 +22,10 @@ namespace MonitoringSuiteLibrary.Models
         /// <param name="height">The first responders height.</param>
         /// <param name="weight">The first responders weight.</param>
         /// <param name="active">The first responders active status.</param>
+        /// <param name="alert">The first responders alert status.</param>
         /// <param name="vitals">The first responders <see cref="MonitoringSuiteLibrary.Models.Vitals"/>.</param>
         /// <param name="location">The first responders <see cref="MonitoringSuiteLibrary.Models.Location"/>.</param>
-        public FirstResponder(int w_id, string fName, string lName, int age, char sex, double height, int weight, bool active, Vitals? vitals, Location? location)
+        public FirstResponder(int w_id, string fName, string lName, int age, char sex, double height, int weight, bool active, bool alert, Vitals? vitals, Location? location)
         {
             this.FirstResponderId = w_id;
             this.FName = fName;
@@ -34,6 +35,7 @@ namespace MonitoringSuiteLibrary.Models
             this.Height = height;
             this.Weight = weight;
             this.Active = active;
+            this.Alert = alert;
             this.Vitals = vitals;
             this.Location = location;
         }
@@ -81,7 +83,12 @@ namespace MonitoringSuiteLibrary.Models
         /// <summary>
         /// Gets the first responders active status.
         /// </summary>
-        public bool Active { get; }
+        public bool Active { get; set; }
+
+        /// <summary>
+        /// Gets the first responders active status.
+        /// </summary>
+        public bool Alert { get; set; }
 
         /// <summary>
         /// Gets or sets the first responders <see cref="MonitoringSuiteLibrary.Models.Vitals"/>.

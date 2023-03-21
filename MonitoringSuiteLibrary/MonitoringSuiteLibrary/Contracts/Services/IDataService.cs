@@ -20,6 +20,13 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         public Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync();
 
         /// <summary>
+        /// Gets a <see cref="FirstResponder"/>.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the target first responder.</param>
+        /// <returns>A <see cref="FirstResponder"/> corresponding to the firstResponderId</returns>
+        public Task<FirstResponder?> GetFirstResponderAsync(int firstResponderId);
+
+        /// <summary>
         /// Gets a <see cref="IEnumerable{FirstResponder}"/> respresenting the first responders for an event.
         /// </summary>
         /// <param name="eventId">The id corresponding to the specific <see cref="Event"/>.</param>
