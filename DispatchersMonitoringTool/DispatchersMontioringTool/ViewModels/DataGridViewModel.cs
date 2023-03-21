@@ -1,36 +1,50 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+
+using MonitoringSuiteLibrary.Services;
+using MonitoringSuiteLibrary.Models;
 
 using DispatchersMontioringTool.Core.Contracts.Services;
 using DispatchersMontioringTool.Core.Models;
 
 using Prism.Mvvm;
 using Prism.Regions;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace DispatchersMontioringTool.ViewModels
 {
     public class DataGridViewModel : BindableBase, INavigationAware
     {
-        private readonly ISampleDataService _sampleDataService;
+        private readonly DataService _dataService;
 
-        public ObservableCollection<SampleOrder> Source { get; } = new ObservableCollection<SampleOrder>();
+        public ObservableCollection<FirstResponder> FirstResponders { get; private set; } = new ObservableCollection<FirstResponder>();
 
-        public DataGridViewModel(ISampleDataService sampleDataService)
+        public DataGridViewModel(DataService dataService)
         {
-            _sampleDataService = sampleDataService;
+            _dataService = dataService;
         }
 
         public async void OnNavigatedTo(NavigationContext navigationContext)
         {
-            Source.Clear();
+            FirstResponders.Clear();
 
             // Replace this with your actual data
-            var data = await _sampleDataService.GetGridDataAsync();
+            var data = await GetFirstRespondersAsync();
 
             foreach (var item in data)
             {
-                Source.Add(item);
+                FirstResponders.Add(item);
             }
+        }
+
+        public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync()
+        {
+            await Task.CompletedTask;
+            return _dataService.GetFirstResponders();
         }
 
         public void OnNavigatedFrom(NavigationContext navigationContext)

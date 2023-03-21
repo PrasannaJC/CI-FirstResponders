@@ -14,12 +14,17 @@ using DispatchersMontioringTool.Models;
 using DispatchersMontioringTool.Services;
 using DispatchersMontioringTool.ViewModels;
 using DispatchersMontioringTool.Views;
+using MonitoringSuiteLibrary.Models;
 
 using Microsoft.Extensions.Configuration;
-
+using Microsoft.Extensions.Options;
 using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Unity;
+using MonitoringSuiteLibrary.Services;
+using Microsoft.Extensions.Configuration.UserSecrets;
+using System.Windows.Documents;
+using System.Net.Http.Headers;
 
 namespace DispatchersMontioringTool
 {
@@ -86,9 +91,15 @@ namespace DispatchersMontioringTool
                 .GetSection(nameof(AppConfig))
                 .Get<AppConfig>();
 
+            var secretsConfig = new ConfigurationBuilder().AddUserSecrets<App>().Build();
+
+            DataServiceConfiguration dataServiceConfiguration = new DataServiceConfiguration();
+            dataServiceConfiguration.ConnectionString = secretsConfig["ConnectionString"];
+
             // Register configurations to IoC
             containerRegistry.RegisterInstance<IConfiguration>(configuration);
             containerRegistry.RegisterInstance<AppConfig>(appConfig);
+            containerRegistry.RegisterInstance<DataService>(new DataService(Options.Create<DataServiceConfiguration>(dataServiceConfiguration)));
         }
 
         private IConfiguration BuildConfiguration()
