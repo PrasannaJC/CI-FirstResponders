@@ -46,6 +46,8 @@ namespace MonitoringSuiteLibrary.Services
 
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
+                connection.Open();
+
                 MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers", connection);
 
                 MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
@@ -93,6 +95,8 @@ namespace MonitoringSuiteLibrary.Services
 
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
+                connection.Open();
+
                 MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from vitals where w_id=" + firstResponderId.ToString(), connection);
 
                 MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
@@ -126,6 +130,7 @@ namespace MonitoringSuiteLibrary.Services
 
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
+                connection.Open();
                 MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from locations where w_id=" + firstResponderId.ToString(), connection);
 
                 MySqlConnector.MySqlDataReader reader = command.ExecuteReader();

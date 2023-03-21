@@ -33,18 +33,12 @@ namespace DispatchersMontioringTool.ViewModels
             FirstResponders.Clear();
 
             // Replace this with your actual data
-            var data = await GetFirstRespondersAsync();
+            var data = await _dataService.GetFirstRespondersAsync();
 
             foreach (var item in data)
             {
                 FirstResponders.Add(item);
             }
-        }
-
-        public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync()
-        {
-            await Task.CompletedTask;
-            return _dataService.GetFirstResponders();
         }
 
         public void OnNavigatedFrom(NavigationContext navigationContext)
