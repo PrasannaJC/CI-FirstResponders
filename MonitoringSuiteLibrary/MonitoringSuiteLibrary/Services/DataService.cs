@@ -31,10 +31,12 @@ namespace MonitoringSuiteLibrary.Services
         #region Public Methods
 
         /// <summary>
-        /// 
+        /// Asynchronous function that queries the database to retrieve all first responder's information from the workers table along with
+        /// their corresponding vitals and location.
         /// </summary>
-        /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
+        /// <returns>
+        /// A collection of FirstResponder objects
+        /// </returns>
         public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync()
         {
             await Task.CompletedTask;
@@ -59,7 +61,7 @@ namespace MonitoringSuiteLibrary.Services
                     Location? location = await GetFirstResponderLocationAsync(firstResponderId);
 
                     firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
-                        reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), vitals, location));
+                        reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), vitals, location));
 
                 }
             }
@@ -67,24 +69,90 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// TODO: Add description and implement <see cref="GetFirstResponders(int)"/>.
+        /// Asynchronous function that queries the database to retrieve a first responder's information from the workers table along with
+        /// their corresponding vitals and location.
         /// </summary>
-        /// <param name="eventId"></param>
-        /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync(int eventId)
+        /// <param name="firstResponderId">The unique id of the first responder</param>
+        /// <returns>
+        /// A FirstResponder object
+        /// </returns>
+        public async Task<FirstResponder?> GetFirstResponderAsync(int firstResponderId)
         {
             await Task.CompletedTask;
-            // TODO: We may need to be able to GetFirstResponders for a specific event.
-            throw new NotImplementedException();
+
+            FirstResponder firstResponder;
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers where w_id=" + firstResponderId.ToString(), connection);
+
+                MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Vitals? vitals = await GetFirstResponderVitalsAsync(firstResponderId);
+                    Location? location = await GetFirstResponderLocationAsync(firstResponderId);
+
+                    firstResponder = new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
+                        reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), vitals, location);
+
+                    return firstResponder;
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
 
         /// <summary>
-        /// 
+        /// Asynchrnous function that queries the database to retrieve all first responder's information from the workers table
+        /// that responded to a particular event along with their corresponding vitals and location.
         /// </summary>
-        /// <param name="firstResponderId"></param>
-        /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
+        /// <returns>
+        /// A collection of FirstResponder objects
+        /// </returns>
+        public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync(int eventId)
+        {
+            await Task.CompletedTask;
+
+            List<FirstResponder> firstResponders = new List<FirstResponder>();
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from responds where e_id=" + eventId.ToString(), connection);
+
+                MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int firstResponderId = reader.GetInt32(1);
+
+                    FirstResponder? firstResponder = await GetFirstResponderAsync(firstResponderId);
+
+                    firstResponders.Add(firstResponder);
+
+                }
+            }
+            return firstResponders;
+        }
+
+        /// <summary>
+        /// Asynchrnous function that queries the database to retrieve the vitals entry of a first responder.
+        /// </summary>
+        /// <param name="firstResponderId">The unique id of the first responder</param>
+        /// <returns>
+        /// A Vitals object
+        /// </returns>
         public async Task<Vitals?> GetFirstResponderVitalsAsync(int firstResponderId)
         {
             await Task.CompletedTask;
@@ -115,11 +183,12 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// 
+        /// Asynchrnous function that queries the database to retrieve the location entry of a first responder.
         /// </summary>
-        /// <param name="firstResponderId"></param>
-        /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
+        /// <param name="firstResponderId">The unique id of the first responder</param>
+        /// <returns>
+        /// A location object
+        /// </returns>
         public async Task<Location?> GetFirstResponderLocationAsync(int firstResponderId)
         {
             await Task.CompletedTask;
@@ -149,15 +218,34 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// TODO: Add description and implement <see cref="SetFirstResponderInactive(int)"/>
+        /// Modifies a first responder's active status to false
         /// </summary>
         /// <param name="firstResponderId"></param>
         /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
         public async Task<bool> SetFirstResponderInactiveAsync(int firstResponderId)
         {
             await Task.CompletedTask;
-            // TODO: Should somehow clear out the vitals and location information. 
-            throw new NotImplementedException();
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("update workers set active = false where w_id =" + firstResponderId.ToString(), connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
         }
 
         /// <summary>
