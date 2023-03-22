@@ -1,4 +1,10 @@
 ﻿namespace DistressDetector
+/**
+* Author => Prasanna J Chandrasekar
+* Start Date => 03/12/2023
+* Objective:
+*      This is a C# Project that forms the core of the ML application.
+*/
 {
     public class Status
     {
@@ -50,6 +56,7 @@
                 Respiratory_Rate = fr.RespRate,
                 Temperature = (float)fr.TempF,
             };
+
             //Load model and predict output
             bool result = DistressDetect.Predict(sampleData).Distress;
             return result;

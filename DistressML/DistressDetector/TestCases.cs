@@ -1,5 +1,4 @@
-﻿using static DistressDetector.Status;
-using Xunit;
+﻿using Xunit;
 
 namespace DistressDetector
 {
@@ -22,7 +21,7 @@ namespace DistressDetector
 
             bool d = Status.DistressStatus(fR);
 
-            Assert.Equal(false, d);
+            Assert.False(d);
         }
 
         [Fact]
@@ -31,18 +30,18 @@ namespace DistressDetector
 
             Status.FR fR = new Status.FR();
 
-            fR.Gender = 'F';
-            fR.Age = 64;
-            fR.BloodOxy = 92;
-            fR.HeartRate = 195;
-            fR.SysBP = 179;
-            fR.DiaBP = 96;
-            fR.RespRate = 5;
-            fR.TempF = 103.6;
+            fR.Gender = 'M';
+            fR.Age = 68;
+            fR.BloodOxy = 93;
+            fR.HeartRate = 204;
+            fR.SysBP = 177;
+            fR.DiaBP = 91;
+            fR.RespRate = 6;
+            fR.TempF = 103.91;
 
             bool d = Status.DistressStatus(fR);
 
-            Assert.Equal(true, d);
+            Assert.True(d);
         }
     }
 }
