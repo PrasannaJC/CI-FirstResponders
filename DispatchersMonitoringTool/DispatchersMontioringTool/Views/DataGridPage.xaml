@@ -11,6 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock
@@ -22,32 +23,36 @@
                 AutoGenerateColumns="False"
                 GridLinesVisibility="Horizontal"
                 CanUserAddRows="False"
-                ItemsSource="{Binding Source}"
+                ItemsSource="{Binding FirstResponders}"
                 Margin="{StaticResource SmallLeftRightMargin}"
                 KeyboardNavigation.TabNavigation="Once">
                 <DataGrid.Columns>
-                    <!--
-                        TODO WTS:
-                        Remove this column definitions and define columns for your data.
-                        Consider adding header properties to Resources.resw
-                    -->
-                    <DataGridTextColumn Binding="{Binding OrderID}" Header="OrderID" />
-                    <DataGridTextColumn Binding="{Binding OrderDate}" Header="OrderDate" />
-                    <DataGridTextColumn Binding="{Binding Company}" Header="Company" />
-                    <DataGridTextColumn Binding="{Binding ShipTo}" Header="ShipTo" />
-                    <DataGridTextColumn Binding="{Binding OrderTotal}" Header="OrderTotal" />
-                    <DataGridTextColumn Binding="{Binding Status}" Header="Status" />
-                    <DataGridTemplateColumn Header="Symbol">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock
-                                    Margin="{StaticResource SmallLeftRightMargin}"
-                                    HorizontalAlignment="Left"
-                                    Style="{StaticResource SmallIconStyle}"
-                                    Text="{Binding Symbol}" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Binding="{Binding FName}" Header="First Name" />
+                    <DataGridTextColumn Binding="{Binding LName}" Header="Last Name" />
+                    <DataGridTextColumn Binding="{Binding Location.XCoord}" Header="X Coordinate" />
+                    <DataGridTextColumn Binding="{Binding Location.YCoord}" Header="Y Coordinate" />
+                    <DataGridTextColumn Binding="{Binding Location.ZCoord}" Header="Z Coordinate" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <DataGrid
+                AutoGenerateColumns="False"
+                GridLinesVisibility="Horizontal"
+                CanUserAddRows="False"
+                ItemsSource="{Binding FirstResponders}"
+                Margin="{StaticResource SmallLeftRightMargin}"
+                KeyboardNavigation.TabNavigation="Once">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding FName}" Header="First Name" />
+                    <DataGridTextColumn Binding="{Binding LName}" Header="Last Name" />
+                    <DataGridTextColumn Binding="{Binding Vitals.Timestamp}" Header="Time" />
+                    <DataGridTextColumn Binding="{Binding Vitals.BloodOxy}" Header="Blood Oxygen" />
+                    <DataGridTextColumn Binding="{Binding Vitals.HeartRate}" Header="Heart Rate" />
+                    <DataGridTextColumn Binding="{Binding Vitals.SysBP}" Header="SysBP" />
+                    <DataGridTextColumn Binding="{Binding Vitals.DiaBP}" Header="DiaBP" />
+                    <DataGridTextColumn Binding="{Binding Vitals.RespRate}" Header="Resp Rate" />
+                    <DataGridTextColumn Binding="{Binding Vitals.TempF}" Header="Temp F" />
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
