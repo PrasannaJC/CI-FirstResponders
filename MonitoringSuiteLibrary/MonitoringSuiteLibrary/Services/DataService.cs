@@ -229,6 +229,9 @@ namespace MonitoringSuiteLibrary.Services
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
+            await DeleteFirstResponderLocationAsync(firstResponderId);
+            await DeleteFirstResponderVitalsAsync(firstResponderId);
+
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
                 try
@@ -249,43 +252,247 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// TODO: Add description and implement <see cref="SetFirstResponderActive(int, Vitals, Location)"/>.
+        /// Modifies a first responder's active status to true
         /// </summary>
-        /// <param name="firstResponderId">The id of the target first responder.</param>
-        /// <param name="vitals">The initial vitals data to store for the first responder.</param>
-        /// <param name="location">The initial location data to store for the first responder.</param>
-        /// <returns>Whether or not setting the first responder as active was successful.</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public async Task<bool> SetFirstResponderActiveAsync(int firstResponderId, Vitals vitals, Location location)
+        /// <param name="firstResponderId"></param>
+        /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
+        public async Task<bool> SetFirstResponderActiveAsync(int firstResponderId)
         {
             await Task.CompletedTask;
-            throw new NotImplementedException();
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            await CreateFirstResponderLocationAsync(firstResponderId);
+            await CreateFirstResponderVitalsAsync(firstResponderId);
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("update workers set active = true where w_id =" + firstResponderId.ToString(), connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
         }
 
         /// <summary>
-        /// TODO: Add description and implement <see cref="UpdateFirstResponderLocation(int)"/>.
+        /// Deletes a first responder vitals. This is done when a first responder is changed to inactive.
         /// </summary>
         /// <param name="firstResponderId"></param>
-        /// <param name="location"></param>
-        /// <returns>Whether or not the update was successful.</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public async Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, Location location)
+        /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
+        public async Task<bool> DeleteFirstResponderVitalsAsync(int firstResponderId)
         {
             await Task.CompletedTask;
-            throw new NotImplementedException();
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("delete from vitals where w_id =" + firstResponderId.ToString(), connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
         }
 
         /// <summary>
-        /// TODO: Add description and implement <see cref="UpdateFirstResponderVitals(int)"/>.
+        /// Deletes a first responder location. This is done when a first responder is changed to inactive.
         /// </summary>
         /// <param name="firstResponderId"></param>
-        /// <param name="vitals"></param>
-        /// <returns>Whether or not the update was successful.</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, Vitals vitals)
+        /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
+        public async Task<bool> DeleteFirstResponderLocationAsync(int firstResponderId)
         {
             await Task.CompletedTask;
-            throw new NotImplementedException();
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("delete from locations where w_id =" + firstResponderId.ToString(), connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Creates a location entry of a first responder.
+        /// </summary>
+        /// <param name="firstResponderId"></param>
+        /// <returns>Whether or not the update was successful.</returns>
+        public async Task<bool> CreateFirstResponderLocationAsync(int firstResponderId)
+        {
+            await Task.CompletedTask;
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
+                        "insert into locations (w_id) values (" + firstResponderId.ToString() + ")", connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Creates a vitals entry for a first responder.
+        /// </summary>
+        /// <param name="firstResponderId"></param>
+        /// <returns>Whether or not the update was successful.</returns>
+        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId)
+        {
+            await Task.CompletedTask;
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
+                        "insert into vitals (w_id) values (" + firstResponderId.ToString() + ")", connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Updates the location of a first responder.
+        /// </summary>
+        /// <param name="firstResponderId"></param>
+        /// <param name="xcoord"></param>
+        /// <param name="ycoord"></param>
+        /// <param name="zcoord"></param>
+        /// <returns>Whether or not the update was successful.</returns>
+        public async Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)
+        {
+            await Task.CompletedTask;
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
+                        "update locations set " +
+                        "xcoord = " + xcoord.ToString() + ", " +
+                        "ycoord = " + ycoord.ToString() + ", " +
+                        "zcoord = " + zcoord.ToString() + " " +
+                        "where w_id = " + firstResponderId.ToString(), connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Updates the location of a first responder.
+        /// </summary>
+        /// <param name="firstResponderId"></param>
+        /// <param name="bloodoxy"></param>
+        /// <param name="heartrate"></param>
+        /// <param name="sysbp"></param>
+        /// <param name="diabp"></param>
+        /// <param name="resprate"></param>
+        /// <param name="tempf"></param>
+        /// <returns>Whether or not the update was successful.</returns>
+        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)
+        {
+            await Task.CompletedTask;
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
+                        "update vitals set " +
+                        "bloodoxy = " + bloodoxy.ToString() + ", " +
+                        "heartrate = " + heartrate.ToString() + ", " +
+                        "sysbp = " + sysbp.ToString() + ", " +
+                        "diabp = " + diabp.ToString() + ", " +
+                        "resprate = " + resprate.ToString() + ", " +
+                        "tempf = " + tempf.ToString() + " " +
+                        "where w_id = " + firstResponderId.ToString(), connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
         }
 
         #endregion

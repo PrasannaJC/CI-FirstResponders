@@ -55,29 +55,63 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         public Task<bool> SetFirstResponderInactiveAsync(int firstResponderId);
 
         /// <summary>
-        /// Sets a first responder as active and initializes location and vitals data.
+        /// Sets a first responder as active.
         /// </summary>
         /// <param name="firstResponderId">The id of the target first responder.</param>
-        /// <param name="vitals">The initial vitals data to store for the first responder.</param>
-        /// <param name="location">The initial location data to store for the first responder.</param>
         /// <returns>Whether or not setting the first responder as active was successful.</returns>
-        public Task<bool> SetFirstResponderActiveAsync(int firstResponderId, Vitals vitals, Location location);
+        public Task<bool> SetFirstResponderActiveAsync(int firstResponderId);
+
+        /// <summary>
+        /// Deletes a first responder vitals. This is done when a first responder is changed to inactive.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the target first responder.</param>
+        /// <returns>Whether or not setting the first responder's vitals to null was successful.</returns>
+        public Task<bool> DeleteFirstResponderVitalsAsync(int firstResponderId);
+
+        /// <summary>
+        /// Deletes a first responder location. This is done when a first responder is changed to inactive.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the target first responder.</param>
+        /// <returns>Whether or not setting the first responder's location to null was successful.</returns>
+        public Task<bool> DeleteFirstResponderLocationAsync(int firstResponderId);
+
+        /// <summary>
+        /// Creates first responder location entry.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the first responder to update.</param>
+        /// <returns>Whether or not the update was successful.</returns>
+        public Task<bool> CreateFirstResponderLocationAsync(int firstResponderId);
+
+        /// <summary>
+        /// Creates first responder vitals entry.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the first responder to update.</param>
+        /// <returns>Whether or not the update was successful.</returns>
+        public Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId);
 
         /// <summary>
         /// Updates first responder location.
         /// </summary>
         /// <param name="firstResponderId">The id of the first responder to update.</param>
-        /// <param name="location">The <see cref="Location"/> data the current <see cref="Location"/> is updated to.</param>
+        /// <param name="xcoord">The x coordinate of the location</param>
+        /// <param name="ycoord">The y coordinate of the location</param>
+        /// <param name="zcoord">The z coordinate of the location</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, Location location);
+        public Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord);
 
         /// <summary>
         /// Updates first responder vitals.
         /// </summary>
         /// <param name="firstResponderId">The id of the first responder to update.</param>
-        /// <param name="vitals">The <see cref="Vitals"/> data the current <see cref="Vitals"/> is updated to.</param>
+        /// <param name="bloodoxy">The blood oxygen level.</param>
+        /// <param name="heartrate">The heart rate level.</param>
+        /// <param name="sysbp">The Systolic blood pressure level.</param>
+        /// <param name="diabp">The diastolic blood pressure level.</param>
+        /// <param name="resprate">The respiratory rate.</param>
+        /// <param name="tempf">The body temperature in fahrenheit.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, Vitals vitals);
+        public Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf);
+
 
         #endregion
     }
