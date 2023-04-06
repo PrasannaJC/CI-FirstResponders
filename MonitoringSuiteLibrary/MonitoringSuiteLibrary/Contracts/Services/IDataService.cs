@@ -112,6 +112,12 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         /// <returns>Whether or not the update was successful.</returns>
         public Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf);
 
+        /// <summary>
+        /// Checks if first responder exists in the database based on worker ID.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the first responder to update.</param>
+        /// <returns>Whether or not the worker id exists in the worker table in the database.</returns>
+        public Task<bool> FirstResponderExistsAsync(int firstResponderId);
 
         #endregion
     }
