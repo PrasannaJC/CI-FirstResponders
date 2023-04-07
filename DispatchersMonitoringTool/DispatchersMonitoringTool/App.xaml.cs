@@ -36,8 +36,7 @@ public partial class App : Application
         => _host.Services.GetService(typeof(T)) as T;
 
     public App()
-    {
-    }
+    {}
 
     private async void OnStartup(object sender, StartupEventArgs e)
     {
@@ -92,8 +91,11 @@ public partial class App : Application
 
         var secretsConfig = new ConfigurationBuilder().AddUserSecrets<App>().Build();
 
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(secretsConfig["SyncfusionKey"]);
+
         DataServiceConfiguration dataServiceConfiguration = new DataServiceConfiguration();
         dataServiceConfiguration.ConnectionString = secretsConfig["ConnectionString"];
+
         services.AddSingleton<IDataService>(new DataService(Options.Create<DataServiceConfiguration>(dataServiceConfiguration)));
 
         services.Configure<AppConfig>(context.Configuration.GetSection(nameof(AppConfig)));
