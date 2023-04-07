@@ -263,8 +263,8 @@ namespace MonitoringSuiteLibrary.Services
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
-            await CreateFirstResponderLocationAsync(firstResponderId);
-            await CreateFirstResponderVitalsAsync(firstResponderId);
+            //await CreateFirstResponderLocationAsync(firstResponderId);
+            //await CreateFirstResponderVitalsAsync(firstResponderId);
 
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
@@ -272,6 +272,68 @@ namespace MonitoringSuiteLibrary.Services
                 {
                     connection.Open();
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("update workers set active = true where w_id =" + firstResponderId.ToString(), connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sets a first responder alert status as false.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the target first responder.</param>
+        /// <returns>Whether or not setting the first responder's alert to false was successful.</returns>
+        public async Task<bool> SetFirstResponderAlertFalseAsync(int firstResponderId)
+        {
+            await Task.CompletedTask;
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("update workers set alert = false where w_id =" + firstResponderId.ToString(), connection);
+
+                    int rowCount = command.ExecuteNonQuery();
+
+                    return (rowCount == 1) ? true : false;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sets a first responder alert status as true.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the target first responder.</param>
+        /// <returns>Whether or not setting the first responder's alert to true was successful.</returns>
+        public async Task<bool> SetFirstResponderAlertTrueAsync(int firstResponderId)
+        {
+            await Task.CompletedTask;
+
+            var setOptions = _options.Value;
+            string connectionString = setOptions.ConnectionString;
+
+            using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("update workers set alert = true where w_id =" + firstResponderId.ToString(), connection);
 
                     int rowCount = command.ExecuteNonQuery();
 
@@ -351,8 +413,11 @@ namespace MonitoringSuiteLibrary.Services
         /// Creates a location entry of a first responder.
         /// </summary>
         /// <param name="firstResponderId"></param>
+        /// <param name="xcoord"></param>
+        /// <param name="ycoord"></param>
+        /// <param name="zcoord"></param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> CreateFirstResponderLocationAsync(int firstResponderId)
+        public async Task<bool> CreateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)
         {
             await Task.CompletedTask;
 
@@ -365,7 +430,11 @@ namespace MonitoringSuiteLibrary.Services
                 {
                     connection.Open();
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
-                        "insert into locations (w_id) values (" + firstResponderId.ToString() + ")", connection);
+                        "insert into locations (w_id, xcoord, ycoord, zcoord) values ("
+                        + firstResponderId.ToString() + ", "
+                        + xcoord.ToString() + ", "
+                        + ycoord.ToString() + ", "
+                        + zcoord.ToString() + " )", connection);
 
                     int rowCount = command.ExecuteNonQuery();
 
@@ -383,8 +452,14 @@ namespace MonitoringSuiteLibrary.Services
         /// Creates a vitals entry for a first responder.
         /// </summary>
         /// <param name="firstResponderId"></param>
+        /// <param name="bloodoxy"></param>
+        /// <param name="heartrate"></param>
+        /// <param name="sysbp"></param>
+        /// <param name="diabp"></param>
+        /// <param name="resprate"></param>
+        /// <param name="tempf"></param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId)
+        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)
         {
             await Task.CompletedTask;
 
@@ -397,7 +472,14 @@ namespace MonitoringSuiteLibrary.Services
                 {
                     connection.Open();
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
-                        "insert into vitals (w_id) values (" + firstResponderId.ToString() + ")", connection);
+                        "insert into vitals (w_id, bloodoxy, heartrate, sysbp, diabp, resprate, tempf) values ("
+                        + firstResponderId.ToString() + ", "
+                        + bloodoxy.ToString() + ", "
+                        + heartrate.ToString() + ", "
+                        + sysbp.ToString() + ", "
+                        + diabp.ToString() + ", "
+                        + resprate.ToString() + ", "
+                        + tempf.ToString() + ")", connection);
 
                     int rowCount = command.ExecuteNonQuery();
 
@@ -504,7 +586,7 @@ namespace MonitoringSuiteLibrary.Services
         {
             await Task.CompletedTask;
 
-            var data = GetFirstResponderAsync(firstResponderId);
+            var data = await GetFirstResponderAsync(firstResponderId);
 
             if (data == null)
             {
