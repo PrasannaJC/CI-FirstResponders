@@ -495,6 +495,25 @@ namespace MonitoringSuiteLibrary.Services
             }
         }
 
+        /// <summary>
+        /// Checks if first responder exists in the database based on worker ID.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the first responder to update.</param>
+        /// <returns>Whether or not the worker id exists in the worker table in the database.</returns>
+        public async Task<bool> FirstResponderExistsAsync(int firstResponderId)
+        {
+            await Task.CompletedTask;
+
+            var data = GetFirstResponderAsync(firstResponderId);
+
+            if (data == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         #endregion
     }
 }
