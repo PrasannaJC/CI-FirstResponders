@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileVitalsMonitoringTool"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitoringSuiteLibrary", "..\MonitoringSuiteLibrary\MonitoringSuiteLibrary\MonitoringSuiteLibrary.csproj", "{1F102907-4C9B-4E4F-936F-4DD1ACDB07EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispatchersMontioringTool", "..\DispatchersMonitoringTool\DispatchersMontioringTool\DispatchersMontioringTool.csproj", "{B3F81685-0151-4187-A71D-9B3366F1E56A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{1F102907-4C9B-4E4F-936F-4DD1ACDB07EC}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{1F102907-4C9B-4E4F-936F-4DD1ACDB07EC}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{1F102907-4C9B-4E4F-936F-4DD1ACDB07EC}.Release|iPhone.Build.0 = Release|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{B3F81685-0151-4187-A71D-9B3366F1E56A}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
