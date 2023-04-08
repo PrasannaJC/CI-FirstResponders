@@ -13,8 +13,8 @@ public class ResponderRealtimeData
     // Throughout this project, First Responders will be refer to as FR. 
     public struct FR
     {
-    //    public int Active; // This is used to check whether a FR has entered a disaster site(1), has been removed(2), or is yet to enter the field(0).
-    //    public int ID; // A unique six digit ID to identify a FR.
+        //    public int Active; // This is used to check whether a FR has entered a disaster site(1), has been removed(2), or is yet to enter the field(0).
+        //    public int ID; // A unique six digit ID to identify a FR.
         public char Gender; // A FR's Gender - either 'M' or 'F'
         public int Age; // Age of FR
         public int BloodOxy; // Blood Oxygen levels
@@ -121,6 +121,7 @@ public class ResponderRealtimeData
                     // Next is temperature
                     // temp = (double)r.Next(-1000, 1000) / 1000;
                     fr.TempF += (double)r.Next(-10, 100) / 100;
+                    fr.TempF = Math.Round(fr.TempF, 2);
 
                 }
             }
@@ -128,6 +129,50 @@ public class ResponderRealtimeData
         }
     }
 
-    static void Main() { }
+    static void Main() 
+    {
+        FR fR = new FR();
+
+        /*-------------------------- New First Responder ---------------------------------*/
+
+        fR.Gender = 'X';
+        fR.Age = 0;
+        fR.BloodOxy = 0;
+        fR.HeartRate = 0;
+        fR.SysBP = 0;
+        fR.DiaBP = 0;
+        fR.RespRate = 0;
+        fR.TempF = 0;
+
+        FR d = Generate(fR);
+        //System.Diagnostics.Debug.WriteLine("Hello");
+        Console.WriteLine("New First Responder Vitals: \nFR Age => {0}\n" +
+                      "FR Gender => {1}\n" + "FR Blood Oxygen => {2}\n" +
+                      "FR Heart rate => {3}\nFR Systolic Blood Pressure => {4}\n" +
+                      "FR Diastolic Blood Pressure => {5}\nFR Respiratory rate => {6}\n" +
+                      "FR Temperature => {7}\n",
+                      d.Age, d.Gender, d.BloodOxy, d.HeartRate, d.SysBP, d.DiaBP, d.RespRate, d.TempF);
+
+        /*-------------------------- Existing First Responder ---------------------------------*/
+
+        fR.Gender = 'M';
+        fR.Age = 39;
+        fR.BloodOxy = 97;
+        fR.HeartRate = 105;
+        fR.SysBP = 112;
+        fR.DiaBP = 75;
+        fR.RespRate = 19;
+        fR.TempF = 99.12;
+
+        d = Generate(fR);
+        Console.WriteLine("New First Responder Vitals: \nFR Age => {0}\n" +
+                      "FR Gender => {1}\n" + "FR Blood Oxygen => {2}\n" +
+                      "FR Heart rate => {3}\nFR Systolic Blood Pressure => {4}\n" +
+                      "FR Diastolic Blood Pressure => {5}\nFR Respiratory rate => {6}\n" +
+                      "FR Temperature => {7}\n",
+                      d.Age, d.Gender, d.BloodOxy, d.HeartRate, d.SysBP, d.DiaBP, d.RespRate, d.TempF);
+    }
+
+
 
 }

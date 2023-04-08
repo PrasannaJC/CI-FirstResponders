@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using MobileVitalsMonitoringTool.Models;
 using MobileVitalsMonitoringTool.Services;
+using MonitoringSuiteLibrary.Models;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
@@ -39,6 +40,13 @@ namespace MobileVitalsMonitoringTool.ViewModels
             onChanged?.Invoke();
             OnPropertyChanged(propertyName);
             return true;
+        }
+
+        FirstResponder firstResponder;
+        public FirstResponder FirstResponder
+        {
+            get { return firstResponder; }
+            set { SetProperty(ref firstResponder, value); }
         }
 
         #region INotifyPropertyChanged
