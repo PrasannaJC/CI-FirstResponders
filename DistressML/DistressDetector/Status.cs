@@ -1,4 +1,6 @@
-﻿namespace DistressDetector
+﻿using static DistressDetector.Status;
+
+namespace DistressDetector
 /**
 * Author => Prasanna J Chandrasekar
 * Start Date => 03/12/2023
@@ -58,10 +60,57 @@
             };
 
             //Load model and predict output
-            bool result = DistressDetect.Predict(sampleData).Distress;
-            return result;
+            float result = DistressDetect.Predict(sampleData).Probability;
+            if (result > 0.5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            //return result;
         }
 
-        static void Main() { }
+        static void Main()
+        {
+            /*
+            FR fr = new FR();
+            while (true)
+            {
+
+            }
+            */
+            FR fR1 = new FR()
+            {
+
+                Gender = 'M',
+                Age = 39,
+                BloodOxy = 100,
+                HeartRate = 75,
+                SysBP = 100,
+                DiaBP = 70,
+                RespRate = 18,
+                TempF = 98.6
+            };
+            bool d = Status.DistressStatus(fR1);
+            Console.WriteLine(d);
+
+            FR fR2 = new FR()
+            {
+                Gender = 'M',
+                Age = 61,
+                BloodOxy = 93,
+                HeartRate = 204,
+                SysBP = 177,
+                DiaBP = 91,
+                RespRate = 5,
+                TempF = 103.91
+            };
+
+            d = Status.DistressStatus(fR2);
+            Console.WriteLine(d);
+            
+        }
     }
 }

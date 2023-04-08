@@ -4,6 +4,7 @@ namespace DistressDetector
 {
     public class TestCases
     {
+
         [Fact]
         public void Test_NOT_Distress()
         {
@@ -31,12 +32,12 @@ namespace DistressDetector
             Status.FR fR = new Status.FR();
 
             fR.Gender = 'M';
-            fR.Age = 68;
+            fR.Age = 61;
             fR.BloodOxy = 93;
             fR.HeartRate = 204;
             fR.SysBP = 177;
             fR.DiaBP = 91;
-            fR.RespRate = 6;
+            fR.RespRate = 5;
             fR.TempF = 103.91;
 
             bool d = Status.DistressStatus(fR);

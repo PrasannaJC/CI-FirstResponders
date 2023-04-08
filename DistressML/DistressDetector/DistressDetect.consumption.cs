@@ -16,7 +16,7 @@ namespace DistressDetector
         public class ModelInput
         {
             [ColumnName(@"Gender")]
-            public string? Gender { get; set; }
+            public string Gender { get; set; }
 
             [ColumnName(@"Age")]
             public float Age { get; set; }
@@ -53,7 +53,7 @@ namespace DistressDetector
         public class ModelOutput
         {
             [ColumnName(@"Gender")]
-            public float[]? Gender { get; set; }
+            public float[] Gender { get; set; }
 
             [ColumnName(@"Age")]
             public float Age { get; set; }
@@ -80,7 +80,7 @@ namespace DistressDetector
             public bool Distress { get; set; }
 
             [ColumnName(@"Features")]
-            public float[]? Features { get; set; }
+            public float[] Features { get; set; }
 
             [ColumnName(@"PredictedLabel")]
             public bool PredictedLabel { get; set; }
