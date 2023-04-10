@@ -15,14 +15,19 @@ using System.Runtime.CompilerServices;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
+    /// <summary>
+    /// The viewmodel that represents that main page of app. Only logged in users can access it.
+    /// </summary>
     public class AboutViewModel : BaseViewModel
     {
         //private readonly DataService _dataService;
 
+        /// <summary>
+        /// Creates a <see cref="AboutViewModel"/>.
+        /// </summary>
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
 
             SOSCommand = new Command(OnSOS);
 
@@ -31,10 +36,14 @@ namespace MobileVitalsMonitoringTool.ViewModels
             GetCurrentLocation();
         }
 
-        public ICommand OpenWebCommand { get; }
-
+        /// <summary>
+        /// Gets the SOSCommand to selt the alert status to true of a first responder.
+        /// </summary>
         public Command SOSCommand { get; }
 
+        /// <summary>
+        /// Sets the alert status of a first responder to true in the database.
+        /// </summary>
         private async void OnSOS()
         {
             MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
@@ -42,13 +51,19 @@ namespace MobileVitalsMonitoringTool.ViewModels
             await dataService.SetFirstResponderAlertTrueAsync(Preferences.Get("w_id", -1));
         }
 
+        /// <summary>
+        /// Pulls first responder information from the database.
+        /// </summary>
         public async void OnNavigatedTo()
         {
             MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
             FirstResponder = await dataService.GetFirstResponderAsync(Preferences.Get("w_id", -1));
         }
 
-        // temporary function to test geolocation. Will be replaced with service that runs in the backgroun
+        /// <summary>
+        /// Gets the location of the first responder and writes it out to the database. This is a temporary function which will
+        /// eventually be replaced by a background service
+        /// </summary>
         private async void GetCurrentLocation()
         {
             MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary

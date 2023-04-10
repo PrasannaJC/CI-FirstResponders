@@ -46,7 +46,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Tap on the button below if need immediate assistance"/>
+                                <Span Text="Tap on the button below if you need immediate assistance"/>
                                 
                             </FormattedString.Spans>
                         </FormattedString>
