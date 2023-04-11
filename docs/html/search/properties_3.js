@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['datastore_0',['DataStore',['../class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_base_view_model.html#a7ca0fbd0b574507a7c54f209dba61b4a',1,'MobileVitalsMonitoringTool::ViewModels::BaseViewModel']]],
+  ['description_1',['Description',['../class_mobile_vitals_monitoring_tool_1_1_models_1_1_item.html#a409f2c30f9f82bd4c2b658d334ae3f09',1,'MobileVitalsMonitoringTool.Models.Item.Description()'],['../class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_item_detail_view_model.html#ab603c074f7c0f751c0f09e503201c224',1,'MobileVitalsMonitoringTool.ViewModels.ItemDetailViewModel.Description()'],['../class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_new_item_view_model.html#a61850e8f0c8ed014ccbfc0e35721ea14',1,'MobileVitalsMonitoringTool.ViewModels.NewItemViewModel.Description()']]],
+  ['diabp_2',['DiaBP',['../struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a4aa7707996d97b4f72a2484bb1b1f0ce',1,'MonitoringSuiteLibrary::Models::Vitals']]],
+  ['diastolic_5fblood_5fpressure_3',['Diastolic_Blood_Pressure',['../class_distress_detector_1_1_distress_detect_1_1_model_input.html#ab745af42862bd27820d0a33d59e67706',1,'DistressDetector.DistressDetect.ModelInput.Diastolic_Blood_Pressure()'],['../class_distress_detector_1_1_distress_detect_1_1_model_output.html#ab33f0adb3c86949af5707ee5cea4fa33',1,'DistressDetector.DistressDetect.ModelOutput.Diastolic_Blood_Pressure()']]],
+  ['display_4',['Display',['../class_dispatchers_monitoring_tool_1_1_models_1_1_map_marker.html#a9114bd5668966fb805a674bca19373a5',1,'DispatchersMonitoringTool::Models::MapMarker']]],
+  ['distress_5',['Distress',['../class_distress_detector_1_1_distress_detect_1_1_model_input.html#a88f3d046bf65684b619b13419c7d3500',1,'DistressDetector.DistressDetect.ModelInput.Distress()'],['../class_distress_detector_1_1_distress_detect_1_1_model_output.html#aa6103709059ca08f0b9b1bd51ec78f8c',1,'DistressDetector.DistressDetect.ModelOutput.Distress()']]]
+];

@@ -1,0 +1,5 @@
+<map id="MobileVitalsMonitoringTool.ViewModels.AboutViewModel" name="MobileVitalsMonitoringTool.ViewModels.AboutViewModel">
+<area shape="rect" id="node1" title="The viewmodel that represents that main page of app. Only logged in users can access it." alt="" coords="5,152,199,192"/>
+<area shape="rect" id="node2" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_base_view_model.html" title="The base view model. This sets data that will be used in the app." alt="" coords="45,79,159,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="23,5,181,31"/>
+</map>

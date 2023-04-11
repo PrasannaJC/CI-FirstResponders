@@ -1,0 +1,4 @@
+var _i_theme_selector_service_8cs =
+[
+    [ "DispatchersMonitoringTool.Contracts.Services.IThemeSelectorService", "interface_dispatchers_monitoring_tool_1_1_contracts_1_1_services_1_1_i_theme_selector_service.html", "interface_dispatchers_monitoring_tool_1_1_contracts_1_1_services_1_1_i_theme_selector_service" ]
+];

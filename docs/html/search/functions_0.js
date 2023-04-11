@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['aboutpage_0',['AboutPage',['../class_mobile_vitals_monitoring_tool_1_1_views_1_1_about_page.html#ab0e6baed54c592b4484cab38ed0dec70',1,'MobileVitalsMonitoringTool::Views::AboutPage']]],
+  ['aboutviewmodel_1',['AboutViewModel',['../class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_about_view_model.html#a45c6b0bacddd6402184ca3f72140e89b',1,'MobileVitalsMonitoringTool::ViewModels::AboutViewModel']]],
+  ['addeventhandler_2',['AddEventHandler',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#a73471f4a6d1ca4c4fceec9ad8610f0c8',1,'XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo eventInfo, object target, System.Delegate handler)'],['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#a73471f4a6d1ca4c4fceec9ad8610f0c8',1,'XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo eventInfo, object target, System.Delegate handler)']]],
+  ['additemasync_3',['AddItemAsync',['../interface_mobile_vitals_monitoring_tool_1_1_services_1_1_i_data_store.html#a283c632f9d3bd4eb66ce4edeacdba842',1,'MobileVitalsMonitoringTool.Services.IDataStore.AddItemAsync()'],['../class_mobile_vitals_monitoring_tool_1_1_services_1_1_mock_data_store.html#a3e2712ac8922af79df6e44ac30597d5e',1,'MobileVitalsMonitoringTool.Services.MockDataStore.AddItemAsync()']]],
+  ['app_4',['App',['../class_dispatchers_monitoring_tool_1_1_app.html#a4b945dd136b5892ebef9ff5816537405',1,'DispatchersMonitoringTool.App.App()'],['../class_mobile_vitals_monitoring_tool_1_1_app.html#a2bb724266b6a836724f4a62370b3afbd',1,'MobileVitalsMonitoringTool.App.App()']]],
+  ['applicationhostservice_5',['ApplicationHostService',['../class_dispatchers_monitoring_tool_1_1_services_1_1_application_host_service.html#aec810305dd06176b975a8e9792af8cf6',1,'DispatchersMonitoringTool::Services::ApplicationHostService']]],
+  ['applicationinfoservice_6',['ApplicationInfoService',['../class_dispatchers_monitoring_tool_1_1_services_1_1_application_info_service.html#a03389767c7add3e509981d621e554c04',1,'DispatchersMonitoringTool::Services::ApplicationInfoService']]],
+  ['appshell_7',['AppShell',['../class_mobile_vitals_monitoring_tool_1_1_app_shell.html#a688650f6033fc948eaa45f5c93ef91b5',1,'MobileVitalsMonitoringTool::AppShell']]]
+];

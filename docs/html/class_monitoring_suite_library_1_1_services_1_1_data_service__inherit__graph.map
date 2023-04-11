@@ -1,0 +1,4 @@
+<map id="MonitoringSuiteLibrary.Services.DataService" name="MonitoringSuiteLibrary.Services.DataService">
+<area shape="rect" id="node1" title="Concrete implementation of the first responder data service." alt="" coords="5,79,213,119"/>
+<area shape="rect" id="node2" href="$interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html" title="Interface for data first responder data services." alt="" coords="62,5,157,31"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="DistressDetector.Status.DistressStatus" name="DistressDetector.Status.DistressStatus">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,171,45"/>
+<area shape="rect" id="node2" href="$class_distress_detector_1_1_distress_detect.html#a9ba9c4530d275ef0c8d3fd73d8a538d9" title="Use this method to predict on ModelInput." alt="" coords="219,5,389,45"/>
+</map>

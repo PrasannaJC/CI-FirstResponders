@@ -1,0 +1,6 @@
+<map id="DistressDetector.DistressDetect.Predict" name="DistressDetector.DistressDetect.Predict">
+<area shape="rect" id="node1" title="Use this method to predict on ModelInput." alt="" coords="456,37,627,77"/>
+<area shape="rect" id="node2" href="$class_distress_detector_1_1_status.html#a9357b78077c6bcfe1965902653420472" title=" " alt="" coords="243,37,408,77"/>
+<area shape="rect" id="node3" href="$class_distress_detector_1_1_test_cases.html#a1adcea3d2f8475fc7c2dfa3db0a6947c" title=" " alt="" coords="5,5,195,45"/>
+<area shape="rect" id="node4" href="$class_distress_detector_1_1_test_cases.html#a13c983fd383dcf2fe738f8cbca5cdfce" title=" " alt="" coords="5,69,195,109"/>
+</map>

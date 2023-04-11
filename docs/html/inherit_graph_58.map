@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,128,249,168"/>
+<area shape="rect" id="node2" href="$class_dispatchers_monitoring_tool_1_1_views_1_1_first_responder_page.html" title="BlankPage." alt="" coords="297,5,476,45"/>
+<area shape="rect" id="node3" href="$class_dispatchers_monitoring_tool_1_1_views_1_1_main_page.html" title="MainPage." alt="" coords="297,69,476,109"/>
+<area shape="rect" id="node4" href="$class_dispatchers_monitoring_tool_1_1_views_1_1_settings_page.html" title="SettingsPage." alt="" coords="297,133,476,173"/>
+<area shape="rect" id="node5" href="$class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html" title="ShellWindow." alt="" coords="297,197,476,237"/>
+<area shape="rect" id="node6" href="$interface_dispatchers_monitoring_tool_1_1_contracts_1_1_views_1_1_i_shell_window.html" title=" " alt="" coords="28,195,227,235"/>
+<area shape="rect" id="node7" title=" " alt="" coords="26,259,229,299"/>
+<area shape="rect" id="node8" title=" " alt="" coords="22,77,233,102"/>
+</map>
