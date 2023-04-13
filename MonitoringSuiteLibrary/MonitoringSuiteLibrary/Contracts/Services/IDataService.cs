@@ -16,7 +16,7 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         /// <summary>
         /// Gets a <see cref="IEnumerable{FirstResponder}"/> representing the first responders.
         /// </summary>
-        /// <returns>An IEnumerable of all first responders.</returns>
+        /// <returns>An IEnumerable of all active first responders.</returns>
         public Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync();
 
         /// <summary>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MobileVitalsMonitoringTool.ViewModels;
 using MobileVitalsMonitoringTool.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace MobileVitalsMonitoringTool
@@ -17,6 +18,7 @@ namespace MobileVitalsMonitoringTool
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
+            Preferences.Set("isLogin", false);
             await Shell.Current.GoToAsync("//LoginPage");
         }
     }

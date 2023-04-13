@@ -31,7 +31,7 @@ namespace MonitoringSuiteLibrary.Services
         #region Public Methods
 
         /// <summary>
-        /// Asynchronous function that queries the database to retrieve all first responder's information from the workers table along with
+        /// Asynchronous function that queries the database to retrieve all active first responder's information from the workers table along with
         /// their corresponding vitals and location.
         /// </summary>
         /// <returns>
@@ -56,13 +56,15 @@ namespace MonitoringSuiteLibrary.Services
 
                 while (reader.Read())
                 {
-                    int firstResponderId = reader.GetInt32(0);
-                    Vitals? vitals = await GetFirstResponderVitalsAsync(firstResponderId);
-                    Location? location = await GetFirstResponderLocationAsync(firstResponderId);
+                    if (reader.GetBoolean(7)) // only return active first responders
+                    {
+                        int firstResponderId = reader.GetInt32(0);
+                        Vitals? vitals = await GetFirstResponderVitalsAsync(firstResponderId);
+                        Location? location = await GetFirstResponderLocationAsync(firstResponderId);
 
-                    firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
-                        reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), vitals, location));
-
+                        firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
+                            reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), vitals, location));
+                    }
                 }
             }
             return firstResponders;
