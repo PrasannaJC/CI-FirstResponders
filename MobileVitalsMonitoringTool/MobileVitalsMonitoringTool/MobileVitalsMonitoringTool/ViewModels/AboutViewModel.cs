@@ -38,9 +38,11 @@ namespace MobileVitalsMonitoringTool.ViewModels
             {
                 MessagingCenter.Subscribe<LocationMessage>(this, "Location", message => {
                     Device.BeginInvokeOnMainThread(() => {
-                        Location += $"{Environment.NewLine}{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}";
+                        Location = $"{Environment.NewLine}{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}";
 
                         Console.WriteLine($"{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}");
+
+                        UpdateDBLocation((decimal)message.Longitude, (decimal)message.Latitude, 0); //Altitude is always 0
                     });
                 });
 
@@ -74,8 +76,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnSOS()
         {
-            MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
-
             await dataService.SetFirstResponderAlertTrueAsync(Preferences.Get("w_id", -1));
         }
 
@@ -84,9 +84,15 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         public async void OnNavigatedTo()
         {
-            MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
             FirstResponder = await dataService.GetFirstResponderAsync(Preferences.Get("w_id", -1));
         }
 
+        /// <summary>
+        /// Updates the location entry of the first responder.
+        /// </summary>
+        public async void UpdateDBLocation(decimal x, decimal y, decimal z)
+        {
+            await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
+        }
     }
 }

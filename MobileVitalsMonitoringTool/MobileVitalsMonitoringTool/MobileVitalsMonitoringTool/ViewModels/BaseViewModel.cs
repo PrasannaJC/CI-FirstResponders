@@ -17,10 +17,9 @@ namespace MobileVitalsMonitoringTool.ViewModels
     /// </summary>
     public class BaseViewModel : INotifyPropertyChanged
     {
-        /// <summary>
-        /// Gets the DataStore. (Not necessary)
-        /// </summary>
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+
+        public MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService();
 
         bool isBusy = false;
 
