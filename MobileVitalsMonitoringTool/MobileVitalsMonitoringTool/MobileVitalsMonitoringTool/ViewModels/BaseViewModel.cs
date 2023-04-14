@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using MobileVitalsMonitoringTool.Models;
 using MobileVitalsMonitoringTool.Services;
 using MonitoringSuiteLibrary.Models;
+using Xamarin.Essentials;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
@@ -43,22 +44,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
             set { SetProperty(ref title, value); }
         }
 
-        /// <summary>
-        /// Sets a property value.
-        /// </summary>
-        protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName]string propertyName = "",
-            Action onChanged = null)
-        {
-            if (EqualityComparer<T>.Default.Equals(backingStore, value))
-                return false;
-
-            backingStore = value;
-            onChanged?.Invoke();
-            OnPropertyChanged(propertyName);
-            return true;
-        }
-
         FirstResponder firstResponder;
 
         /// <summary>
@@ -68,6 +53,55 @@ namespace MobileVitalsMonitoringTool.ViewModels
         {
             get { return firstResponder; }
             set { SetProperty(ref firstResponder, value); }
+        }
+
+        public int workerId;
+
+        /// <summary>
+        /// Gets or sets the worker ID of a first responder.
+        /// </summary>
+        public int WorkerId
+        {
+            get { return workerId; }
+            set { SetProperty(ref workerId, value); }
+        }
+
+        string location;
+
+        /// <summary>
+        /// Gets or sets the location of a first responder.
+        /// </summary>
+        public string Location
+        {
+            get { return location; }
+            set { SetProperty(ref location, value); }
+        }
+
+        /// <summary>
+        /// Starts the location background service.
+        /// </summary>
+        public void StartService()
+        {
+            var startServiceMessage = new StartServiceMessage();
+            MessagingCenter.Send(startServiceMessage, "ServiceStarted");
+            Preferences.Set("LocationServiceRunning", true);
+            Location = "Location Service has been started!";
+        }
+
+        /// <summary>
+        /// Sets a property value.
+        /// </summary>
+        protected bool SetProperty<T>(ref T backingStore, T value,
+            [CallerMemberName] string propertyName = "",
+            Action onChanged = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(backingStore, value))
+                return false;
+
+            backingStore = value;
+            onChanged?.Invoke();
+            OnPropertyChanged(propertyName);
+            return true;
         }
 
         #region INotifyPropertyChanged

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using MobileVitalsMonitoringTool.Services;
 using MobileVitalsMonitoringTool.ViewModels;
 using MobileVitalsMonitoringTool.Views;
 using Xamarin.Essentials;
@@ -19,7 +20,18 @@ namespace MobileVitalsMonitoringTool
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
             Preferences.Set("isLogin", false);
+            StopService();
             await Shell.Current.GoToAsync("//LoginPage");
+        }
+
+        /// <summary>
+        /// Stops the location background service.
+        /// </summary>
+        private void StopService()
+        {
+            var stopServiceMessage = new StopServiceMessage();
+            MessagingCenter.Send(stopServiceMessage, "ServiceStopped");
+            Preferences.Set("LocationServiceRunning", false);
         }
     }
 }

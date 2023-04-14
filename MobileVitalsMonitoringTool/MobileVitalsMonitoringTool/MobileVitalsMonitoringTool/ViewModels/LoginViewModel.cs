@@ -14,24 +14,9 @@ namespace MobileVitalsMonitoringTool.ViewModels
     /// <summary>
     /// The viewmodel to log into the app.
     /// </summary>
-    public class LoginViewModel : INotifyPropertyChanged
+    public class LoginViewModel : BaseViewModel
     {
         public Action DisplayInvalidLoginPrompt;
-        public event PropertyChangedEventHandler PropertyChanged = delegate { };
-        private int workerId;
-
-        /// <summary>
-        /// Gets or sets the worker ID of a first responder.
-        /// </summary>
-        public int WorkerId
-        {
-            get { return workerId; }
-            set
-            {
-                workerId = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("WorkerId"));
-            }
-        }
 
         /// <summary>
         /// Gets or sets the SubmitCommand.
@@ -66,6 +51,21 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
                 Preferences.Set("isLogin", true);
                 Preferences.Set("w_id", workerId);
+                Preferences.Set("LocationServiceRunning", true);
+
+                var permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.LocationAlways>();
+
+                if (permission == Xamarin.Essentials.PermissionStatus.Denied)
+                {
+                    // TODO Let the user know they need to accept
+                    return;
+                }
+
+                if (Device.RuntimePlatform == Device.Android)
+                {
+                    StartService(); //location service
+                }
+
                 Application.Current.MainPage = new AppShell();
                 await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }

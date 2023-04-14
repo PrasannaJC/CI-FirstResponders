@@ -33,7 +33,35 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
             OnNavigatedTo();
 
-            GetCurrentLocation();
+            // subscribe to messaging center and start location service
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                MessagingCenter.Subscribe<LocationMessage>(this, "Location", message => {
+                    Device.BeginInvokeOnMainThread(() => {
+                        Location += $"{Environment.NewLine}{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}";
+
+                        Console.WriteLine($"{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}");
+                    });
+                });
+
+                MessagingCenter.Subscribe<StopServiceMessage>(this, "ServiceStopped", message => {
+                    Device.BeginInvokeOnMainThread(() => {
+                        Location = "Location Service has been stopped!";
+                    });
+                });
+
+                MessagingCenter.Subscribe<LocationErrorMessage>(this, "LocationError", message => {
+                    Device.BeginInvokeOnMainThread(() => {
+                        Location = "There was an error updating location!";
+                    });
+                });
+
+                if (Preferences.Get("LocationServiceRunning", false) == true && Preferences.Get("isLogin", false) == true)
+                {
+                    StartService();
+                }
+            }
+
         }
 
         /// <summary>
@@ -58,41 +86,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
         {
             MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
             FirstResponder = await dataService.GetFirstResponderAsync(Preferences.Get("w_id", -1));
-        }
-
-        /// <summary>
-        /// Gets the location of the first responder and writes it out to the database. This is a temporary function which will
-        /// eventually be replaced by a background service
-        /// </summary>
-        private async void GetCurrentLocation()
-        {
-            MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
-            try
-            {
-                var location = await Geolocation.GetLastKnownLocationAsync();
-                location = null;
-                if (location == null)
-                {
-                    location = await Geolocation.GetLocationAsync(new GeolocationRequest
-                    {
-                        DesiredAccuracy = GeolocationAccuracy.Medium,
-                        Timeout = TimeSpan.FromSeconds(30)
-                    });
-
-                }
-                if (location != null)
-                {
-                    decimal x = (decimal)location.Longitude;
-                    decimal y = (decimal)location.Latitude;
-                    decimal z = (decimal)location.Altitude;
-
-                    await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Something is wrong: {ex.Message}");
-            }
         }
 
     }
