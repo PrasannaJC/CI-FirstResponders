@@ -92,7 +92,17 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         public async void UpdateDBLocation(decimal x, decimal y, decimal z)
         {
-            await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
+            if (await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1)) == null)
+            {
+                await dataService.CreateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
+            }
+            else
+            {
+                await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
+            }
+
+            //update FirstResponder object with new location entry
+            FirstResponder.Location = await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1));
         }
     }
 }

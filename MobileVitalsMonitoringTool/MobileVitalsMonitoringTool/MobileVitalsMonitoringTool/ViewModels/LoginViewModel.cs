@@ -36,8 +36,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         public async void OnSubmit()
         {
-            MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); // temporary
-
             var exists = await dataService.FirstResponderExistsAsync(workerId);
 
             if (!exists)
@@ -46,12 +44,11 @@ namespace MobileVitalsMonitoringTool.ViewModels
             }
             else
             {
-                // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-                //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
-
                 Preferences.Set("isLogin", true);
                 Preferences.Set("w_id", workerId);
                 Preferences.Set("LocationServiceRunning", true);
+
+                await dataService.SetFirstResponderActiveAsync(workerId);
 
                 var permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.LocationAlways>();
 
@@ -66,6 +63,8 @@ namespace MobileVitalsMonitoringTool.ViewModels
                     StartService(); //location service
                 }
 
+                // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
+                //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
                 Application.Current.MainPage = new AppShell();
                 await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }

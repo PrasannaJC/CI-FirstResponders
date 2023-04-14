@@ -88,6 +88,16 @@ namespace MobileVitalsMonitoringTool.ViewModels
         }
 
         /// <summary>
+        /// Stops the location background service.
+        /// </summary>
+        public void StopService()
+        {
+            var stopServiceMessage = new StopServiceMessage();
+            MessagingCenter.Send(stopServiceMessage, "ServiceStopped");
+            Preferences.Set("LocationServiceRunning", false);
+        }
+
+        /// <summary>
         /// Sets a property value.
         /// </summary>
         protected bool SetProperty<T>(ref T backingStore, T value,

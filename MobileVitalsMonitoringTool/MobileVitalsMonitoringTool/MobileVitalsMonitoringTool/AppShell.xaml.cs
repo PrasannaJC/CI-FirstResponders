@@ -19,20 +19,11 @@ namespace MobileVitalsMonitoringTool
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
-            Preferences.Set("isLogin", false);
-            StopService();
+            var vm = new LogoutViewModel();
             await Shell.Current.GoToAsync("//LoginPage");
         }
 
-        /// <summary>
-        /// Stops the location background service.
-        /// </summary>
-        private void StopService()
-        {
-            var stopServiceMessage = new StopServiceMessage();
-            MessagingCenter.Send(stopServiceMessage, "ServiceStopped");
-            Preferences.Set("LocationServiceRunning", false);
-        }
+
     }
 }
 

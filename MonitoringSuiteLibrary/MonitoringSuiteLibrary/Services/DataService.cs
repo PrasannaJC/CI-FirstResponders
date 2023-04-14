@@ -231,7 +231,7 @@ namespace MonitoringSuiteLibrary.Services
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
-            await DeleteFirstResponderLocationAsync(firstResponderId);
+            //await DeleteFirstResponderLocationAsync(firstResponderId);
             await DeleteFirstResponderVitalsAsync(firstResponderId);
 
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
