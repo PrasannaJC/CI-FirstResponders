@@ -76,6 +76,39 @@ namespace MobileVitalsMonitoringTool.ViewModels
             set { SetProperty(ref location, value); }
         }
 
+        string alertMessage;
+
+        /// <summary>
+        /// Gets or sets the alert message.
+        /// </summary>
+        public string AlertMessage
+        {
+            get { return alertMessage; }
+            set { SetProperty(ref alertMessage, value); }
+        }
+
+        TimeSpan totalSeconds = new TimeSpan(0, 0, 0, 10);
+
+        /// <summary>
+        /// Gets or sets the alert countdown total seconds.
+        /// </summary>
+        public TimeSpan TotalSeconds
+        {
+            get { return totalSeconds; }
+            set { SetProperty(ref totalSeconds, value); }
+        }
+
+        bool sendAlertAllowed = true;
+
+        /// <summary>
+        /// Gets or sets the sendAlertAllowed flag.
+        /// </summary>
+        public bool SendAlertAllowed
+        {
+            get { return sendAlertAllowed; }
+            set { SetProperty(ref sendAlertAllowed, value); }
+        }
+
         /// <summary>
         /// Starts the location background service.
         /// </summary>

@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using MobileVitalsMonitoringTool.Views;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
@@ -76,7 +77,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnSOS()
         {
-            await dataService.SetFirstResponderAlertTrueAsync(Preferences.Get("w_id", -1));
+            await Shell.Current.GoToAsync(nameof(AlertPage));
         }
 
         /// <summary>
