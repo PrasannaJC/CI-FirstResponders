@@ -37,7 +37,7 @@ namespace MonitoringSuiteLibrary.Services
         /// <returns>
         /// A collection of FirstResponder objects
         /// </returns>
-        public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync()
+        public async Task<IEnumerable<FirstResponder>> GetActiveFirstRespondersAsync()
         {
             await Task.CompletedTask;
 
@@ -50,21 +50,18 @@ namespace MonitoringSuiteLibrary.Services
             {
                 connection.Open();
 
-                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers", connection);
+                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers WHERE active = 1", connection);
 
                 MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    if (reader.GetBoolean(7)) // only return active first responders
-                    {
-                        int firstResponderId = reader.GetInt32(0);
-                        Vitals? vitals = await GetFirstResponderVitalsAsync(firstResponderId);
-                        Location? location = await GetFirstResponderLocationAsync(firstResponderId);
+                    int firstResponderId = reader.GetInt32(0);
+                    Vitals? vitals = await GetFirstResponderVitalsAsync(firstResponderId);
+                    Location? location = await GetFirstResponderLocationAsync(firstResponderId);
 
-                        firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
-                            reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), vitals, location));
-                    }
+                    firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
+                        reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), vitals, location));
                 }
             }
             return firstResponders;

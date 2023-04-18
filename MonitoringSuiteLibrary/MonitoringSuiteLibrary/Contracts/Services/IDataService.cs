@@ -14,10 +14,10 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         #region Public Methods
 
         /// <summary>
-        /// Gets a <see cref="IEnumerable{FirstResponder}"/> representing the first responders.
+        /// Gets a <see cref="IEnumerable{FirstResponder}"/> representing the active first responders.
         /// </summary>
         /// <returns>An IEnumerable of all active first responders.</returns>
-        public Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync();
+        public Task<IEnumerable<FirstResponder>> GetActiveFirstRespondersAsync();
 
         /// <summary>
         /// Gets a <see cref="FirstResponder"/>.
