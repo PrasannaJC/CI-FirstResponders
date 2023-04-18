@@ -24,10 +24,6 @@ namespace MonitoringSuiteLibrary.Machine_Learning
             }
             return d;
         }
-        void Main()
-        {
-            //Console.WriteLine("Hello");
-        }
     }
 
 

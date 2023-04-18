@@ -49,8 +49,5 @@ namespace MonitoringSuiteLibrary.Machine_Learning
             Assert.True(k);
 
         }
-        static void Main()
-        {
-        }
     }
 }
