@@ -508,6 +508,7 @@ namespace MonitoringSuiteLibrary.Services
                     connection.Open();
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
                         "update locations set " +
+                        "timestamp = current_timestamp(), " +       // force timestamp to change even if the fields have the same value when updated
                         "xcoord = " + xcoord.ToString() + ", " +
                         "ycoord = " + ycoord.ToString() + ", " +
                         "zcoord = " + zcoord.ToString() + " " +
@@ -550,6 +551,7 @@ namespace MonitoringSuiteLibrary.Services
                     connection.Open();
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
                         "update vitals set " +
+                        "timestamp = current_timestamp(), " +       // force timestamp to change even if the fields have the same value when updated
                         "bloodoxy = " + bloodoxy.ToString() + ", " +
                         "heartrate = " + heartrate.ToString() + ", " +
                         "sysbp = " + sysbp.ToString() + ", " +
