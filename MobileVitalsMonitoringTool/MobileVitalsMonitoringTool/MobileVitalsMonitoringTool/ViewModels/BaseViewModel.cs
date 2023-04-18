@@ -9,6 +9,8 @@ using MobileVitalsMonitoringTool.Models;
 using MobileVitalsMonitoringTool.Services;
 using MonitoringSuiteLibrary.Models;
 using Xamarin.Essentials;
+using MonitoringSuiteLibrary.Services;
+using Microsoft.Extensions.Options;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
@@ -19,7 +21,19 @@ namespace MobileVitalsMonitoringTool.ViewModels
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
-        public MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService();
+        public DataService dataService;
+        private DataServiceConfiguration dataServiceConfiguration;
+
+        /// <summary>
+        /// BaseViewModel constructor that sets configuration for dataService
+        /// </summary>
+        public BaseViewModel()
+        {
+            dataServiceConfiguration = new DataServiceConfiguration();
+            dataServiceConfiguration.ConnectionString = "PUT CONNECTION STRING HERE";
+
+            dataService = new DataService(Options.Create<DataServiceConfiguration>(dataServiceConfiguration));
+        }
 
         bool isBusy = false;
 

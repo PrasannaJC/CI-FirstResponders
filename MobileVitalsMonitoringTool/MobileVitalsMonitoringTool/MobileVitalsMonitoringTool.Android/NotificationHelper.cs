@@ -27,7 +27,7 @@ namespace MobileVitalsMonitoringTool.Droid
             var notificationBuilder = new NotificationCompat.Builder(context, foregroundChannelId)
                 .SetContentTitle("First Responder Safety")
                 .SetContentText("Your location is being tracked")
-                //.SetSmallIcon(Resource.Drawable.location)
+                .SetSmallIcon(Resource.Drawable.location)
                 .SetOngoing(true)
                 .SetContentIntent(pendingIntent);
 

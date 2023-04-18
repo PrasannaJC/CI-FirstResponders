@@ -170,7 +170,7 @@ namespace MonitoringSuiteLibrary.Services
 
                 if (reader.Read())
                 {
-                    vitals = new Vitals(reader.GetDateTime(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetInt32(7));
+                    vitals = new Vitals(reader.GetDateTime(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetFloat(7));
 
                     return vitals;
                 }
@@ -228,9 +228,6 @@ namespace MonitoringSuiteLibrary.Services
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
-            //await DeleteFirstResponderLocationAsync(firstResponderId);
-            await DeleteFirstResponderVitalsAsync(firstResponderId);
-
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
                 try
@@ -261,9 +258,6 @@ namespace MonitoringSuiteLibrary.Services
 
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
-
-            //await CreateFirstResponderLocationAsync(firstResponderId);
-            //await CreateFirstResponderVitalsAsync(firstResponderId);
 
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
@@ -458,7 +452,7 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="resprate"></param>
         /// <param name="tempf"></param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)
+        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
         {
             await Task.CompletedTask;
 
@@ -542,7 +536,7 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="resprate"></param>
         /// <param name="tempf"></param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)
+        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
         {
             await Task.CompletedTask;
 
