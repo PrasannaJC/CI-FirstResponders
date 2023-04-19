@@ -12,9 +12,10 @@ namespace MonitoringSuiteLibrary.MachineLearning
         /// <summary>
         /// Check the distress status of a First Responder object using it's age, gender, and vitals data.
         /// </summary>
-        /// <param ModelInput.Age="age">The first responders age id.</param>
-        /// <param ModelInput.Gender="sex">The first responders gender.</param>
-        /// <param Vitals="v">The first responders Vitals data.</param>
+        /// <param name="age">The first responders age id.</param>
+        /// <param name="sex">The first responders gender.</param>
+        /// <param name="v">The first responders Vitals data.</param>
+        /// <returns>Returns a boolean representing the distress status of a first responder.</returns>
 
 
         public static bool GetDistressStatus(int age, 
@@ -45,7 +46,7 @@ namespace MonitoringSuiteLibrary.MachineLearning
             {
                 distress = false;
             }
-            /// @return [out] distress The distress status of a first responder.
+
             return distress;
         }
     }
