@@ -15,7 +15,8 @@
     <PackageReference Include="MahApps.Metro" Version="2.4.9" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
-    <PackageReference Include="MonitoringSuiteLibrary" Version="1.0.1" />
+    <PackageReference Include="MonitoringSuiteLibrary" Version="1.0.3" />
+    <PackageReference Include="Syncfusion.SfGrid.WPF" Version="21.1.39" />
     <PackageReference Include="Syncfusion.SfMaps.WPF" Version="21.1.38">
       <Aliases>global</Aliases>
     </PackageReference>

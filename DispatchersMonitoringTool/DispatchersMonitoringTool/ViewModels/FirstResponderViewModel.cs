@@ -15,6 +15,7 @@ using MonitoringSuiteLibrary.Contracts.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using DispatchersMonitoringTool.Contracts.ViewModels;
 using Syncfusion.UI.Xaml.Maps;
+using Windows.ApplicationModel.Background;
 
 namespace DispatchersMonitoringTool.ViewModels
 {
@@ -26,8 +27,10 @@ namespace DispatchersMonitoringTool.ViewModels
         #region Private Fields
 
         private readonly IDataService _dataService;
-        private FirstResponder selectedFirstResponder;
-        private string centerPoint;
+        private FirstResponder _selectedFirstResponder;
+        private string _centerPoint;
+        private PeriodicTimer _timer;
+        private double _updateInterval = 10;
 
         // This magic number is the coordinates for baxter arena.
         private static string _baxterArenaLocation = "41.23617672942098, -96.01298567694602";
@@ -37,7 +40,7 @@ namespace DispatchersMonitoringTool.ViewModels
         #region Public Properties
 
         /// <summary>
-        /// Stores the given <see cref="ObservableCollection{FirstResponder}"/>.
+        /// Gets or sets the given <see cref="ObservableCollection{FirstResponder}"/>.
         /// </summary>
         public ObservableCollection<FirstResponder> FirstResponders { get; private set; } = new ObservableCollection<FirstResponder>();
 
@@ -53,17 +56,17 @@ namespace DispatchersMonitoringTool.ViewModels
         {
             get
             {
-                return selectedFirstResponder;
+                return _selectedFirstResponder;
             }
             set
             {
-                selectedFirstResponder = value;
+                _selectedFirstResponder = value;
 
-                if (selectedFirstResponder != null)
+                if (_selectedFirstResponder != null)
                 {
-                    if (selectedFirstResponder.Location != null)
+                    if (_selectedFirstResponder.Location != null)
                     {
-                        CenterPoint = selectedFirstResponder.Location.Value.YCoord + ", " + selectedFirstResponder.Location.Value.XCoord;
+                        CenterPoint = _selectedFirstResponder.Location.Value.YCoord + ", " + _selectedFirstResponder.Location.Value.XCoord;
                     }
                 }
             }
@@ -74,8 +77,8 @@ namespace DispatchersMonitoringTool.ViewModels
         /// </summary>
         public string CenterPoint 
         {
-            get => centerPoint;
-            set => SetProperty(ref centerPoint, value);
+            get => _centerPoint;
+            set => SetProperty(ref _centerPoint, value);
         } 
 
         #endregion
@@ -99,35 +102,42 @@ namespace DispatchersMonitoringTool.ViewModels
         #region Public Methods
 
         /// <summary>
-        /// Occurs when the viemodel is navigated to.
+        /// Occurs when the viewmodel is navigated to.
         /// </summary>
         /// <param name="navigationContext">The <see cref="NavigationContext"/>.</param>
         public async void OnNavigatedTo(object parameter)
         {
-            FirstResponders.Clear();
-            MapMarkers.Clear();
+            // Initialize first responder lists.
+            UpdateFirstResponders(await _dataService.GetActiveFirstRespondersAsync());
 
-            // Replace this with your actual data
-            var data = await _dataService.GetFirstRespondersAsync();
+            _timer = new PeriodicTimer(TimeSpan.FromSeconds(_updateInterval));
 
-            foreach (var item in data)
-            {
-                FirstResponders.Add(item);
-
-                if (item.Location != null)
-                {
-                    MapMarkers.Add(new MapMarker(BuildFirstResponderVitalsString(item), longitude: item.Location.Value.XCoord, latitude: item.Location.Value.YCoord)) ;
-                }
-            }
+            MaintainUpdatedFirstResponderData(_timer);
         }
 
+        /// <summary>
+        /// Occurs when the viewmodel is navigated from.
+        /// </summary>
         public void OnNavigatedFrom()
         {
+            _timer.Dispose();
         }
 
         #endregion
 
         #region Private Methods
+
+        /// <summary>
+        /// Maintains updated first responder data on a timer.
+        /// </summary>
+        /// <param name="timer">The timer the updates are based on.</param>
+        private async void MaintainUpdatedFirstResponderData(PeriodicTimer timer)
+        {
+            while(await timer.WaitForNextTickAsync())
+            {
+                UpdateFirstResponders(await _dataService.GetActiveFirstRespondersAsync());
+            }
+        }
 
         /// <summary>
         /// Builds the string that represents a <see cref="FirstResponder"/>s vitals.
@@ -153,6 +163,31 @@ namespace DispatchersMonitoringTool.ViewModels
             {
                 return result + "\n"
                     + "No Vitals Available";
+            }
+        }
+
+        /// <summary>
+        /// Updates the list of first responders, and properties that are dependent on this list.
+        /// </summary>
+        /// <param name="firstResponders">An enumerable of first responders.</param>
+        private void UpdateFirstResponders(IEnumerable<FirstResponder> firstResponders)
+        {
+            if (firstResponders == null)
+            {
+                return;
+            }
+
+            FirstResponders.Clear();
+            MapMarkers.Clear();
+
+            foreach (var firstResponder in firstResponders)
+            {
+                FirstResponders.Add(firstResponder);
+
+                if (firstResponder.Location != null)
+                {
+                    MapMarkers.Add(new MapMarker(BuildFirstResponderVitalsString(firstResponder), longitude: firstResponder.Location.Value.XCoord, latitude: firstResponder.Location.Value.YCoord));
+                }
             }
         }
 
