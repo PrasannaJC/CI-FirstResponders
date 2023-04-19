@@ -32,17 +32,19 @@
                 <StackPanel Grid.Row="0">
                     <GroupBox Header="Color Key"
                               Margin="{StaticResource SmallLeftBottomMargin}">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                      VerticalScrollBarVisibility="Disabled">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Red -> Distress Call"
-                                       Foreground="Red"
-                                       Margin="{StaticResource SmallLeftRightMargin}"/>
+                                       Foreground="Red"/>
                             <TextBlock Text="Orange -> Lost Communication"
                                        Foreground="Orange"
-                                       Margin="{StaticResource SmallLeftRightMargin}"/>
+                                       Margin="{StaticResource SmallLeftMargin}"/>
                             <TextBlock Text="Green -> No reported issues"
                                        Foreground="Green"
-                                       Margin="{StaticResource SmallLeftRightMargin}"/>
+                                       Margin="{StaticResource SmallLeftMargin}"/>
                         </StackPanel>
+                        </ScrollViewer>
                     </GroupBox>
                     <TextBlock Style="{StaticResource PageTitleStyle}"
                                Margin="{StaticResource MediumLeftMargin}"
