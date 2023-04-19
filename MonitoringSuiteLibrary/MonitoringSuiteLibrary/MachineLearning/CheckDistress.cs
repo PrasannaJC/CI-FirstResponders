@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static MonitoringSuiteLibrary.MachineLearning.checkDistress;
 using static MonitoringSuiteLibrary.Distress;
 using MonitoringSuiteLibrary.Models;
 
 namespace MonitoringSuiteLibrary.MachineLearning
 {
-    public class checkDistress
+    public class CheckDistress
     {
 
         /// <summary>
@@ -18,7 +17,7 @@ namespace MonitoringSuiteLibrary.MachineLearning
         /// <param Vitals="v">The first responders Vitals data.</param>
 
 
-        public static bool getDistressStatus(int age, 
+        public static bool GetDistressStatus(int age, 
             char sex,
             Vitals v
             )
