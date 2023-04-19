@@ -8,7 +8,7 @@ namespace DataGenerator
         /// <summary>
         /// Check the distress status of a First Responder object using it's age, gender, and vitals data.
         /// </summary>
-        /// <param name="f">The first responder for whom we're generating vitals data.</param>
+        /// <param name="v">The first responder for whom we're generating vitals data.</param>
         /// <returns>The changed vitals data of the first responder.</returns>
         public Vitals Data(Vitals v)
         {
