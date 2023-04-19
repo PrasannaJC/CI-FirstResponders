@@ -30,6 +30,20 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0">
+                    <GroupBox Header="Color Key"
+                              Margin="{StaticResource SmallLeftBottomMargin}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Red -> Distress Call"
+                                       Foreground="Red"
+                                       Margin="{StaticResource SmallLeftRightMargin}"/>
+                            <TextBlock Text="Orange -> Lost Communication"
+                                       Foreground="Orange"
+                                       Margin="{StaticResource SmallLeftRightMargin}"/>
+                            <TextBlock Text="Green -> No reported issues"
+                                       Foreground="Green"
+                                       Margin="{StaticResource SmallLeftRightMargin}"/>
+                        </StackPanel>
+                    </GroupBox>
                     <TextBlock Style="{StaticResource PageTitleStyle}"
                                Margin="{StaticResource MediumLeftMargin}"
                                Text="Active First Responders" />
