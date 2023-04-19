@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <UserSecretsId>frsapp</UserSecretsId>
     <Nullable>enable</Nullable>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Monitoring Suite Library </Title>
     <UserSecretsId>c5f5c87c-9e39-4fc2-9d70-435f41de4d54</UserSecretsId>
