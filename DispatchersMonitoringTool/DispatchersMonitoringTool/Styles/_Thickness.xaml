@@ -18,6 +18,7 @@
     <Thickness x:Key="SmallRightMargin">0, 0, 12, 0</Thickness>
     <Thickness x:Key="SmallTopBottomMargin">0, 12, 0, 12</Thickness>
     <Thickness x:Key="SmallLeftTopRightBottomMargin">12, 12, 12, 12</Thickness>
+    <Thickness x:Key="SmallLeftBottomMargin">12, 0, 0, 12</Thickness>
 
     <!--Extra Small size margins-->
     <Thickness x:Key="XSmallLeftMargin">8, 0, 0, 0</Thickness>

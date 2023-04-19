@@ -78,9 +78,6 @@ public partial class App : Application
         services.AddTransient<IShellWindow, ShellWindow>();
         services.AddTransient<ShellViewModel>();
 
-        services.AddTransient<MainViewModel>();
-        services.AddTransient<MainPage>();
-
         services.AddTransient<FirstResponderViewModel>();
         services.AddTransient<FirstResponderPage>();
 
