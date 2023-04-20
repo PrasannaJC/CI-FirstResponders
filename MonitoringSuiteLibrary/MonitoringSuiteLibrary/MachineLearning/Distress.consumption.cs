@@ -96,7 +96,7 @@ namespace MonitoringSuiteLibrary
         #endregion
 
         //private static string MLNetModelPath = Path.GetFullPath("D:\\GitHubDesktopRepos\\CI-FirstResponders\\MonitoringSuiteLibrary\\MonitoringSuiteLibrary\\MachineLearning\\Distress.zip");
-        private static string MLNetModelPath = Path.GetFullPath("Distress.zip");
+        private static string MLNetModelPath = Path.GetFullPath("MachineLearning\\Distress.zip");
 
         public static readonly Lazy<PredictionEngine<ModelInput, ModelOutput>> PredictEngine = new Lazy<PredictionEngine<ModelInput, ModelOutput>>(() => CreatePredictEngine(), true);
 

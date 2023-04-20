@@ -3,11 +3,18 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <UserSecretsId>frsapp</UserSecretsId>
     <Nullable>enable</Nullable>
-    <Version>1.0.7</Version>
+    <Version>1.0.9</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Monitoring Suite Library </Title>
     <UserSecretsId>c5f5c87c-9e39-4fc2-9d70-435f41de4d54</UserSecretsId>
   </PropertyGroup>
+	<ItemGroup>
+		<Content Include="MachineLearning\Distress.zip">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<pack>true</pack>
+		</Content>
+	</ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
