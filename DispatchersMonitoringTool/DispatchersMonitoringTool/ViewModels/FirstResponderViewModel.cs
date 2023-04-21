@@ -151,7 +151,7 @@ namespace DispatchersMonitoringTool.ViewModels
             if (firstResponder.Vitals != null)
             {
                 return result + '\n'
-                    + "Time: " + firstResponder.Vitals.Value.Timestamp + "\n"
+                    + "Time (UTC): " + firstResponder.Vitals.Value.Timestamp + "\n"
                     + "DiaBP: " + firstResponder.Vitals.Value.DiaBP + '\n'
                     + "SysBP: " + firstResponder.Vitals.Value.SysBP + "\n"
                     + "HR: " + firstResponder.Vitals.Value.HeartRate + "\n"

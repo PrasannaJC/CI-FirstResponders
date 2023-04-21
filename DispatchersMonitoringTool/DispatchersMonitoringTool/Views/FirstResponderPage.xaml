@@ -63,7 +63,7 @@
                         <syncfusion:SfDataGrid.Columns>
                             <syncfusion:GridTextColumn MappingName="FName" HeaderText="First Name"/>
                             <syncfusion:GridTextColumn MappingName="LName" HeaderText="Last Name"/>
-                            <syncfusion:GridTextColumn MappingName="Vitals.Timestamp" HeaderText="Time"/>
+                            <syncfusion:GridTextColumn MappingName="Vitals.Timestamp" HeaderText="Time (UTC)"/>
                             <syncfusion:GridNumericColumn MappingName="Vitals.BloodOxy" HeaderText="Blood Oxygen"/>
                             <syncfusion:GridNumericColumn MappingName="Vitals.HeartRate" HeaderText="Heart Rate"/>
                             <syncfusion:GridNumericColumn MappingName="Vitals.SysBP" HeaderText="SysBP"/>
