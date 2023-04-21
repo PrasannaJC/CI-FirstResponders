@@ -130,8 +130,8 @@ namespace MobileVitalsMonitoringTool.ViewModels
         {
             var startServiceMessage = new StartServiceMessage();
             MessagingCenter.Send(startServiceMessage, "ServiceStarted");
-            Preferences.Set("LocationServiceRunning", true);
-            Location = "Location Service has been started!";
+            Preferences.Set("LocationVitalsServiceRunning", true);
+            Location = "Location and Vitals Service has been started!";
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         {
             var stopServiceMessage = new StopServiceMessage();
             MessagingCenter.Send(stopServiceMessage, "ServiceStopped");
-            Preferences.Set("LocationServiceRunning", false);
+            Preferences.Set("LocationVitalsServiceRunning", false);
         }
 
         /// <summary>

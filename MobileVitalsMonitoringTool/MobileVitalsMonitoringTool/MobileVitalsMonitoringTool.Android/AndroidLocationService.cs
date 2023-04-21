@@ -30,7 +30,7 @@ namespace MobileVitalsMonitoringTool.Droid
 			Task.Run(() => {
 				try
 				{
-					var locShared = new GetLocationService();
+					var locShared = new GetLocationVitalsService();
 					locShared.Run(_cts.Token).Wait();
 				}
 				catch (Android.OS.OperationCanceledException)

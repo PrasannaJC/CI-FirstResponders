@@ -46,7 +46,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
             {
                 Preferences.Set("isLogin", true);
                 Preferences.Set("w_id", workerId);
-                Preferences.Set("LocationServiceRunning", true);
+                Preferences.Set("LocationVitalsServiceRunning", true);
 
                 await dataService.SetFirstResponderActiveAsync(workerId);
 

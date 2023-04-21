@@ -1,22 +1,24 @@
 ﻿using System;
+using MonitoringSuiteLibrary.Models;
+
 namespace MobileVitalsMonitoringTool.Services
 {
     /// <summary>
-    /// Starts the messaging center.
+    /// A class to contain a message when the messaging center is started.
     /// </summary>
     public class StartServiceMessage
     {
     }
 
     /// <summary>
-    /// Stops the messaging center
+    /// A class to contain a message when the messaging center is stopped.
     /// </summary>
     public class StopServiceMessage
     {
     }
 
     /// <summary>
-    /// Represents the Location messages in the messaging center
+    /// A class to contain the location message.
     /// </summary>
     public class LocationMessage
     {
@@ -32,9 +34,20 @@ namespace MobileVitalsMonitoringTool.Services
     }
 
     /// <summary>
-    /// Represents any error messages in the messaging center
+    /// A class to contain the vitals message.
     /// </summary>
-    public class LocationErrorMessage
+    public class VitalsMessage
+    {
+        /// <summary>
+        /// Gets or sets the Vitals object in <see cref="VitalsMessage"/>
+        /// </summary>
+        public Vitals Vitals { get; set; }
+    }
+
+    /// <summary>
+    /// A class to contain an error message.
+    /// </summary>
+    public class ErrorMessage
     {
     }
 }

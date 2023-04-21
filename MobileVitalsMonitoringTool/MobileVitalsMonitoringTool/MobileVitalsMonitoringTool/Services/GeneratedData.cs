@@ -2,7 +2,7 @@
 using MonitoringSuiteLibrary.Models;
 using System;
 
-namespace DataGenerator
+namespace MobileVitalsMonitoringTool.Services
 {
     /// <summary>
     /// A  class to generate vitals data to simulate sensors inputting real first responder vitals.

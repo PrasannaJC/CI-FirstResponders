@@ -13,15 +13,16 @@ using System.Threading;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using MobileVitalsMonitoringTool.Views;
+using MonitoringSuiteLibrary.MachineLearning;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
     /// <summary>
-    /// The viewmodel that represents that main page of app. Only logged in users can access it.
+    /// A class that represents the AboutViewModel. This is the main page of the application
+    /// and only logged in users can see it.
     /// </summary>
     public class AboutViewModel : BaseViewModel
     {
-        //private readonly DataService _dataService;
 
         /// <summary>
         /// Creates a <see cref="AboutViewModel"/>.
@@ -32,11 +33,13 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
             SOSCommand = new Command(OnSOS);
 
+            // get FirstResponder info
             OnNavigatedTo();
 
-            // subscribe to messaging center and start location service
+            // subscribe to messaging center and start location and vitals service (only set for Android)
             if (Device.RuntimePlatform == Device.Android)
             {
+                // get location message from GetLocationVitalsService
                 MessagingCenter.Subscribe<LocationMessage>(this, "Location", message => {
                     Device.BeginInvokeOnMainThread(() => {
                         Location = $"{Environment.NewLine}{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}";
@@ -47,19 +50,34 @@ namespace MobileVitalsMonitoringTool.ViewModels
                     });
                 });
 
+                // get Vitals message GetLocationVitalsService
+                MessagingCenter.Subscribe<VitalsMessage>(this, "Vitals", message => {
+                    Device.BeginInvokeOnMainThread(() => {
+
+                        UpdateDBVitals(message.Vitals);
+
+                        if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                        {
+                            OnSOS();
+                        }
+                    });
+                });
+
+                // get message when service has been stopped
                 MessagingCenter.Subscribe<StopServiceMessage>(this, "ServiceStopped", message => {
                     Device.BeginInvokeOnMainThread(() => {
                         Location = "Location Service has been stopped!";
                     });
                 });
 
-                MessagingCenter.Subscribe<LocationErrorMessage>(this, "LocationError", message => {
+                // get message when there is an error getting the location or vitals
+                MessagingCenter.Subscribe<ErrorMessage>(this, "LocationVitalsError", message => {
                     Device.BeginInvokeOnMainThread(() => {
-                        Location = "There was an error updating location!";
+                        Location = "There was an error updating location and/or vitals!";
                     });
                 });
 
-                if (Preferences.Get("LocationServiceRunning", false) == true && Preferences.Get("isLogin", false) == true)
+                if (Preferences.Get("LocationVitalsServiceRunning", false) == true && Preferences.Get("isLogin", false) == true)
                 {
                     StartService();
                 }
@@ -68,12 +86,12 @@ namespace MobileVitalsMonitoringTool.ViewModels
         }
 
         /// <summary>
-        /// Gets the SOSCommand to selt the alert status to true of a first responder.
+        /// Gets the SOSCommand.
         /// </summary>
         public Command SOSCommand { get; }
 
         /// <summary>
-        /// Sets the alert status of a first responder to true in the database.
+        /// Navigates user to AlertPage.
         /// </summary>
         private async void OnSOS()
         {
@@ -89,7 +107,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         }
 
         /// <summary>
-        /// Updates the location entry of the first responder.
+        /// Updates the location entry of the first responder in the database.
         /// </summary>
         public async void UpdateDBLocation(decimal x, decimal y, decimal z)
         {
@@ -104,6 +122,24 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
             //update FirstResponder object with new location entry
             FirstResponder.Location = await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1));
+        }
+
+        /// <summary>
+        /// Updates the vitals entry of the first responder in the database.
+        /// </summary>
+        public async void UpdateDBVitals(Vitals vitals)
+        {
+            if (await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1)) == null)
+            {
+                await dataService.CreateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals.BloodOxy, vitals.HeartRate, vitals.SysBP, vitals.DiaBP, vitals.RespRate, vitals.TempF);
+            }
+            else
+            {
+                await dataService.UpdateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals.BloodOxy, vitals.HeartRate, vitals.SysBP, vitals.DiaBP, vitals.RespRate, vitals.TempF);
+            }
+
+            //update FirstResponder object with new vitals entry
+            FirstResponder.Vitals = await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1));
         }
     }
 }
