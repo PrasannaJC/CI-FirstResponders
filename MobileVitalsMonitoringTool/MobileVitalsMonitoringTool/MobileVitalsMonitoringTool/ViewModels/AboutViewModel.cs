@@ -56,10 +56,10 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
                         UpdateDBVitals(message.Vitals);
 
-                        if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
-                        {
-                            OnSOS();
-                        }
+                        //if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                        //{
+                        //    OnSOS();
+                        //}
                     });
                 });
 
