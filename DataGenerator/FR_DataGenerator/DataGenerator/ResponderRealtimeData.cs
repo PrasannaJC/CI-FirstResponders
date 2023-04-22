@@ -9,12 +9,13 @@ namespace DataGenerator;
  */
 public class ResponderRealtimeData
 {
-
-    // Throughout this project, First Responders will be refer to as FR. 
+    /// <summary>
+    /// This is the original implementation of the DataGenerator when the first responder structure wasn't fully planned out.
+    /// Throughout this project, First Responders may be refer to in a few places as FR. 
+    /// </summary>
     public struct FR
     {
-        //    public int Active; // This is used to check whether a FR has entered a disaster site(1), has been removed(2), or is yet to enter the field(0).
-        //    public int ID; // A unique six digit ID to identify a FR.
+
         public char Gender; // A FR's Gender - either 'M' or 'F'
         public int Age; // Age of FR
         public int BloodOxy; // Blood Oxygen levels
@@ -23,6 +24,17 @@ public class ResponderRealtimeData
         public int DiaBP; // Diastolic Blood Pressure
         public int RespRate; // Respiratory rate per minute
         public double TempF; // Temperature in Degrees Fahrenheit
+
+        /// <param name="Gender">The first responders gender.</param>
+        /// <param name="Age">The first responders age.</param>
+        /// <param name="BloodOxy">The blood oxygen level.</param>
+        /// <param name="HeartRate">The heart rate level.</param>
+        /// <param name="SysBP">The Systolic blood pressure level.</param>
+        /// <param name="DiaBP">The diastolic blood pressure level.</param>
+        /// <param name="RespRate">The respiratory rate.</param>
+        /// <param name="TempF">The body temperature in fahrenheit.</param>
+
+
 
         //  private int[] Distress;
 
@@ -128,7 +140,9 @@ public class ResponderRealtimeData
             return fr;
         }
     }
-
+    /// <summary>
+    /// Demonstration of the functionality of the Generate() method shown above - precursor to test cases.
+    /// </summary>
     static void Main() 
     {
         FR fR = new FR();

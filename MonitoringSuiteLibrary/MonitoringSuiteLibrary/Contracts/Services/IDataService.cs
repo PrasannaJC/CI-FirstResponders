@@ -14,10 +14,10 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         #region Public Methods
 
         /// <summary>
-        /// Gets a <see cref="IEnumerable{FirstResponder}"/> representing the first responders.
+        /// Gets a <see cref="IEnumerable{FirstResponder}"/> representing the active first responders.
         /// </summary>
-        /// <returns>An IEnumerable of all first responders.</returns>
-        public Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync();
+        /// <returns>An IEnumerable of all active first responders.</returns>
+        public Task<IEnumerable<FirstResponder>> GetActiveFirstRespondersAsync();
 
         /// <summary>
         /// Gets a <see cref="FirstResponder"/>.
@@ -110,7 +110,7 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         /// <param name="resprate"></param>
         /// <param name="tempf"></param>
         /// <returns>Whether or not the update was successful.</returns>
-        public Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf);
+        public Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf);
 
         /// <summary>
         /// Updates first responder location.
@@ -133,7 +133,7 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         /// <param name="resprate">The respiratory rate.</param>
         /// <param name="tempf">The body temperature in fahrenheit.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf);
+        public Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf);
 
         /// <summary>
         /// Checks if first responder exists in the database based on worker ID.

@@ -26,3 +26,7 @@ The mobile application monitoring tool will be responsible for reporting its loc
 * Added very basic log-in feature that uses worker ID
 * Created temporary GetLocation() function to test Xamarin.Essentials geolocation tool. This will eventually be replaced by a background service.
 * Created SOS button that updates database to set the alert field to true.
+* Log-in and log-out now update the active and inactive status of a first responder in the database.
+* Background service implemented to take location and vitals every couple of seconds.
+* Data generator integrated into in the mobile app to produce mocked vitals.
+* Alert page implemented. Includes countdown timer to automatically send alert, cancel button to cancel the alert, and a send button to immediately send the alert.

@@ -100,6 +100,34 @@ namespace MonitoringSuiteLibrary.Models
         /// </summary>
         public Location? Location { get; set; }
 
+        /// <summary>
+        /// Gets or sets whether or not the first responders vitals and location data is current.
+        /// </summary>
+        public bool IsVitalsAndLocationCurrent
+        {
+            get
+            {
+                if (Vitals == null || Location == null)
+                {
+                    return false;
+                }
+
+                TimeSpan decayTime = TimeSpan.FromMinutes(1);
+
+                if (Vitals.Value.Timestamp.Date != DateTime.Today || Vitals.Value.Timestamp < DateTime.UtcNow - decayTime)
+                {
+                    return false;
+                }
+
+                if (Location.Value.Timestamp.Date != DateTime.Today || Location.Value.Timestamp < DateTime.UtcNow - decayTime)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+
         #endregion
     }
 }

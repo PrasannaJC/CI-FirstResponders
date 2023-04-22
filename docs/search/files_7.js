@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['iactivationhandler_2ecs_0',['IActivationHandler.cs',['../_i_activation_handler_8cs.html',1,'']]],
+  ['iapplicationinfoservice_2ecs_1',['IApplicationInfoService.cs',['../_i_application_info_service_8cs.html',1,'']]],
+  ['idataservice_2ecs_2',['IDataService.cs',['../_i_data_service_8cs.html',1,'']]],
+  ['idatastore_2ecs_3',['IDataStore.cs',['../_i_data_store_8cs.html',1,'']]],
+  ['ifileservice_2ecs_4',['IFileService.cs',['../_i_file_service_8cs.html',1,'']]],
+  ['inavigationaware_2ecs_5',['INavigationAware.cs',['../_i_navigation_aware_8cs.html',1,'']]],
+  ['inavigationservice_2ecs_6',['INavigationService.cs',['../_i_navigation_service_8cs.html',1,'']]],
+  ['ipageservice_2ecs_7',['IPageService.cs',['../_i_page_service_8cs.html',1,'']]],
+  ['ipersistandrestoreservice_2ecs_8',['IPersistAndRestoreService.cs',['../_i_persist_and_restore_service_8cs.html',1,'']]],
+  ['ishellwindow_2ecs_9',['IShellWindow.cs',['../_i_shell_window_8cs.html',1,'']]],
+  ['isystemservice_2ecs_10',['ISystemService.cs',['../_i_system_service_8cs.html',1,'']]],
+  ['item_2ecs_11',['Item.cs',['../_item_8cs.html',1,'']]],
+  ['itemdetailpage_2examl_2ecs_12',['ItemDetailPage.xaml.cs',['../_item_detail_page_8xaml_8cs.html',1,'']]],
+  ['itemdetailpage_2examl_2eg_2ecs_13',['ItemDetailPage.xaml.g.cs',['../_item_detail_page_8xaml_8g_8cs.html',1,'']]],
+  ['itemdetailviewmodel_2ecs_14',['ItemDetailViewModel.cs',['../_item_detail_view_model_8cs.html',1,'']]],
+  ['itemspage_2examl_2ecs_15',['ItemsPage.xaml.cs',['../_items_page_8xaml_8cs.html',1,'']]],
+  ['itemspage_2examl_2eg_2ecs_16',['ItemsPage.xaml.g.cs',['../_items_page_8xaml_8g_8cs.html',1,'']]],
+  ['itemsviewmodel_2ecs_17',['ItemsViewModel.cs',['../_items_view_model_8cs.html',1,'']]],
+  ['ithemeselectorservice_2ecs_18',['IThemeSelectorService.cs',['../_i_theme_selector_service_8cs.html',1,'']]]
+];

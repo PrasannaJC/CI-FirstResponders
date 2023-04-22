@@ -7,42 +7,74 @@
     xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
     x:Class="DispatchersMonitoringTool.Views.FirstResponderPage"
     Style="{DynamicResource MahApps.Styles.Page}"
+    xmlns:converters="clr-namespace:DispatchersMonitoringTool.Converters"
     mc:Ignorable="d"
     d:DesignHeight="450" d:DesignWidth="800">
+
+    <Page.Resources>
+        <converters:RowStyleConverter x:Key="rowstyleconverter"/>
+        <Style x:Key="RowStyleColor" TargetType="syncfusion:VirtualizingCellsControl">
+            <Setter Property="Background" Value="{Binding Converter={StaticResource rowstyleconverter}}"/>
+        </Style>
+    </Page.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock
-            Style="{StaticResource PageTitleStyle}"
-            Margin="{StaticResource MediumLeftMargin}"
-            Text="First Responders" />
-
         <Grid Grid.Column="0"
               Margin="{StaticResource SmallLeftTopRightBottomMargin}">
-            <DataGrid
-                AutoGenerateColumns="False"
-                GridLinesVisibility="Horizontal"
-                CanUserAddRows="False"
-                IsReadOnly="True"
-                ItemsSource="{Binding FirstResponders}"
-                SelectedItem="{Binding SelectedFirstResponder}"
-                Margin="{StaticResource SmallLeftRightMargin}"
-                KeyboardNavigation.TabNavigation="Once">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding FName}" Header="First Name" />
-                    <DataGridTextColumn Binding="{Binding LName}" Header="Last Name" />
-                    <DataGridTextColumn Binding="{Binding Vitals.Timestamp}" Header="Time" />
-                    <DataGridTextColumn Binding="{Binding Vitals.BloodOxy}" Header="Blood Oxygen" />
-                    <DataGridTextColumn Binding="{Binding Vitals.HeartRate}" Header="Heart Rate" />
-                    <DataGridTextColumn Binding="{Binding Vitals.SysBP}" Header="SysBP" />
-                    <DataGridTextColumn Binding="{Binding Vitals.DiaBP}" Header="DiaBP" />
-                    <DataGridTextColumn Binding="{Binding Vitals.RespRate}" Header="Resp Rate" />
-                    <DataGridTextColumn Binding="{Binding Vitals.TempF}" Header="Temp F" />
-                </DataGrid.Columns>
-            </DataGrid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <GroupBox Header="Color Key"
+                              Margin="{StaticResource SmallLeftBottomMargin}">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                      VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Red -> Distress Call"
+                                       Foreground="Red"/>
+                            <TextBlock Text="Orange -> Lost Communication"
+                                       Foreground="Orange"
+                                       Margin="{StaticResource SmallLeftMargin}"/>
+                            <TextBlock Text="Green -> No reported issues"
+                                       Foreground="Green"
+                                       Margin="{StaticResource SmallLeftMargin}"/>
+                        </StackPanel>
+                        </ScrollViewer>
+                    </GroupBox>
+                    <TextBlock Style="{StaticResource PageTitleStyle}"
+                               Margin="{StaticResource MediumLeftMargin}"
+                               Text="Active First Responders" />
+                    <syncfusion:SfDataGrid AutoGenerateColumns="False"
+                                           GridLinesVisibility="Horizontal"
+                                           IsReadOnly="True"
+                                           ItemsSource="{Binding FirstResponders}"
+                                           SelectedItem="{Binding SelectedFirstResponder}"
+                                           Margin="{StaticResource SmallLeftMargin}"
+                                           KeyboardNavigation.TabNavigation="Once"
+                                           SelectionMode="Single"
+                                           ColumnSizer="Auto"
+                                           RowStyle="{StaticResource RowStyleColor}"
+                                           NavigationMode="Row">
+                        <syncfusion:SfDataGrid.Columns>
+                            <syncfusion:GridTextColumn MappingName="FName" HeaderText="First Name"/>
+                            <syncfusion:GridTextColumn MappingName="LName" HeaderText="Last Name"/>
+                            <syncfusion:GridTextColumn MappingName="Vitals.Timestamp" HeaderText="Time (UTC)"/>
+                            <syncfusion:GridNumericColumn MappingName="Vitals.BloodOxy" HeaderText="Blood Oxygen"/>
+                            <syncfusion:GridNumericColumn MappingName="Vitals.HeartRate" HeaderText="Heart Rate"/>
+                            <syncfusion:GridNumericColumn MappingName="Vitals.SysBP" HeaderText="SysBP"/>
+                            <syncfusion:GridNumericColumn MappingName="Vitals.DiaBP" HeaderText="DiaBP"/>
+                            <syncfusion:GridNumericColumn MappingName="Vitals.RespRate" HeaderText="Resp Rate"/>
+                            <syncfusion:GridNumericColumn MappingName="Vitals.TempF" HeaderText="Temp F"/>
+                        </syncfusion:SfDataGrid.Columns>
+                    </syncfusion:SfDataGrid>
+                </StackPanel>
+            </Grid>
+            
         </Grid>
 
         <Grid Grid.Column="1"
@@ -51,6 +83,8 @@
                 <syncfusion:SfMap.Layers>
                     <syncfusion:ImageryLayer LayerType="OSM" 
                                              Markers="{Binding MapMarkers}"
+                                             MarkerHorizontalAlignment="Center"
+                                             MarkerVerticalAlignment="Center"
                                              Center="{Binding CenterPoint, Mode=TwoWay}">
                         <syncfusion:ImageryLayer.MarkerToolTipSettings>
                             <syncfusion:ToolTipSetting ValuePath="Display" PointerLength="18" FontFamily="Segoe UI" FontStyle="Italic" FontSize="20" Foreground="White" Margin="10" Background="Green"  Stroke="Black" StrokeThickness="2" ShowDuration="2000">

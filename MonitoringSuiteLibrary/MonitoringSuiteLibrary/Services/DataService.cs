@@ -31,13 +31,13 @@ namespace MonitoringSuiteLibrary.Services
         #region Public Methods
 
         /// <summary>
-        /// Asynchronous function that queries the database to retrieve all first responder's information from the workers table along with
+        /// Asynchronous function that queries the database to retrieve all active first responder's information from the workers table along with
         /// their corresponding vitals and location.
         /// </summary>
         /// <returns>
         /// A collection of FirstResponder objects
         /// </returns>
-        public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync()
+        public async Task<IEnumerable<FirstResponder>> GetActiveFirstRespondersAsync()
         {
             await Task.CompletedTask;
 
@@ -50,7 +50,7 @@ namespace MonitoringSuiteLibrary.Services
             {
                 connection.Open();
 
-                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers", connection);
+                MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand("Select * from workers WHERE active = 1", connection);
 
                 MySqlConnector.MySqlDataReader reader = command.ExecuteReader();
 
@@ -62,7 +62,6 @@ namespace MonitoringSuiteLibrary.Services
 
                     firstResponders.Add(new FirstResponder(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetChar(4),
                         reader.GetDouble(5), reader.GetInt32(6), reader.GetBoolean(7), reader.GetBoolean(8), vitals, location));
-
                 }
             }
             return firstResponders;
@@ -171,7 +170,7 @@ namespace MonitoringSuiteLibrary.Services
 
                 if (reader.Read())
                 {
-                    vitals = new Vitals(reader.GetDateTime(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetInt32(7));
+                    vitals = new Vitals(reader.GetDateTime(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetInt32(6), reader.GetFloat(7));
 
                     return vitals;
                 }
@@ -229,9 +228,6 @@ namespace MonitoringSuiteLibrary.Services
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
 
-            await DeleteFirstResponderLocationAsync(firstResponderId);
-            await DeleteFirstResponderVitalsAsync(firstResponderId);
-
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
                 try
@@ -262,9 +258,6 @@ namespace MonitoringSuiteLibrary.Services
 
             var setOptions = _options.Value;
             string connectionString = setOptions.ConnectionString;
-
-            //await CreateFirstResponderLocationAsync(firstResponderId);
-            //await CreateFirstResponderVitalsAsync(firstResponderId);
 
             using (MySqlConnector.MySqlConnection connection = new MySqlConnector.MySqlConnection(connectionString))
             {
@@ -459,7 +452,7 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="resprate"></param>
         /// <param name="tempf"></param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)
+        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
         {
             await Task.CompletedTask;
 
@@ -515,6 +508,7 @@ namespace MonitoringSuiteLibrary.Services
                     connection.Open();
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
                         "update locations set " +
+                        "timestamp = current_timestamp(), " +       // force timestamp to change even if the fields have the same value when updated
                         "xcoord = " + xcoord.ToString() + ", " +
                         "ycoord = " + ycoord.ToString() + ", " +
                         "zcoord = " + zcoord.ToString() + " " +
@@ -543,7 +537,7 @@ namespace MonitoringSuiteLibrary.Services
         /// <param name="resprate"></param>
         /// <param name="tempf"></param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)
+        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
         {
             await Task.CompletedTask;
 
@@ -557,6 +551,7 @@ namespace MonitoringSuiteLibrary.Services
                     connection.Open();
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
                         "update vitals set " +
+                        "timestamp = current_timestamp(), " +       // force timestamp to change even if the fields have the same value when updated
                         "bloodoxy = " + bloodoxy.ToString() + ", " +
                         "heartrate = " + heartrate.ToString() + ", " +
                         "sysbp = " + sysbp.ToString() + ", " +

@@ -16,7 +16,6 @@ public class PageService : IPageService
     public PageService(IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider;
-        Configure<MainViewModel, MainPage>();
         Configure<FirstResponderViewModel, FirstResponderPage>();
         Configure<SettingsViewModel, SettingsPage>();
     }

@@ -1,0 +1,4 @@
+var _menu_item_template_selector_8cs =
+[
+    [ "DispatchersMonitoringTool.TemplateSelectors.MenuItemTemplateSelector", "class_dispatchers_monitoring_tool_1_1_template_selectors_1_1_menu_item_template_selector.html", "class_dispatchers_monitoring_tool_1_1_template_selectors_1_1_menu_item_template_selector" ]
+];

@@ -12,73 +12,134 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using MobileVitalsMonitoringTool.Views;
+using MonitoringSuiteLibrary.MachineLearning;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
+    /// <summary>
+    /// A class that represents the AboutViewModel. This is the main page of the application
+    /// and only logged in users can see it.
+    /// </summary>
     public class AboutViewModel : BaseViewModel
     {
-        //private readonly DataService _dataService;
 
+        /// <summary>
+        /// Creates a <see cref="AboutViewModel"/>.
+        /// </summary>
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
 
             SOSCommand = new Command(OnSOS);
 
+            // get FirstResponder info
             OnNavigatedTo();
 
-            GetCurrentLocation();
+            // subscribe to messaging center and start location and vitals service (only set for Android)
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                // get location message from GetLocationVitalsService
+                MessagingCenter.Subscribe<LocationMessage>(this, "Location", message => {
+                    Device.BeginInvokeOnMainThread(() => {
+                        Location = $"{Environment.NewLine}{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}";
+
+                        Console.WriteLine($"{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}");
+
+                        UpdateDBLocation((decimal)message.Longitude, (decimal)message.Latitude, 0); //Altitude is always 0
+                    });
+                });
+
+                // get Vitals message GetLocationVitalsService
+                MessagingCenter.Subscribe<VitalsMessage>(this, "Vitals", message => {
+                    Device.BeginInvokeOnMainThread(() => {
+
+                        UpdateDBVitals(message.Vitals);
+
+                        //if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                        //{
+                        //    OnSOS();
+                        //}
+                    });
+                });
+
+                // get message when service has been stopped
+                MessagingCenter.Subscribe<StopServiceMessage>(this, "ServiceStopped", message => {
+                    Device.BeginInvokeOnMainThread(() => {
+                        Location = "Location Service has been stopped!";
+                    });
+                });
+
+                // get message when there is an error getting the location or vitals
+                MessagingCenter.Subscribe<ErrorMessage>(this, "LocationVitalsError", message => {
+                    Device.BeginInvokeOnMainThread(() => {
+                        Location = "There was an error updating location and/or vitals!";
+                    });
+                });
+
+                if (Preferences.Get("LocationVitalsServiceRunning", false) == true && Preferences.Get("isLogin", false) == true)
+                {
+                    StartService();
+                }
+            }
+
         }
 
-        public ICommand OpenWebCommand { get; }
-
+        /// <summary>
+        /// Gets the SOSCommand.
+        /// </summary>
         public Command SOSCommand { get; }
 
+        /// <summary>
+        /// Navigates user to AlertPage.
+        /// </summary>
         private async void OnSOS()
         {
-            MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
-
-            await dataService.SetFirstResponderAlertTrueAsync(Preferences.Get("w_id", -1));
+            await Shell.Current.GoToAsync(nameof(AlertPage));
         }
 
+        /// <summary>
+        /// Pulls first responder information from the database.
+        /// </summary>
         public async void OnNavigatedTo()
         {
-            MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
             FirstResponder = await dataService.GetFirstResponderAsync(Preferences.Get("w_id", -1));
         }
 
-        // temporary function to test geolocation. Will be replaced with service that runs in the backgroun
-        private async void GetCurrentLocation()
+        /// <summary>
+        /// Updates the location entry of the first responder in the database.
+        /// </summary>
+        public async void UpdateDBLocation(decimal x, decimal y, decimal z)
         {
-            MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); //temporary
-            try
+            if (await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1)) == null)
             {
-                var location = await Geolocation.GetLastKnownLocationAsync();
-                location = null;
-                if (location == null)
-                {
-                    location = await Geolocation.GetLocationAsync(new GeolocationRequest
-                    {
-                        DesiredAccuracy = GeolocationAccuracy.Medium,
-                        Timeout = TimeSpan.FromSeconds(30)
-                    });
-
-                }
-                if (location != null)
-                {
-                    decimal x = (decimal)location.Longitude;
-                    decimal y = (decimal)location.Latitude;
-                    decimal z = (decimal)location.Altitude;
-
-                    await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
-                }
+                await dataService.CreateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
             }
-            catch (Exception ex)
+            else
             {
-                Debug.WriteLine($"Something is wrong: {ex.Message}");
+                await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
             }
+
+            //update FirstResponder object with new location entry
+            FirstResponder.Location = await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1));
         }
 
+        /// <summary>
+        /// Updates the vitals entry of the first responder in the database.
+        /// </summary>
+        public async void UpdateDBVitals(Vitals vitals)
+        {
+            if (await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1)) == null)
+            {
+                await dataService.CreateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals.BloodOxy, vitals.HeartRate, vitals.SysBP, vitals.DiaBP, vitals.RespRate, vitals.TempF);
+            }
+            else
+            {
+                await dataService.UpdateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals.BloodOxy, vitals.HeartRate, vitals.SysBP, vitals.DiaBP, vitals.RespRate, vitals.TempF);
+            }
+
+            //update FirstResponder object with new vitals entry
+            FirstResponder.Vitals = await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1));
+        }
     }
 }

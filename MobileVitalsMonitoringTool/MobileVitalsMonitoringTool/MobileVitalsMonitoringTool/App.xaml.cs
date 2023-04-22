@@ -16,11 +16,6 @@ namespace MobileVitalsMonitoringTool
         {
             InitializeComponent();
 
-            //var secretsConfig = new ConfigurationBuilder().AddUserSecrets<App>().Build();
-
-            //DataServiceConfiguration dataServiceConfiguration = new DataServiceConfiguration();
-            //dataServiceConfiguration.ConnectionString = secretsConfig["ConnectionString"];
-
             DependencyService.Register<MockDataStore>();
 
             bool isLogin = Preferences.Get("isLogin", false);
@@ -34,8 +29,6 @@ namespace MobileVitalsMonitoringTool
                 MainPage = new LoginPage();
             }
 
-            //MainPage = new AppShell();
-            //MainPage = new Views.LoginPage();
         }
 
         protected override void OnStart ()

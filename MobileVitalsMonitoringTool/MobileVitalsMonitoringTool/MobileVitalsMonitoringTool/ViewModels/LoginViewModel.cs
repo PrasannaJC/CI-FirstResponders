@@ -11,32 +11,31 @@ using Xamarin.Essentials;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
-    public class LoginViewModel : INotifyPropertyChanged
+    /// <summary>
+    /// The viewmodel to log into the app.
+    /// </summary>
+    public class LoginViewModel : BaseViewModel
     {
         public Action DisplayInvalidLoginPrompt;
-        public event PropertyChangedEventHandler PropertyChanged = delegate { };
-        private int workerId;
-        public int WorkerId
-        {
-            get { return workerId; }
-            set
-            {
-                workerId = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("WorkerId"));
-            }
-        }
 
+        /// <summary>
+        /// Gets or sets the SubmitCommand.
+        /// </summary>
         public ICommand SubmitCommand { protected set; get; }
 
+        /// <summary>
+        /// Creates a <see cref="LoginViewModel"/>.
+        /// </summary>
         public LoginViewModel()
         {
             SubmitCommand = new Command(OnSubmit);
         }
 
+        /// <summary>
+        /// Checks whether the specified worker ID exists in the database and logs in user if it does. Otherwise an error message is displayed.
+        /// </summary>
         public async void OnSubmit()
         {
-            MobileVitalsMonitoringTool.Services.DataService dataService = new MobileVitalsMonitoringTool.Services.DataService(); // temporary
-
             var exists = await dataService.FirstResponderExistsAsync(workerId);
 
             if (!exists)
@@ -45,11 +44,27 @@ namespace MobileVitalsMonitoringTool.ViewModels
             }
             else
             {
-                // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-                //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
-
                 Preferences.Set("isLogin", true);
                 Preferences.Set("w_id", workerId);
+                Preferences.Set("LocationVitalsServiceRunning", true);
+
+                await dataService.SetFirstResponderActiveAsync(workerId);
+
+                var permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.LocationAlways>();
+
+                if (permission == Xamarin.Essentials.PermissionStatus.Denied)
+                {
+                    // TODO Let the user know they need to accept
+                    return;
+                }
+
+                if (Device.RuntimePlatform == Device.Android)
+                {
+                    StartService(); //location service
+                }
+
+                // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
+                //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
                 Application.Current.MainPage = new AppShell();
                 await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }

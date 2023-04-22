@@ -22,7 +22,7 @@ namespace MonitoringSuiteLibrary.Models
         /// <param name="diabp">The diastolic blood pressure level.</param>
         /// <param name="resprate">The respiratory rate.</param>
         /// <param name="tempf">The body temperature in fahrenheit.</param>
-        public Vitals(DateTime timestamp, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)
+        public Vitals(DateTime timestamp, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
         {
             this.Timestamp = timestamp;
             this.BloodOxy = bloodoxy;
@@ -70,7 +70,7 @@ namespace MonitoringSuiteLibrary.Models
         /// <summary>
         /// Gets or sets the body temperature in fahrenheit.
         /// </summary>
-        public int TempF { get; set; }
+        public float TempF { get; set; }
 
         #endregion
     }

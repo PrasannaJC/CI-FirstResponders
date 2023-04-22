@@ -1,0 +1,4 @@
+var dir_4c1647684bbecca19be1ed81ab8d8a79 =
+[
+    [ "netstandard2.1", "dir_45c5117e309374680dc226a143412564.html", "dir_45c5117e309374680dc226a143412564" ]
+];

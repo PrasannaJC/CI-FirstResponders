@@ -1,0 +1,4 @@
+<map id="MobileVitalsMonitoringTool.ViewModels.LoginViewModel.LoginViewModel" name="MobileVitalsMonitoringTool.ViewModels.LoginViewModel.LoginViewModel">
+<area shape="rect" id="node1" title="Creates a LoginViewModel." alt="" coords="5,5,231,60"/>
+<area shape="rect" id="node2" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_login_view_model.html#aa2d7c7ea65a65a8e145162de4f56e288" title="Checks whether the specified worker ID exists in the database and logs in user if it does...." alt="" coords="279,13,531,53"/>
+</map>
