@@ -114,12 +114,12 @@ namespace MonitoringSuiteLibrary.Models
 
                 TimeSpan decayTime = TimeSpan.FromMinutes(1);
 
-                if (Vitals.Value.Timestamp.Date != DateTime.Today || Vitals.Value.Timestamp < DateTime.UtcNow - decayTime)
+                if (!(Vitals.Value.Timestamp > DateTime.UtcNow - decayTime))
                 {
                     return false;
                 }
 
-                if (Location.Value.Timestamp.Date != DateTime.Today || Location.Value.Timestamp < DateTime.UtcNow - decayTime)
+                if (!(Location.Value.Timestamp > DateTime.UtcNow - decayTime))
                 {
                     return false;
                 }
