@@ -14,6 +14,9 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using MobileVitalsMonitoringTool.Views;
 using MonitoringSuiteLibrary.MachineLearning;
+using System.Reflection;
+using System.IO;
+using System.Security.Cryptography;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
@@ -56,10 +59,17 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
                         UpdateDBVitals(message.Vitals);
 
-                        //if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                        //string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Distress.zip");
+
+                        //if (File.Exists(filePath))
                         //{
-                        //    OnSOS();
+                        //    System.Diagnostics.Debug.WriteLine("file found at " + filePath);
                         //}
+
+                        if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                        {
+                            OnSOS();
+                        }
                     });
                 });
 

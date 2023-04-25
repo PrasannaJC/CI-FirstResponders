@@ -6,6 +6,8 @@ using MobileVitalsMonitoringTool.Views;
 using Microsoft.Extensions.Configuration;
 using MonitoringSuiteLibrary.Models;
 using Xamarin.Essentials;
+using System.IO;
+using System.Reflection;
 
 namespace MobileVitalsMonitoringTool
 {
@@ -33,6 +35,18 @@ namespace MobileVitalsMonitoringTool
 
         protected override void OnStart ()
         {
+            //string filename = "MobileVitalsMonitoringTool.MachineLearning.Distress.zip";
+
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Distress.zip");
+
+            if (File.Exists(filePath))
+                File.Delete(filePath);
+            using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("MobileVitalsMonitoringTool.MachineLearning.Distress.zip"))
+            using (var file = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+            {
+                resource.CopyTo(file);
+            }
+
         }
 
         protected override void OnSleep ()

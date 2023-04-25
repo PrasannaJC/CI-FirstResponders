@@ -25,4 +25,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="$(NuGetPackageRoot)monitoringsuitelibrary/1.0.23/contentFiles/any/netstandard2.1/MachineLearning/Distress.zip" Condition="Exists('$(NuGetPackageRoot)monitoringsuitelibrary/1.0.23/contentFiles/any/netstandard2.1/MachineLearning/Distress.zip')">
+        <NuGetPackageId>MonitoringSuiteLibrary</NuGetPackageId>
+        <NuGetPackageVersion>1.0.23</NuGetPackageVersion>
+        <NuGetItemType>Content</NuGetItemType>
+        <Pack>false</Pack>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <TargetPath>MachineLearning/Distress.zip</TargetPath>
+        <DestinationSubDirectory>MachineLearning/</DestinationSubDirectory>
+        <Private>True</Private>
+        <Link>MachineLearning/Distress.zip</Link>
+      </EmbeddedResource>
+    </ItemGroup>
 </Project>
