@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileVitalsMonitoringTool.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileVitalsMonitoringTool.iOS", "MobileVitalsMonitoringTool\MobileVitalsMonitoringTool.iOS\MobileVitalsMonitoringTool.iOS.csproj", "{01F00D76-0745-4B91-A09D-6B2F572AA8BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileVitalsMonitoringTool", "MobileVitalsMonitoringTool\MobileVitalsMonitoringTool\MobileVitalsMonitoringTool.csproj", "{CB066C78-E3B8-496A-A9B5-39A5544FB089}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileVitalsMonitoringTool", "MobileVitalsMonitoringTool\MobileVitalsMonitoringTool\MobileVitalsMonitoringTool.csproj", "{CB066C78-E3B8-496A-A9B5-39A5544FB089}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

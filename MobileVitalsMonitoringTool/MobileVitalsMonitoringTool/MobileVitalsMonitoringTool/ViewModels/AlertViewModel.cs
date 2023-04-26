@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using MobileVitalsMonitoringTool.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using MobileVitalsMonitoringTool.Services;
 using System.Threading.Tasks;
-//using static System.Net.Mime.MediaTypeNames;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
