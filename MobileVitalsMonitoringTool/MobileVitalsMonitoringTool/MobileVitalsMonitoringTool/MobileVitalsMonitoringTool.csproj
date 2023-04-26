@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MonitoringSuiteLibrary" Version="1.0.24" />
+    <PackageReference Include="MonitoringSuiteLibrary" Version="1.0.25" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
     <PackageReference Include="ZstdNet" Version="1.4.5" />
@@ -20,22 +20,15 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.13" />
     <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="7.0.4" />
   </ItemGroup>
-    <ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\Distress.zip" />
+  </ItemGroup>
+<!--    <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
+  </ItemGroup>-->
     <ItemGroup>
-      <EmbeddedResource Include="$(NuGetPackageRoot)monitoringsuitelibrary/1.0.23/contentFiles/any/netstandard2.1/MachineLearning/Distress.zip" Condition="Exists('$(NuGetPackageRoot)monitoringsuitelibrary/1.0.23/contentFiles/any/netstandard2.1/MachineLearning/Distress.zip')">
-        <NuGetPackageId>MonitoringSuiteLibrary</NuGetPackageId>
-        <NuGetPackageVersion>1.0.23</NuGetPackageVersion>
-        <NuGetItemType>Content</NuGetItemType>
-        <Pack>false</Pack>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        <TargetPath>MachineLearning/Distress.zip</TargetPath>
-        <DestinationSubDirectory>MachineLearning/</DestinationSubDirectory>
-        <Private>True</Private>
-        <Link>MachineLearning/Distress.zip</Link>
-      </EmbeddedResource>
+      <EmbeddedResource Include="Services\Distress.zip" />
     </ItemGroup>
 </Project>

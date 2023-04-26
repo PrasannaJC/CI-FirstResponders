@@ -59,17 +59,10 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
                         UpdateDBVitals(message.Vitals);
 
-                        //string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Distress.zip");
-
-                        //if (File.Exists(filePath))
+                        //if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
                         //{
-                        //    System.Diagnostics.Debug.WriteLine("file found at " + filePath);
+                        //    OnSOS();
                         //}
-
-                        if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
-                        {
-                            OnSOS();
-                        }
                     });
                 });
 

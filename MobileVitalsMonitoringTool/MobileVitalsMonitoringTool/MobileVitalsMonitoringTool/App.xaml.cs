@@ -35,13 +35,13 @@ namespace MobileVitalsMonitoringTool
 
         protected override void OnStart ()
         {
-            //string filename = "MobileVitalsMonitoringTool.MachineLearning.Distress.zip";
-
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Distress.zip");
 
             if (File.Exists(filePath))
+            {
                 File.Delete(filePath);
-            using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("MobileVitalsMonitoringTool.MachineLearning.Distress.zip"))
+            }
+            using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("MobileVitalsMonitoringTool.Services.Distress.zip"))
             using (var file = new FileStream(filePath, FileMode.Create, FileAccess.Write))
             {
                 resource.CopyTo(file);
