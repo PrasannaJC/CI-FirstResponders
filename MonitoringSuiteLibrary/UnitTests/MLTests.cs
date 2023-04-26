@@ -8,7 +8,7 @@ namespace UnitTests
     {
 
         [Fact]
-        public void Test_NOT_Distress()
+        public void TestNotDistress()
         {
 
             Vitals v = new Vitals()
@@ -30,7 +30,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void Test_IN_Distress()
+        public void TestInDistress()
         {
 
             Vitals v = new Vitals()
