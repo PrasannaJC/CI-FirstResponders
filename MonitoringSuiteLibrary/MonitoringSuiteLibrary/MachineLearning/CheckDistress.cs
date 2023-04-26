@@ -55,6 +55,4 @@ namespace MonitoringSuiteLibrary.MachineLearning
             return distress;
         }
     }
-
-
 }

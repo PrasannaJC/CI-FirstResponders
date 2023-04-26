@@ -14,7 +14,6 @@ namespace MonitoringSuiteLibrary.Models
         /// <summary>
         /// Creates a Vitals object
         /// </summary>
-        /// <
         /// <param name="timestamp">The vitals' timestamp.</param>
         /// <param name="bloodoxy">The blood oxygen level.</param>
         /// <param name="heartrate">The heart rate level.</param>

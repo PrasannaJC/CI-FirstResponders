@@ -4,7 +4,6 @@ using System.Text;
 
 namespace MonitoringSuiteLibrary.Models
 {
-
     /// <summary>
     /// The struct that represents vitals.
     /// </summary>
@@ -15,7 +14,6 @@ namespace MonitoringSuiteLibrary.Models
         /// <summary>
         /// Creates a ResponseEvent object
         /// </summary>
-        /// <
         /// <param name="e_id">The Event's unique id.</param>
         /// <param name="location">The location of event.</param>
         /// <param name="stime">The start time of event.</param>

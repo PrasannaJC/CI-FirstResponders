@@ -21,6 +21,10 @@ namespace MonitoringSuiteLibrary.Services
 
         #region Constructors
 
+        /// <summary>
+        /// Creates a <see cref="DataService"/>.
+        /// </summary>
+        /// <param name="options">The IOptions of type <see cref="DataServiceConfiguration"/> to use.</param>
         public DataService(IOptions<DataServiceConfiguration> options)
         {
             _options = options;
@@ -34,9 +38,7 @@ namespace MonitoringSuiteLibrary.Services
         /// Asynchronous function that queries the database to retrieve all active first responder's information from the workers table along with
         /// their corresponding vitals and location.
         /// </summary>
-        /// <returns>
-        /// A collection of FirstResponder objects
-        /// </returns>
+        /// <returns>A collection of FirstResponder objects.</returns>
         public async Task<IEnumerable<FirstResponder>> GetActiveFirstRespondersAsync()
         {
             await Task.CompletedTask;
@@ -71,10 +73,8 @@ namespace MonitoringSuiteLibrary.Services
         /// Asynchronous function that queries the database to retrieve a first responder's information from the workers table along with
         /// their corresponding vitals and location.
         /// </summary>
-        /// <param name="firstResponderId">The unique id of the first responder</param>
-        /// <returns>
-        /// A FirstResponder object
-        /// </returns>
+        /// <param name="firstResponderId">The unique id of the first responder.</param>
+        /// <returns>The <see cref="FirstResponder"/> corresponding to the <paramref name="firstResponderId"/>.</returns>
         public async Task<FirstResponder?> GetFirstResponderAsync(int firstResponderId)
         {
             await Task.CompletedTask;
@@ -109,12 +109,11 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// Asynchrnous function that queries the database to retrieve all first responder's information from the workers table
+        /// Asynchronous function that queries the database to retrieve all first responder's information from the workers table
         /// that responded to a particular event along with their corresponding vitals and location.
         /// </summary>
-        /// <returns>
-        /// A collection of FirstResponder objects
-        /// </returns>
+        /// <param name="eventId">The id of the event corresponding to the target first responders.</param>
+        /// <returns>A collection of FirstResponder objects.</returns>
         public async Task<IEnumerable<FirstResponder>> GetFirstRespondersAsync(int eventId)
         {
             await Task.CompletedTask;
@@ -138,20 +137,20 @@ namespace MonitoringSuiteLibrary.Services
 
                     FirstResponder? firstResponder = await GetFirstResponderAsync(firstResponderId);
 
-                    firstResponders.Add(firstResponder);
-
+                    if (firstResponder != null)
+                    {
+                        firstResponders.Add(firstResponder);
+                    }
                 }
             }
             return firstResponders;
         }
 
         /// <summary>
-        /// Asynchrnous function that queries the database to retrieve the vitals entry of a first responder.
+        /// Asynchronous function that queries the database to retrieve the vitals entry of a first responder.
         /// </summary>
-        /// <param name="firstResponderId">The unique id of the first responder</param>
-        /// <returns>
-        /// A Vitals object
-        /// </returns>
+        /// <param name="firstResponderId">The unique id of the first responder.</param>
+        /// <returns>The <see cref="Vitals"/> corresponding to the <paramref name="firstResponderId"/>.</returns>
         public async Task<Vitals?> GetFirstResponderVitalsAsync(int firstResponderId)
         {
             await Task.CompletedTask;
@@ -182,12 +181,10 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// Asynchrnous function that queries the database to retrieve the location entry of a first responder.
+        /// Asynchronous function that queries the database to retrieve the location entry of a first responder.
         /// </summary>
-        /// <param name="firstResponderId">The unique id of the first responder</param>
-        /// <returns>
-        /// A location object
-        /// </returns>
+        /// <param name="firstResponderId">The unique id of the first responder.</param>
+        /// <returns>The <see cref="Location"/> corresponding to the <paramref name="firstResponderId"/>.</returns>
         public async Task<Location?> GetFirstResponderLocationAsync(int firstResponderId)
         {
             await Task.CompletedTask;
@@ -217,9 +214,9 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// Modifies a first responder's active status to false
+        /// Modifies a first responder's active status to false.
         /// </summary>
-        /// <param name="firstResponderId"></param>
+        /// <param name="firstResponderId">The id corresponding to the first responder to modify.</param>
         /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
         public async Task<bool> SetFirstResponderInactiveAsync(int firstResponderId)
         {
@@ -248,9 +245,9 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// Modifies a first responder's active status to true
+        /// Modifies a first responder's active status to true.
         /// </summary>
-        /// <param name="firstResponderId"></param>
+        /// <param name="firstResponderId">The id corresponding to the first responder to modify.</param>
         /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
         public async Task<bool> SetFirstResponderActiveAsync(int firstResponderId)
         {
@@ -343,7 +340,7 @@ namespace MonitoringSuiteLibrary.Services
         /// <summary>
         /// Deletes a first responder vitals. This is done when a first responder is changed to inactive.
         /// </summary>
-        /// <param name="firstResponderId"></param>
+        /// <param name="firstResponderId">The id of the target first responder.</param>
         /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
         public async Task<bool> DeleteFirstResponderVitalsAsync(int firstResponderId)
         {
@@ -374,7 +371,7 @@ namespace MonitoringSuiteLibrary.Services
         /// <summary>
         /// Deletes a first responder location. This is done when a first responder is changed to inactive.
         /// </summary>
-        /// <param name="firstResponderId"></param>
+        /// <param name="firstResponderId">The id of the target first responder.</param>
         /// <returns>Whether or not setting the first responder as inactive was successful.</returns>
         public async Task<bool> DeleteFirstResponderLocationAsync(int firstResponderId)
         {
@@ -405,10 +402,10 @@ namespace MonitoringSuiteLibrary.Services
         /// <summary>
         /// Creates a location entry of a first responder.
         /// </summary>
-        /// <param name="firstResponderId"></param>
-        /// <param name="xcoord"></param>
-        /// <param name="ycoord"></param>
-        /// <param name="zcoord"></param>
+        /// <param name="firstResponderId">The id of the first responder corresponding to the created location.</param>
+        /// <param name="xcoord">The x coordinate of the location.</param>
+        /// <param name="ycoord">The y coordinate of the location.</param>
+        /// <param name="zcoord">The z coordinate of the location.</param>
         /// <returns>Whether or not the update was successful.</returns>
         public async Task<bool> CreateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)
         {
@@ -444,13 +441,13 @@ namespace MonitoringSuiteLibrary.Services
         /// <summary>
         /// Creates a vitals entry for a first responder.
         /// </summary>
-        /// <param name="firstResponderId"></param>
-        /// <param name="bloodoxy"></param>
-        /// <param name="heartrate"></param>
-        /// <param name="sysbp"></param>
-        /// <param name="diabp"></param>
-        /// <param name="resprate"></param>
-        /// <param name="tempf"></param>
+        /// <param name="firstResponderId">The id of the first responder corresponding to the created vitals.</param>
+        /// <param name="bloodoxy">The blood oxygen value.</param>
+        /// <param name="heartrate">The heart rate value.</param>
+        /// <param name="sysbp">The systolic blood pressure value.</param>
+        /// <param name="diabp">The diastolic blood pressure value.</param>
+        /// <param name="resprate">The respiratory rate.</param>
+        /// <param name="tempf">The first responders temperature.</param>
         /// <returns>Whether or not the update was successful.</returns>
         public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
         {
@@ -489,10 +486,10 @@ namespace MonitoringSuiteLibrary.Services
         /// <summary>
         /// Updates the location of a first responder.
         /// </summary>
-        /// <param name="firstResponderId"></param>
-        /// <param name="xcoord"></param>
-        /// <param name="ycoord"></param>
-        /// <param name="zcoord"></param>
+        /// <param name="firstResponderId">The id of the first responder to update.</param>
+        /// <param name="xcoord">The x coordinate to update to.</param>
+        /// <param name="ycoord">The y coordinate to update to.</param>
+        /// <param name="zcoord">The z coordinate to update to.</param>
         /// <returns>Whether or not the update was successful.</returns>
         public async Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)
         {
@@ -527,15 +524,15 @@ namespace MonitoringSuiteLibrary.Services
         }
 
         /// <summary>
-        /// Updates the location of a first responder.
+        /// Updates the vitals of a first responder.
         /// </summary>
-        /// <param name="firstResponderId"></param>
-        /// <param name="bloodoxy"></param>
-        /// <param name="heartrate"></param>
-        /// <param name="sysbp"></param>
-        /// <param name="diabp"></param>
-        /// <param name="resprate"></param>
-        /// <param name="tempf"></param>
+        /// <param name="firstResponderId">The id of the first responder to update.</param>
+        /// <param name="bloodoxy">The blood oxygen to update to.</param>
+        /// <param name="heartrate">The heart rate to update to.</param>
+        /// <param name="sysbp">The systolic blood pressure to update to.</param>
+        /// <param name="diabp">The diastolic blood pressure to update to.</param>
+        /// <param name="resprate">The respritory rate to update to.</param>
+        /// <param name="tempf">The temperature of the first responder in fahrenheit to update to.</param>
         /// <returns>Whether or not the update was successful.</returns>
         public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
         {

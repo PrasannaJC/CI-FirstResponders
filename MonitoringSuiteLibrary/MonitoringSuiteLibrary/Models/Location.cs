@@ -4,7 +4,6 @@ using System.Text;
 
 namespace MonitoringSuiteLibrary.Models
 {
-
     /// <summary>
     /// The struct that represents vitals.
     /// </summary>
@@ -15,7 +14,6 @@ namespace MonitoringSuiteLibrary.Models
         /// <summary>
         /// Creates a Location object
         /// </summary>
-        /// <
         /// <param name="timestamp">The location's timestamp.</param>
         /// <param name="xcoord">The x coordinates of the location.</param>
         /// <param name="ycoord">The y coordinates of the location.</param>
