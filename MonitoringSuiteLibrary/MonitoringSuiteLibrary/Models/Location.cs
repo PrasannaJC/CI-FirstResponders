@@ -26,6 +26,20 @@ namespace MonitoringSuiteLibrary.Models
             this.ZCoord = zcoord;
         }
 
+        /// <summary>
+        /// Creates a Location object without specifying the timestamp.
+        /// </summary>
+        /// <param name="xcoord">The x coordinates of the location.</param>
+        /// <param name="ycoord">The y coordinates of the location.</param>
+        /// <param name="zcoord">The z coordinates of the location.</param>
+        public Location(decimal xcoord, decimal ycoord, decimal zcoord)
+        {
+            this.Timestamp = DateTime.Now;
+            this.XCoord = xcoord;
+            this.YCoord = ycoord;
+            this.ZCoord = zcoord;
+        }
+
         #endregion
 
         #region Properties

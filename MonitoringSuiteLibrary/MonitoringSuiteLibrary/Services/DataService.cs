@@ -403,11 +403,9 @@ namespace MonitoringSuiteLibrary.Services
         /// Creates a location entry of a first responder.
         /// </summary>
         /// <param name="firstResponderId">The id of the first responder corresponding to the created location.</param>
-        /// <param name="xcoord">The x coordinate of the location.</param>
-        /// <param name="ycoord">The y coordinate of the location.</param>
-        /// <param name="zcoord">The z coordinate of the location.</param>
+        /// <param name="location">A <see cref="Location"/> object.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> CreateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)
+        public async Task<bool> CreateFirstResponderLocationAsync(int firstResponderId, Location location)
         {
             await Task.CompletedTask;
 
@@ -422,9 +420,9 @@ namespace MonitoringSuiteLibrary.Services
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
                         "insert into locations (w_id, xcoord, ycoord, zcoord) values ("
                         + firstResponderId.ToString() + ", "
-                        + xcoord.ToString() + ", "
-                        + ycoord.ToString() + ", "
-                        + zcoord.ToString() + " )", connection);
+                        + location.XCoord.ToString() + ", "
+                        + location.YCoord.ToString() + ", "
+                        + location.ZCoord.ToString() + " )", connection);
 
                     int rowCount = command.ExecuteNonQuery();
 
@@ -442,14 +440,9 @@ namespace MonitoringSuiteLibrary.Services
         /// Creates a vitals entry for a first responder.
         /// </summary>
         /// <param name="firstResponderId">The id of the first responder corresponding to the created vitals.</param>
-        /// <param name="bloodoxy">The blood oxygen value.</param>
-        /// <param name="heartrate">The heart rate value.</param>
-        /// <param name="sysbp">The systolic blood pressure value.</param>
-        /// <param name="diabp">The diastolic blood pressure value.</param>
-        /// <param name="resprate">The respiratory rate.</param>
-        /// <param name="tempf">The first responders temperature.</param>
+        /// <param name="vitals">A <see cref="Vitals"/> object.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
+        public async Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, Vitals vitals)
         {
             await Task.CompletedTask;
 
@@ -464,12 +457,12 @@ namespace MonitoringSuiteLibrary.Services
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
                         "insert into vitals (w_id, bloodoxy, heartrate, sysbp, diabp, resprate, tempf) values ("
                         + firstResponderId.ToString() + ", "
-                        + bloodoxy.ToString() + ", "
-                        + heartrate.ToString() + ", "
-                        + sysbp.ToString() + ", "
-                        + diabp.ToString() + ", "
-                        + resprate.ToString() + ", "
-                        + tempf.ToString() + ")", connection);
+                        + vitals.BloodOxy.ToString() + ", "
+                        + vitals.HeartRate.ToString() + ", "
+                        + vitals.SysBP.ToString() + ", "
+                        + vitals.DiaBP.ToString() + ", "
+                        + vitals.RespRate.ToString() + ", "
+                        + vitals.TempF.ToString() + ")", connection);
 
                     int rowCount = command.ExecuteNonQuery();
 
@@ -487,11 +480,9 @@ namespace MonitoringSuiteLibrary.Services
         /// Updates the location of a first responder.
         /// </summary>
         /// <param name="firstResponderId">The id of the first responder to update.</param>
-        /// <param name="xcoord">The x coordinate to update to.</param>
-        /// <param name="ycoord">The y coordinate to update to.</param>
-        /// <param name="zcoord">The z coordinate to update to.</param>
+        /// <param name="location">A <see cref="Location"/> object.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)
+        public async Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, Location location)
         {
             await Task.CompletedTask;
 
@@ -506,9 +497,9 @@ namespace MonitoringSuiteLibrary.Services
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
                         "update locations set " +
                         "timestamp = current_timestamp(), " +       // force timestamp to change even if the fields have the same value when updated
-                        "xcoord = " + xcoord.ToString() + ", " +
-                        "ycoord = " + ycoord.ToString() + ", " +
-                        "zcoord = " + zcoord.ToString() + " " +
+                        "xcoord = " + location.XCoord.ToString() + ", " +
+                        "ycoord = " + location.YCoord.ToString() + ", " +
+                        "zcoord = " + location.ZCoord.ToString() + " " +
                         "where w_id = " + firstResponderId.ToString(), connection);
 
                     int rowCount = command.ExecuteNonQuery();
@@ -527,14 +518,9 @@ namespace MonitoringSuiteLibrary.Services
         /// Updates the vitals of a first responder.
         /// </summary>
         /// <param name="firstResponderId">The id of the first responder to update.</param>
-        /// <param name="bloodoxy">The blood oxygen to update to.</param>
-        /// <param name="heartrate">The heart rate to update to.</param>
-        /// <param name="sysbp">The systolic blood pressure to update to.</param>
-        /// <param name="diabp">The diastolic blood pressure to update to.</param>
-        /// <param name="resprate">The respritory rate to update to.</param>
-        /// <param name="tempf">The temperature of the first responder in fahrenheit to update to.</param>
+        /// <param name="vitals">A <see cref="Vitals"/> object.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
+        public async Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, Vitals vitals)
         {
             await Task.CompletedTask;
 
@@ -549,12 +535,12 @@ namespace MonitoringSuiteLibrary.Services
                     MySqlConnector.MySqlCommand command = new MySqlConnector.MySqlCommand(
                         "update vitals set " +
                         "timestamp = current_timestamp(), " +       // force timestamp to change even if the fields have the same value when updated
-                        "bloodoxy = " + bloodoxy.ToString() + ", " +
-                        "heartrate = " + heartrate.ToString() + ", " +
-                        "sysbp = " + sysbp.ToString() + ", " +
-                        "diabp = " + diabp.ToString() + ", " +
-                        "resprate = " + resprate.ToString() + ", " +
-                        "tempf = " + tempf.ToString() + " " +
+                        "bloodoxy = " + vitals.BloodOxy.ToString() + ", " +
+                        "heartrate = " + vitals.HeartRate.ToString() + ", " +
+                        "sysbp = " + vitals.SysBP.ToString() + ", " +
+                        "diabp = " + vitals.DiaBP.ToString() + ", " +
+                        "resprate = " + vitals.RespRate.ToString() + ", " +
+                        "tempf = " + vitals.TempF.ToString() + " " +
                         "where w_id = " + firstResponderId.ToString(), connection);
 
                     int rowCount = command.ExecuteNonQuery();
@@ -572,7 +558,7 @@ namespace MonitoringSuiteLibrary.Services
         /// <summary>
         /// Checks if first responder exists in the database based on worker ID.
         /// </summary>
-        /// <param name="firstResponderId">The id of the first responder to update.</param>
+        /// <param name="firstResponderId">The id of the first responder to check.</param>
         /// <returns>Whether or not the worker id exists in the worker table in the database.</returns>
         public async Task<bool> FirstResponderExistsAsync(int firstResponderId)
         {
@@ -586,6 +572,44 @@ namespace MonitoringSuiteLibrary.Services
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Checks if first responder is active.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the first responder to check.</param>
+        /// <returns>Whether or not the worker's active field is true in the database.</returns>
+        public async Task<bool> FirstResponderIsActiveAsync(int firstResponderId)
+        {
+            await Task.CompletedTask;
+
+            var data = await GetFirstResponderAsync(firstResponderId);
+
+            if (data != null && data.Active)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Checks if first responder has an active alert.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the first responder to check.</param>
+        /// <returns>Whether or not the worker's alert field is true in the database.</returns>
+        public async Task<bool> FirstResponderHasAlertAsync(int firstResponderId)
+        {
+            await Task.CompletedTask;
+
+            var data = await GetFirstResponderAsync(firstResponderId);
+
+            if (data != null && data.Alert)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         #endregion

@@ -32,6 +32,26 @@ namespace MonitoringSuiteLibrary.Models
             this.TempF = tempf;
         }
 
+        /// <summary>
+        /// Creates a Vitals object without specifying the timestamp.
+        /// </summary>
+        /// <param name="bloodoxy">The blood oxygen level.</param>
+        /// <param name="heartrate">The heart rate level.</param>
+        /// <param name="sysbp">The Systolic blood pressure level.</param>
+        /// <param name="diabp">The diastolic blood pressure level.</param>
+        /// <param name="resprate">The respiratory rate.</param>
+        /// <param name="tempf">The body temperature in fahrenheit.</param>
+        public Vitals(int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf)
+        {
+            this.Timestamp = DateTime.Now;
+            this.BloodOxy = bloodoxy;
+            this.HeartRate = heartrate;
+            this.SysBP = sysbp;
+            this.DiaBP = diabp;
+            this.RespRate = resprate;
+            this.TempF = tempf;
+        }
+
         #endregion
 
         #region Properties

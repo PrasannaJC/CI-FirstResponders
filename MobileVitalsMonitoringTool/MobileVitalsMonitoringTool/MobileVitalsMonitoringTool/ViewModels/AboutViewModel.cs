@@ -116,13 +116,15 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         public async void UpdateDBLocation(decimal x, decimal y, decimal z)
         {
+            MonitoringSuiteLibrary.Models.Location location = new MonitoringSuiteLibrary.Models.Location(x, y, z);
+
             if (await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1)) == null)
             {
-                await dataService.CreateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
+                await dataService.CreateFirstResponderLocationAsync(Preferences.Get("w_id", -1), location);
             }
             else
             {
-                await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
+                await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), location);
             }
 
             //update FirstResponder object with new location entry
@@ -136,11 +138,11 @@ namespace MobileVitalsMonitoringTool.ViewModels
         {
             if (await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1)) == null)
             {
-                await dataService.CreateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals.BloodOxy, vitals.HeartRate, vitals.SysBP, vitals.DiaBP, vitals.RespRate, vitals.TempF);
+                await dataService.CreateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals);
             }
             else
             {
-                await dataService.UpdateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals.BloodOxy, vitals.HeartRate, vitals.SysBP, vitals.DiaBP, vitals.RespRate, vitals.TempF);
+                await dataService.UpdateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals);
             }
 
             //update FirstResponder object with new vitals entry
