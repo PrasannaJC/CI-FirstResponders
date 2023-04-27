@@ -32,7 +32,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Home";
 
             SOSCommand = new Command(OnSOS);
 
@@ -59,10 +59,10 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
                         UpdateDBVitals(message.Vitals);
 
-                        //if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
-                        //{
-                        //    OnSOS();
-                        //}
+                        if (CheckDistressONNX.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                        {
+                            OnSOS();
+                        }
                     });
                 });
 

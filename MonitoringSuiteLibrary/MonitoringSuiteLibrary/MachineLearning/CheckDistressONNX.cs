@@ -13,7 +13,9 @@ namespace MonitoringSuiteLibrary.MachineLearning
     {
         public static bool GetDistressStatus(int age, char sex, Vitals v)
         {
-            string ONNXModelPath = Path.GetFullPath(Path.Join("MachineLearning", "DistressONNXModel.onnx"));
+            //string ONNXModelPath = Path.GetFullPath(Path.Join("MachineLearning", "DistressONNXModel.onnx"));
+            string ONNXModelPath = Path.GetFullPath(Path.Combine("data", "user", "0", "com.frs.mobilevitalsmonitoringtool", "files", ".local", "share", "DistressONNXModel.onnx"));
+
             int sexF = 0;
             bool r = false;
             if (sex == 'F')

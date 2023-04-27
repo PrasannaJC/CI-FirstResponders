@@ -33,17 +33,17 @@ namespace MobileVitalsMonitoringTool
 
         protected override void OnStart ()
         {
-            //string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Distress.zip");
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "DistressONNXModel.onnx");
 
-            //if (File.Exists(filePath))
-            //{
-            //    File.Delete(filePath);
-            //}
-            //using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("MobileVitalsMonitoringTool.Services.Distress.zip"))
-            //using (var file = new FileStream(filePath, FileMode.Create, FileAccess.Write))
-            //{
-            //    resource.CopyTo(file);
-            //}
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+            using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("MobileVitalsMonitoringTool.Services.DistressONNXModel.onnx"))
+            using (var file = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+            {
+                resource.CopyTo(file);
+            }
 
         }
 
