@@ -24,9 +24,11 @@ namespace UnitTests
             char g = 'M';
             int a = 39;
 
-            bool k = CheckDistress.GetDistressStatus(a, g, v);
+            bool z = CheckDistressONNX.GetDistressStatus(a, g, v);
 
-            Assert.False(k);
+            // bool k = CheckDistress.GetDistressStatus(a, g, v);
+
+            Assert.False(z);
         }
 
         [Fact]
@@ -46,10 +48,15 @@ namespace UnitTests
             char g = 'F';
             int a = 59;
 
-            bool k = CheckDistress.GetDistressStatus(a, g, v);
+            // bool k = CheckDistress.GetDistressStatus(a, g, v);
 
-            Assert.True(k);
+            bool z = CheckDistressONNX.GetDistressStatus(a, g, v);
 
+            Assert.True(z);
+
+        }
+        static void Main()
+        {
         }
     }
 }
