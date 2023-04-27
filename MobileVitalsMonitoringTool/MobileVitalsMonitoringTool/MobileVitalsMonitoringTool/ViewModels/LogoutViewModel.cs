@@ -22,6 +22,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         public LogoutViewModel()
         {
             Preferences.Set("isLogin", false);
+            Preferences.Set("checkDistressFlag", false);
             StopService();
             dataService.SetFirstResponderInactiveAsync(Preferences.Get("w_id", -1));
         }

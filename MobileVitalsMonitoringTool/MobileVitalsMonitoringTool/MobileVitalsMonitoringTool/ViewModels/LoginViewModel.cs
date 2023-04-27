@@ -47,6 +47,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
                 Preferences.Set("isLogin", true);
                 Preferences.Set("w_id", workerId);
                 Preferences.Set("LocationVitalsServiceRunning", true);
+                Preferences.Set("checkDistressFlag", true);
 
                 await dataService.SetFirstResponderActiveAsync(workerId);
 

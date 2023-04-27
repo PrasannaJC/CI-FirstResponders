@@ -59,7 +59,8 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
                         UpdateDBVitals(message.Vitals);
 
-                        if (CheckDistressONNX.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                        // checkDistressFlag prevents multiple alert pages to open
+                        if (Preferences.Get("checkDistressFlag", true) && CheckDistressONNX.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
                         {
                             OnSOS();
                         }
@@ -98,6 +99,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnSOS()
         {
+            Preferences.Set("checkDistressFlag", false);
             await Shell.Current.GoToAsync(nameof(AlertPage));
         }
 

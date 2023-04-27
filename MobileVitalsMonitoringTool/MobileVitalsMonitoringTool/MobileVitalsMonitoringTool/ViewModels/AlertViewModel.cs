@@ -48,6 +48,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
             if (await dataService.SetFirstResponderAlertFalseAsync(Preferences.Get("w_id", -1)))
             {
                 _timer.Stop();
+                Preferences.Set("checkDistressFlag", true);
                 // This will pop the current page off the navigation stack
                 await Shell.Current.GoToAsync("..");
             }
