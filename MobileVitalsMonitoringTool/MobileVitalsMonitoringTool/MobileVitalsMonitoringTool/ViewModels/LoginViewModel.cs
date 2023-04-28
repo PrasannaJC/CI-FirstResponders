@@ -17,6 +17,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         public Action DisplayInvalidLoginPrompt;
+        public Action DisplayAlreadyLoggedInPrompt;
 
         /// <summary>
         /// Gets or sets the SubmitCommand.
@@ -36,21 +37,25 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         public async void OnSubmit()
         {
-            var exists = await dataService.FirstResponderExistsAsync(workerId);
+            var exists = await dataService.FirstResponderExistsAsync(WorkerId);
 
             if (!exists)
             {
                 DisplayInvalidLoginPrompt();
             }
+            else if (await dataService.FirstResponderIsActiveAsync(WorkerId))
+            {
+                DisplayAlreadyLoggedInPrompt();
+            }
             else
             {
                 Preferences.Set("isLogin", true);
-                Preferences.Set("w_id", workerId);
+                Preferences.Set("w_id", WorkerId);
                 Preferences.Set("LocationVitalsServiceRunning", true);
                 Preferences.Set("checkDistressFlag", true);
                 Preferences.Set("hasAlert", false);
 
-                await dataService.SetFirstResponderActiveAsync(workerId);
+                await dataService.SetFirstResponderActiveAsync(WorkerId);
 
                 var permission = await Xamarin.Essentials.Permissions.RequestAsync<Xamarin.Essentials.Permissions.LocationAlways>();
 

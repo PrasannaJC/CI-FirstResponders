@@ -34,6 +34,15 @@ namespace MobileVitalsMonitoringTool.ViewModels
         {
             Title = "Home";
 
+            WorkerId = Preferences.Get("w_id", -1);
+            bool isLoggedIn = Preferences.Get("isLogin", false);
+
+            // Take user to login page if not logged in
+            if (WorkerId == -1 || !isLoggedIn)
+            {
+                Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            }
+
             SOSCommand = new Command(OnSOS);
 
             // get FirstResponder info
@@ -91,7 +100,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
                     });
                 });
 
-                if (Preferences.Get("LocationVitalsServiceRunning", false) == true && Preferences.Get("isLogin", false) == true)
+                if (Preferences.Get("LocationVitalsServiceRunning", false) == true)
                 {
                     StartService();
                 }
@@ -118,7 +127,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnNavigatedTo()
         {
-            FirstResponder = await dataService.GetFirstResponderAsync(Preferences.Get("w_id", -1));
+            FirstResponder = await dataService.GetFirstResponderAsync(WorkerId);
         }
 
         /// <summary>
@@ -126,7 +135,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void CheckAlertStatus()
         {
-            if (await dataService.FirstResponderHasAlertAsync(Preferences.Get("w_id", -1)))
+            if (await dataService.FirstResponderHasAlertAsync(WorkerId))
             {
                 Preferences.Set("hasAlert", true);
                 OnSOS();
@@ -140,17 +149,17 @@ namespace MobileVitalsMonitoringTool.ViewModels
         {
             MonitoringSuiteLibrary.Models.Location location = new MonitoringSuiteLibrary.Models.Location(x, y, z);
 
-            if (await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1)) == null)
+            if (await dataService.GetFirstResponderLocationAsync(WorkerId) == null)
             {
-                await dataService.CreateFirstResponderLocationAsync(Preferences.Get("w_id", -1), location);
+                await dataService.CreateFirstResponderLocationAsync(WorkerId, location);
             }
             else
             {
-                await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), location);
+                await dataService.UpdateFirstResponderLocationAsync(WorkerId, location);
             }
 
             //update FirstResponder object with new location entry
-            FirstResponder.Location = await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1));
+            FirstResponder.Location = await dataService.GetFirstResponderLocationAsync(WorkerId);
         }
 
         /// <summary>
@@ -158,17 +167,17 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void UpdateDBVitals(Vitals vitals)
         {
-            if (await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1)) == null)
+            if (await dataService.GetFirstResponderVitalsAsync(WorkerId) == null)
             {
-                await dataService.CreateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals);
+                await dataService.CreateFirstResponderVitalsAsync(WorkerId, vitals);
             }
             else
             {
-                await dataService.UpdateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals);
+                await dataService.UpdateFirstResponderVitalsAsync(WorkerId, vitals);
             }
 
             //update FirstResponder object with new vitals entry
-            FirstResponder.Vitals = await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1));
+            FirstResponder.Vitals = await dataService.GetFirstResponderVitalsAsync(WorkerId);
         }
     }
 }
