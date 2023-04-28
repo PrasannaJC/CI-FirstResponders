@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using MobileVitalsMonitoringTool.Services;
 using MobileVitalsMonitoringTool.ViewModels;
 using MobileVitalsMonitoringTool.Views;
@@ -18,8 +19,8 @@ namespace MobileVitalsMonitoringTool
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
+            await Task.CompletedTask;
             var vm = new LogoutViewModel();
-            await Shell.Current.GoToAsync("//LoginPage");
         }
 
 

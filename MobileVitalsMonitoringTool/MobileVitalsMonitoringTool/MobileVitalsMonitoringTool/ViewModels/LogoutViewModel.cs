@@ -23,8 +23,12 @@ namespace MobileVitalsMonitoringTool.ViewModels
         {
             Preferences.Set("isLogin", false);
             Preferences.Set("checkDistressFlag", false);
+
+            // stop getting the location and vitals
             StopService();
+
             dataService.SetFirstResponderInactiveAsync(Preferences.Get("w_id", -1));
+            Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
     }
 }

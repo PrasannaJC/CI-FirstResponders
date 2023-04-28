@@ -19,14 +19,11 @@ namespace MobileVitalsMonitoringTool
             InitializeComponent();
 
             bool isLogin = Preferences.Get("isLogin", false);
+            Application.Current.MainPage = new AppShell();
 
-            if (isLogin)
+            if (!isLogin)
             {
-                MainPage = new AppShell();
-            }
-            else
-            {
-                MainPage = new LoginPage();
+                Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
             }
 
         }

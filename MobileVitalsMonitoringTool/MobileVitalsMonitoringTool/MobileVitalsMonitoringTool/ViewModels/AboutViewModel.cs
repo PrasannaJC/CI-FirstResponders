@@ -32,9 +32,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         public AboutViewModel()
         {
-            Preferences.Set("checkDistressFlag", true);
-            Preferences.Set("hasAlert", false);
-
             Title = "Home";
 
             SOSCommand = new Command(OnSOS);

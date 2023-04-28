@@ -47,6 +47,8 @@ namespace MobileVitalsMonitoringTool.ViewModels
                 Preferences.Set("isLogin", true);
                 Preferences.Set("w_id", workerId);
                 Preferences.Set("LocationVitalsServiceRunning", true);
+                Preferences.Set("checkDistressFlag", true);
+                Preferences.Set("hasAlert", false);
 
                 await dataService.SetFirstResponderActiveAsync(workerId);
 
@@ -54,7 +56,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
                 if (permission == Xamarin.Essentials.PermissionStatus.Denied)
                 {
-                    // TODO Let the user know they need to accept
+                    // Let the user know they need to accept
                     return;
                 }
 
@@ -62,13 +64,9 @@ namespace MobileVitalsMonitoringTool.ViewModels
                 {
                     StartService(); //location service
                 }
-
-                // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-                //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
-                Application.Current.MainPage = new AppShell();
+                
                 await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }
         }
     }
 }
-
