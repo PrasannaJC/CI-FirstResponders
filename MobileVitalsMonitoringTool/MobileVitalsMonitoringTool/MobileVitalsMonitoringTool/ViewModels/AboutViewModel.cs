@@ -32,6 +32,9 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         public AboutViewModel()
         {
+            Preferences.Set("checkDistressFlag", true);
+            Preferences.Set("hasAlert", false);
+
             Title = "Home";
 
             SOSCommand = new Command(OnSOS);
@@ -60,9 +63,19 @@ namespace MobileVitalsMonitoringTool.ViewModels
                         UpdateDBVitals(message.Vitals);
 
                         // checkDistressFlag prevents multiple alert pages to open
-                        if (Preferences.Get("checkDistressFlag", true) && CheckDistressONNX.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                        if (Preferences.Get("checkDistressFlag", true))
                         {
-                            OnSOS();
+                            Console.WriteLine($"ML CHECKED!!!");
+                            if (CheckDistressONNX.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                            {
+                                OnSOS();
+                            }
+
+                            // check alert status only if hasAlert is false
+                            if (!Preferences.Get("hasAlert", false))
+                            {
+                                CheckAlertStatus();
+                            }
                         }
                     });
                 });
@@ -106,15 +119,27 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// <summary>
         /// Pulls first responder information from the database.
         /// </summary>
-        public async void OnNavigatedTo()
+        private async void OnNavigatedTo()
         {
             FirstResponder = await dataService.GetFirstResponderAsync(Preferences.Get("w_id", -1));
         }
 
         /// <summary>
+        /// Checks if the first responder has an active alert status and if they do they are navigated to AlertPage.
+        /// </summary>
+        private async void CheckAlertStatus()
+        {
+            if (await dataService.FirstResponderHasAlertAsync(Preferences.Get("w_id", -1)))
+            {
+                Preferences.Set("hasAlert", true);
+                OnSOS();
+            }
+        }
+
+        /// <summary>
         /// Updates the location entry of the first responder in the database.
         /// </summary>
-        public async void UpdateDBLocation(decimal x, decimal y, decimal z)
+        private async void UpdateDBLocation(decimal x, decimal y, decimal z)
         {
             MonitoringSuiteLibrary.Models.Location location = new MonitoringSuiteLibrary.Models.Location(x, y, z);
 
@@ -134,7 +159,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// <summary>
         /// Updates the vitals entry of the first responder in the database.
         /// </summary>
-        public async void UpdateDBVitals(Vitals vitals)
+        private async void UpdateDBVitals(Vitals vitals)
         {
             if (await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1)) == null)
             {

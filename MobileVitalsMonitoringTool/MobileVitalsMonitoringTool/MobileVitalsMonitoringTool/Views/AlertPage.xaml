@@ -4,7 +4,6 @@
             x:Class="MobileVitalsMonitoringTool.Views.AlertPage"
             xmlns:vm="clr-namespace:MobileVitalsMonitoringTool.ViewModels"
              Shell.PresentationMode="ModalAnimated"
-             Title="{Binding Title}"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
 
