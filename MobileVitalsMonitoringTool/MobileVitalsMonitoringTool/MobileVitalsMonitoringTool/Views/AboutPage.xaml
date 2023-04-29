@@ -34,7 +34,8 @@
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Welcome Back " FontSize="Title"/>
-                                <Span Text="{Binding FirstResponder.FName}" FontSize="Title" FontAttributes="Bold"/>
+                                <Span Text="First Responder" FontSize="Title" FontAttributes="Bold"/>
+                                <!--<Span Text="{Binding FirstResponder.FName}" FontSize="Title" FontAttributes="Bold"/>-->
                                 <Span Text="!" FontSize="Title"/>
                             </FormattedString.Spans>
                         </FormattedString>
