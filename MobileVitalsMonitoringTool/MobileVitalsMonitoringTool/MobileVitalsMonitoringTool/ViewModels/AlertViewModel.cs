@@ -24,8 +24,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
             SendAlertCommand = new Command(OnSendAlert);
             CancelAlertCommand = new Command(OnCancelAlert);
 
-            WorkerId = Preferences.Get("w_id", -1);
-
             if (Preferences.Get("hasAlert", false))
             {
                 AlertMessage = "You have an active alert!";
@@ -56,6 +54,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnCancelAlert()
         {
+            WorkerId = Preferences.Get("w_id", -1);
             if (await dataService.SetFirstResponderAlertFalseAsync(WorkerId))
             {
                 if (timerStarted)
@@ -78,6 +77,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnSendAlert()
         {
+            WorkerId = Preferences.Get("w_id", -1);
             if (await dataService.SetFirstResponderAlertTrueAsync(WorkerId))
             {
                 AlertMessage = "Alert Sent!";

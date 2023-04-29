@@ -40,6 +40,17 @@ namespace MobileVitalsMonitoringTool.Services
     }
 
     /// <summary>
+    /// A class to contain the first responder message.
+    /// </summary>
+    public class FirstResponderMessage
+    {
+        /// <summary>
+        /// Gets or sets the FirstResponder object in <see cref="FirstResponderMessage"/>
+        /// </summary>
+        public FirstResponder FirstResponder { get; set; }
+    }
+
+    /// <summary>
     /// A class to contain an error message.
     /// </summary>
     public class ErrorMessage

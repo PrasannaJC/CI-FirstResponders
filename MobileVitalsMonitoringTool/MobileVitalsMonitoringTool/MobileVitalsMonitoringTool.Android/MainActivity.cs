@@ -33,12 +33,12 @@ namespace MobileVitalsMonitoringTool.Droid
             serviceIntent = new Intent(this, typeof(AndroidLocationService));
             SetServiceMethods();
 
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.M && !Android.Provider.Settings.CanDrawOverlays(this))
-            {
-                var intent = new Intent(Android.Provider.Settings.ActionManageOverlayPermission);
-                intent.SetFlags(ActivityFlags.NewTask);
-                this.StartActivity(intent);
-            }
+            //if (Build.VERSION.SdkInt >= BuildVersionCodes.M && !Android.Provider.Settings.CanDrawOverlays(this))
+            //{
+            //    var intent = new Intent(Android.Provider.Settings.ActionManageOverlayPermission);
+            //    intent.SetFlags(ActivityFlags.NewTask);
+            //    this.StartActivity(intent);
+            //}
 
             LoadApplication(new App());
         }

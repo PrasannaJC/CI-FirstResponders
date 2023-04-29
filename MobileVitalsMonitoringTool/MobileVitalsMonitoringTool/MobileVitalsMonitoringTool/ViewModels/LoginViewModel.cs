@@ -8,6 +8,7 @@ using Xamarin.Forms;
 
 using MobileVitalsMonitoringTool.Services;
 using Xamarin.Essentials;
+using MonitoringSuiteLibrary.Models;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
@@ -70,7 +71,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
                 {
                     StartService(); //location service
                 }
-                
+
                 await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }
         }
