@@ -33,7 +33,8 @@ namespace MobileVitalsMonitoringTool.ViewModels
         public AboutViewModel()
         {
             Title = "Home";
-
+            Preferences.Set("checkDistressFlag", true);
+            Preferences.Set("hasAlert", false);
             WorkerId = Preferences.Get("w_id", -1);
             bool isLoggedIn = Preferences.Get("isLogin", false);
 
@@ -54,11 +55,12 @@ namespace MobileVitalsMonitoringTool.ViewModels
                 // get location message from GetLocationVitalsService
                 MessagingCenter.Subscribe<LocationMessage>(this, "Location", message => {
                     Device.BeginInvokeOnMainThread(() => {
-                        Location = $"{Environment.NewLine}{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}";
 
-                        Console.WriteLine($"{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}");
+                        // for debugging:
+                        //Location = $"{Environment.NewLine}{message.Location.YCoord}, {message.Location.XCoord}, {DateTime.Now.ToLongTimeString()}";
+                        //Console.WriteLine($"{message.Location.YCoord}, {message.Location.XCoord}, {DateTime.Now.ToLongTimeString()}");
 
-                        UpdateDBLocation((decimal)message.Longitude, (decimal)message.Latitude, 0); //Altitude is always 0
+                        UpdateDBLocation(message.Location);
                     });
                 });
 
@@ -145,10 +147,8 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// <summary>
         /// Updates the location entry of the first responder in the database.
         /// </summary>
-        private async void UpdateDBLocation(decimal x, decimal y, decimal z)
+        private async void UpdateDBLocation(MonitoringSuiteLibrary.Models.Location location)
         {
-            MonitoringSuiteLibrary.Models.Location location = new MonitoringSuiteLibrary.Models.Location(x, y, z);
-
             if (await dataService.GetFirstResponderLocationAsync(WorkerId) == null)
             {
                 await dataService.CreateFirstResponderLocationAsync(WorkerId, location);

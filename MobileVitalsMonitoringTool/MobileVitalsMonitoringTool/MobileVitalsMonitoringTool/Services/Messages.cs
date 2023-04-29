@@ -23,14 +23,9 @@ namespace MobileVitalsMonitoringTool.Services
     public class LocationMessage
     {
         /// <summary>
-        /// Gets or sets the latitude in <see cref="LocationMessage"/>
+        /// Gets or sets the Location object in <see cref="LocationMessage"/>
         /// </summary>
-        public double Latitude { get; set; }
-
-        /// <summary>
-        /// Gets or sets the longitude in <see cref="LocationMessage"/>
-        /// </summary>
-        public double Longitude { get; set; }
+        public Location Location { get; set; }
     }
 
     /// <summary>

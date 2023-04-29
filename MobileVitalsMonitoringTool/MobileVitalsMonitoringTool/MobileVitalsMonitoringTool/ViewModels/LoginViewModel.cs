@@ -65,6 +65,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
                     return;
                 }
 
+                // background service to get location and vitals is only configured for Android
                 if (Device.RuntimePlatform == Device.Android)
                 {
                     StartService(); //location service

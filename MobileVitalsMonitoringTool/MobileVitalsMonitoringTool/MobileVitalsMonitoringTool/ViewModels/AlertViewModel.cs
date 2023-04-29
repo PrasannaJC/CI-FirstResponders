@@ -100,7 +100,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
         private void CountDown()
         {
             if (TotalSeconds.TotalSeconds == 0)
-
             {
                 _timer.Stop();
                 OnSendAlert(); // send alert when timer hits 0

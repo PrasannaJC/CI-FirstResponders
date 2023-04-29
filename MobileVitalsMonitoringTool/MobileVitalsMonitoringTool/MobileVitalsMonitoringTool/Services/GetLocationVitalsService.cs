@@ -47,8 +47,7 @@ namespace MobileVitalsMonitoringTool.Services
 						{
 							var locationMessage = new LocationMessage
 							{
-								Latitude = location.Latitude,
-								Longitude = location.Longitude
+								Location = new MonitoringSuiteLibrary.Models.Location((decimal)location.Longitude, (decimal)location.Latitude, (decimal)location.Altitude)
 							};
 
 							Device.BeginInvokeOnMainThread(() =>

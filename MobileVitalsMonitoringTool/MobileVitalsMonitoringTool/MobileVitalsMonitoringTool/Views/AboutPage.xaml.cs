@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace MobileVitalsMonitoringTool.Views
 {
     /// <summary>
-    /// The AboutPage view class
+    /// A class for the AboutPage
     /// </summary>
     public partial class AboutPage : ContentPage
     {

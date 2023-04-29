@@ -11,7 +11,7 @@ using Xamarin.Forms.Xaml;
 namespace MobileVitalsMonitoringTool.Views
 {
     /// <summary>
-    /// The LoginPage view class
+    /// A class for the LoginPage
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
