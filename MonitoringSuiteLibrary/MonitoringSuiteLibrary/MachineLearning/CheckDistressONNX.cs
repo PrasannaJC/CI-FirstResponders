@@ -9,6 +9,10 @@ using System.IO;
 
 namespace MonitoringSuiteLibrary.MachineLearning
 {
+    /// <summary>
+    /// The new class that uses the python ONNX machine learning implementation to check the distress status of first responders.
+    /// This references the DistressONNXModel.onnx file as it's source for the machine learning model.
+    /// </summary>
     public class CheckDistressONNX
     {
         /// <summary>

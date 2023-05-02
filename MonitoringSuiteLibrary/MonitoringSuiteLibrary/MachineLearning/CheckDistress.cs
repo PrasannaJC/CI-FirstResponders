@@ -7,7 +7,8 @@ using MonitoringSuiteLibrary.Models;
 namespace MonitoringSuiteLibrary.MachineLearning
 {
     /// <summary>
-    /// A class to check the distress status of first responders.
+    /// The original class using an ML.NET implementation to check the distress status of first responders.
+    /// This references the Distress.mbconfig ML.NET files for it's machine learning implementation.
     /// </summary>
     public class CheckDistress
     {
