@@ -11,9 +11,17 @@ namespace MonitoringSuiteLibrary.MachineLearning
 {
     public class CheckDistressONNX
     {
+        /// <summary>
+        /// Check the distress status of a First Responder object using it's age, gender, and vitals data.
+        /// </summary>
+        /// <param name="age">The first responders age id.</param>
+        /// <param name="sex">The first responders gender.</param>
+        /// <param name="v">The first responders Vitals data.</param>
+        /// <returns>Returns a boolean representing the distress status of a first responder.</returns>
         public static bool GetDistressStatus(int age, char sex, Vitals v)
         {
-            //string ONNXModelPath = Path.GetFullPath(Path.Join("MachineLearning", "DistressONNXModel.onnx"));
+            // comment for debugging
+            // string ONNXModelPath = Path.GetFullPath(Path.Join("MachineLearning", "DistressONNXModel.onnx"));
             string ONNXModelPath = Path.GetFullPath(Path.Combine("data", "user", "0", "com.frs.mobilevitalsmonitoringtool", "files", ".local", "share", "DistressONNXModel.onnx"));
 
             int sexF = 0;

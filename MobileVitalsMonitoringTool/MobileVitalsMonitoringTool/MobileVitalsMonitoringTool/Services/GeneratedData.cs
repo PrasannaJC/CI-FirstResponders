@@ -29,14 +29,15 @@ namespace MobileVitalsMonitoringTool.Services
             var r = new Random();
             Vitals temp = v;
 
-
+            /// <summary>
+            /// This section is for when we hit the 6/100 chance that a first responder's vitals spike to distress levels instead of gradually changing.
+            /// </summary>
             // 6/100 chance to hit distress state.
             // If we do hit the distress chance, 
             // then we give a greater window for the randomly generated values to 
             // increment/decriment the vitals data elements.
             if (r.Next(0, 100) >= 94)
             {
-                /* ---BloodOxy--------------------------------------------------------------------------------- */
 
                 switch (temp.BloodOxy)
                 {
@@ -63,7 +64,6 @@ namespace MobileVitalsMonitoringTool.Services
                         break;
                 }
 
-                /* ---HeartRate-------------------------------------------------------------------------------- */
 
                 if (temp.HeartRate < 75) { temp.HeartRate += r.Next(50, 65); }
                 else if (temp.HeartRate > 75 && temp.HeartRate <= 180) { temp.HeartRate += r.Next(20, 35); }
@@ -72,52 +72,23 @@ namespace MobileVitalsMonitoringTool.Services
                 else if (temp.HeartRate > 190 && temp.HeartRate <= 203) { temp.HeartRate += r.Next(5, 10); }
                 else { temp.HeartRate += 0; }
 
-                /* ---SySBP------------------------------------------------------------------------------------ */
 
                 if (temp.SysBP < 145) { temp.SysBP += r.Next(15, 25); }
                 else if (temp.SysBP <= 155) { temp.SysBP += r.Next(10, 16); }
                 else if (temp.SysBP > 155 && temp.SysBP < 167) { temp.SysBP += 3; }
                 else { temp.SysBP += 0; }
 
-                /* ---DiaBP------------------------------------------------------------------------------------ */
 
                 if (temp.DiaBP <= 87) { temp.DiaBP += r.Next(1, 5); }
                 else if (temp.DiaBP > 87 && temp.DiaBP <= 92) { temp.DiaBP += r.Next(1, 3); }
                 else if (temp.DiaBP > 92) { temp.DiaBP += 0; }
 
-                /* ---RespRate--------------------------------------------------------------------------------- */
 
                 if (temp.BloodOxy > 98) { temp.RespRate = r.Next(20, 25); }
                 else if (temp.BloodOxy > 95 && temp.BloodOxy <= 98) { temp.RespRate = r.Next(14, 20); }
                 else if (temp.BloodOxy > 93 && temp.BloodOxy <= 95) { temp.RespRate = r.Next(8, 14); }
                 else if (temp.BloodOxy >= 92 && temp.BloodOxy <= 93) { temp.RespRate = r.Next(5, 8); }
-                /*
-                switch (temp.RespRate)
-                {
-                    case 5:
-                        temp.RespRate += 0;
-                        break;
-                    case 6:
-                        temp.RespRate += -1;
-                        break;
-                    case 7:
-                        temp.RespRate += -2;
-                        break;
-                    case 8:
-                        temp.RespRate += r.Next(-3, -1);
-                        break;
-                    case 9:
-                        temp.RespRate += r.Next(-4, -1);
-                        break;
-                    case 10:
-                        temp.RespRate += r.Next(-5, -1);
-                        break;
-                    default:
-                        temp.RespRate += r.Next(-6, -1);
-                        break;
-                }
-                */
-                /* ---TempF------------------------------------------------------------------------------------ */
+
 
                 if (temp.TempF < 102.4) { temp.TempF += r.Next(50, 110) / 100; }
                 else if (temp.TempF < 103.25) { temp.TempF += r.Next(20, 40) / 100; }
@@ -127,8 +98,9 @@ namespace MobileVitalsMonitoringTool.Services
             }
             else
             {
-                /* ---BloodOxy--------------------------------------------------------------------------------- */
-
+                /// <summary>
+                /// This section is for the general case of generating vitals data i.e. a first responder's vitals change as they would under normal circumstances in a disaster zone.
+                /// </summary>
                 // The check below is to make sure we don't go above 100%
                 if (temp.BloodOxy == 100)
                 {
@@ -143,14 +115,12 @@ namespace MobileVitalsMonitoringTool.Services
                 // If we otherwise have a BloodOxy of 92, we either leave it be or increment it by 1.
                 else { temp.BloodOxy += r.Next(0, 2); }
 
-                /* ---RespRate--------------------------------------------------------------------------------- */
                 // RespRate is tied to BloodOxy, and thue the latter's values determine what RespRate will be.
                 if (temp.BloodOxy > 98) { temp.RespRate = r.Next(22, 27); }
                 else if (temp.BloodOxy > 95 && temp.BloodOxy <= 98) { temp.RespRate = r.Next(15, 22); }
                 else if (temp.BloodOxy > 93 && temp.BloodOxy <= 95) { temp.RespRate = r.Next(10, 16); }
                 else if (temp.BloodOxy >= 92 && temp.BloodOxy <= 93) { temp.RespRate = r.Next(5, 10); }
 
-                /* ---HeartRate-------------------------------------------------------------------------------- */
 
                 // Heartrate is increased/decreased by different ranges depending on how high or low it is.
                 if (temp.HeartRate < 75) { temp.HeartRate += r.Next(10, 18); }
@@ -158,14 +128,12 @@ namespace MobileVitalsMonitoringTool.Services
                 else if (temp.HeartRate > 180 && temp.HeartRate <= 210) { temp.HeartRate += r.Next(-2, 5); }
                 else if (temp.HeartRate > 210) { temp.HeartRate += r.Next(-1, 0); }
 
-                /* ---SySBP------------------------------------------------------------------------------------ */
 
                 // Systolic Blood Pressure is increased/decreased by different ranges depending on how high or low it is.
                 if (temp.SysBP < 160) { temp.SysBP += r.Next(-2, 4); }
                 else if (temp.SysBP >= 160 && temp.SysBP < 166){ temp.SysBP += r.Next(-1, 2); }
                 else { temp.SysBP += 0; }
 
-                /* ---DiaBP------------------------------------------------------------------------------------ */
 
                 // Diastolic Blood Pressure is increased/decreased by different ranges depending on how high or low it is.
 
@@ -175,7 +143,6 @@ namespace MobileVitalsMonitoringTool.Services
                 else if (temp.DiaBP > 92 && temp.DiaBP <= 100) { temp.DiaBP += r.Next(-1, 2); }
                 else { temp.DiaBP += 0; }
 
-                /* ---TempF------------------------------------------------------------------------------------ */
 
                 // Temperature is increased/decreased by different ranges depending on how high or low it is.
                 // If we go too low, we only increment.
