@@ -6,11 +6,9 @@ namespace UnitTests
 {
     public class MLTests
     {
-
         [Fact]
         public void TestNotDistress()
         {
-
             Vitals v = new Vitals()
             {
                 BloodOxy = 94,
@@ -56,9 +54,6 @@ namespace UnitTests
 
             Assert.True(z);
 
-        }
-        static void Main()
-        {
         }
     }
 }
