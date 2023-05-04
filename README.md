@@ -10,6 +10,10 @@ This is a python program that will generate the dataset being used for this proj
 ## DispatchersMonitoringTool
 The dispatcher's monitoring tool interfaces with the results from the vitals and location monitoring performed by the distress detector and the mobile vitals monitoring tool. The first responders location is displayed in a map overlaying Open Street Maps, and the vitals and distress status is displayed in a table format.
 
+<p align="center">
+  <img alt="MapExample" src="Resources/DesktopAppScreenshot.png">
+</p>
+
 ## MobileVitalsMonitoringTool
 The mobile application monitoring tool will be responsible for reporting its location, first responder vitals information, and SOS alerts to the dispather's monitoring tool. This is the main interface that first responders will have access to monitor their own vitals as well as request aid. The application will also use a system to automatically send out SOS alerts based on the first responder's vitals information. (Note that vitals information will come from the data generator described above).
 
