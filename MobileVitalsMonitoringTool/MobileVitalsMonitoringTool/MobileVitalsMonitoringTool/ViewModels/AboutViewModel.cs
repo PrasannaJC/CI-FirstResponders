@@ -28,6 +28,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
     {
         bool disableSOSButton = false;
         string fname;
+        string ONNXModelPath = Path.Combine("data", "user", "0", "com.frs.mobilevitalsmonitoringtool", "files", ".local", "share", "DistressONNXModel.onnx");
 
         /// <summary>
         /// Creates a <see cref="AboutViewModel"/>.
@@ -74,7 +75,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
                         if (Preferences.Get("checkDistressFlag", true))
                         {
                             Console.WriteLine($"ML CHECKED!!!");
-                            if (CheckDistressONNX.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
+                            if (CheckDistressONNX.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals, ONNXModelPath))
                             {
                                 OnSOS();
                             }
