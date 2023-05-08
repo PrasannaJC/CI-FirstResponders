@@ -1,0 +1,8 @@
+<map id="Ort::RunOptions::SetRunTag" name="Ort::RunOptions::SetRunTag">
+<area shape="rect" id="node1" title="wraps OrtApi::RunOptionsSetRunTag" alt="" coords="5,10,193,36"/>
+<area shape="rect" id="node2" href="$namespace_ort.html#a8930fa08683b5153ee3aa4df63745ce3" title="This returns a reference to the OrtApi interface in use." alt="" coords="867,36,955,61"/>
+<area shape="rect" id="node3" href="$namespace_ort.html#a46abac49f0814465d931e0fea00095b8" title=" " alt="" coords="241,36,368,61"/>
+<area shape="rect" id="node4" href="$namespace_ort_1_1detail.html#a9abe48d6640cf4680ec232a80e200371" title=" " alt="" coords="416,36,575,61"/>
+<area shape="rect" id="node5" href="$struct_ort_1_1_status.html#a19a0d483b009e0188971ddc9823922b2" title=" " alt="" coords="634,36,807,61"/>
+<area shape="rect" id="node6" href="$struct_ort_1_1_status.html#a82e24c127b4b791a9075708a7b784f49" title=" " alt="" coords="623,109,819,134"/>
+</map>

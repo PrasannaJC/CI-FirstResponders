@@ -1,0 +1,4 @@
+<map id="MobileVitalsMonitoringTool.Services.GetLocationVitalsService.Run" name="MobileVitalsMonitoringTool.Services.GetLocationVitalsService.Run">
+<area shape="rect" id="node1" title="Initiates a loop to get the location and vitals of a first responder until a cancellation token is re..." alt="" coords="5,13,252,53"/>
+<area shape="rect" id="node2" href="$interface_mobile_vitals_monitoring_tool_1_1_contracts_1_1_services_1_1_i_vitals_data.html#a58b8eec2fb872de5f7fe824ee5ac6eca" title="Gets the vitals data." alt="" coords="300,5,503,60"/>
+</map>

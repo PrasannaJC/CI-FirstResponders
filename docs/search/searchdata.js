@@ -1,16 +1,19 @@
 var indexSectionsWithContent =
 {
-  0: ".abcdefghijklmnopqrstuvwxyz",
-  1: "abcdefgilmnprstvx",
-  2: "dmsx",
-  3: ".abdefgilmnprstvx",
-  4: "abcdfghilmnoprstuv",
-  5: "abcdefghijklmnopqrstuvwxyz",
-  6: "a",
-  7: "dl",
-  8: "abcdefghilmnoprstuvwxyz",
-  9: "np",
-  10: "cr"
+  0: "._abcdefghijklmnopqrstuvwxyz~",
+  1: "abcdefgiklmnoprstuvwx",
+  2: "abcdmosux",
+  3: ".abcdefgiklmnoprstuvwx",
+  4: "abcdefghiklmnopqrstuvw~",
+  5: "_abcdefghijklmnopqrstuvwxyz",
+  6: "abcegorstu",
+  7: "acegno",
+  8: "cdilno",
+  9: "abcdefghilmnoprstuvwxyz",
+  10: "np",
+  11: "_no",
+  12: "g",
+  13: "cdr"
 };
 
 var indexSectionNames =
@@ -21,11 +24,14 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "enums",
-  7: "enumvalues",
-  8: "properties",
-  9: "events",
-  10: "pages"
+  6: "typedefs",
+  7: "enums",
+  8: "enumvalues",
+  9: "properties",
+  10: "events",
+  11: "defines",
+  12: "groups",
+  13: "pages"
 };
 
 var indexSectionLabels =
@@ -36,10 +42,13 @@ var indexSectionLabels =
   3: "Files",
   4: "Functions",
   5: "Variables",
-  6: "Enumerations",
-  7: "Enumerator",
-  8: "Properties",
-  9: "Events",
-  10: "Pages"
+  6: "Typedefs",
+  7: "Enumerations",
+  8: "Enumerator",
+  9: "Properties",
+  10: "Events",
+  11: "Macros",
+  12: "Modules",
+  13: "Pages"
 };
 

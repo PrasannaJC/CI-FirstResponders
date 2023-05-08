@@ -1,0 +1,4 @@
+<map id="MobileVitalsMonitoringTool.ViewModels.BaseViewModel.StopService" name="MobileVitalsMonitoringTool.ViewModels.BaseViewModel.StopService">
+<area shape="rect" id="node1" title="Stops the location background service." alt="" coords="295,13,557,53"/>
+<area shape="rect" id="node2" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_logout_view_model.html#a57c316e468a55e4f7ee89cb3abd16df5" title="Creates a LogoutViewModel." alt="" coords="5,5,247,60"/>
+</map>

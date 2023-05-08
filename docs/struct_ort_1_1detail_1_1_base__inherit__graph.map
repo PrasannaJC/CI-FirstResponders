@@ -1,0 +1,46 @@
+<map id="Ort::detail::Base&lt; T &gt;" name="Ort::detail::Base&lt; T &gt;">
+<area shape="rect" id="node1" title="Used internally by the C++ API. C++ wrapper types inherit from this. This is a zero cost abstraction ..." alt="" coords="5,733,153,758"/>
+<area shape="rect" id="node2" href="$struct_ort_1_1detail_1_1_allocator_impl.html" title=" " alt="" coords="235,5,398,45"/>
+<area shape="rect" id="node4" href="$struct_ort_1_1detail_1_1_allocator_impl.html" title=" " alt="" coords="201,69,432,109"/>
+<area shape="rect" id="node6" href="$struct_ort_1_1detail_1_1_const_io_binding_impl.html" title=" " alt="" coords="229,133,404,173"/>
+<area shape="rect" id="node7" href="$struct_ort_1_1detail_1_1_const_session_impl.html" title=" " alt="" coords="233,197,401,237"/>
+<area shape="rect" id="node8" href="$struct_ort_1_1detail_1_1_const_session_options_impl.html" title=" " alt="" coords="204,261,429,301"/>
+<area shape="rect" id="node9" href="$struct_ort_1_1detail_1_1_const_value_impl.html" title=" " alt="" coords="227,325,406,365"/>
+<area shape="rect" id="node10" href="$struct_ort_1_1detail_1_1_kernel_info_impl.html" title=" " alt="" coords="233,389,401,429"/>
+<area shape="rect" id="node12" href="$struct_ort_1_1detail_1_1_map_type_info_impl.html" title=" " alt="" coords="236,453,397,493"/>
+<area shape="rect" id="node14" href="$struct_ort_1_1detail_1_1_memory_info_impl.html" title=" " alt="" coords="227,517,406,557"/>
+<area shape="rect" id="node16" href="$struct_ort_1_1detail_1_1_sequence_type_info_impl.html" title=" " alt="" coords="209,581,424,621"/>
+<area shape="rect" id="node18" href="$struct_ort_1_1detail_1_1_tensor_type_and_shape_info_impl.html" title=" " alt="" coords="205,646,428,701"/>
+<area shape="rect" id="node20" href="$struct_ort_1_1detail_1_1_type_info_impl.html" title=" " alt="" coords="237,725,396,765"/>
+<area shape="rect" id="node22" href="$struct_ort_1_1detail_1_1_allocator_impl.html" title=" " alt="" coords="220,790,413,815"/>
+<area shape="rect" id="node23" href="$struct_ort_1_1detail_1_1_const_io_binding_impl.html" title=" " alt="" coords="229,840,404,880"/>
+<area shape="rect" id="node27" href="$struct_ort_1_1detail_1_1_const_session_impl.html" title=" " alt="" coords="233,904,401,944"/>
+<area shape="rect" id="node31" href="$struct_ort_1_1detail_1_1_const_session_options_impl.html" title=" " alt="" coords="233,968,401,1008"/>
+<area shape="rect" id="node35" href="$struct_ort_1_1detail_1_1_const_value_impl.html" title=" " alt="" coords="212,1033,421,1058"/>
+<area shape="rect" id="node39" href="$struct_ort_1_1detail_1_1_kernel_info_impl.html" title=" " alt="" coords="217,1082,416,1107"/>
+<area shape="rect" id="node40" href="$struct_ort_1_1detail_1_1_map_type_info_impl.html" title=" " alt="" coords="237,1132,397,1172"/>
+<area shape="rect" id="node41" href="$struct_ort_1_1detail_1_1_memory_info_impl.html" title=" " alt="" coords="212,1197,421,1222"/>
+<area shape="rect" id="node42" href="$struct_ort_1_1detail_1_1_sequence_type_info_impl.html" title=" " alt="" coords="230,1247,403,1287"/>
+<area shape="rect" id="node43" href="$struct_ort_1_1detail_1_1_tensor_type_and_shape_info_impl.html" title=" " alt="" coords="228,1311,405,1351"/>
+<area shape="rect" id="node44" href="$struct_ort_1_1detail_1_1_type_info_impl.html" title=" " alt="" coords="221,1375,412,1401"/>
+<area shape="rect" id="node3" href="$struct_ort_1_1_allocator.html" title="Wrapper around OrtAllocator." alt="" coords="528,13,627,38"/>
+<area shape="rect" id="node5" href="$struct_ort_1_1_allocator_with_default_options.html" title="Wrapper around OrtAllocator default instance that is owned by Onnxruntime." alt="" coords="494,69,661,109"/>
+<area shape="rect" id="node11" href="$struct_ort_1_1_kernel_info.html" title="This struct owns the OrtKernInfo* pointer when a copy is made. For convenient wrapping of OrtKernelIn..." alt="" coords="525,397,630,422"/>
+<area shape="rect" id="node13" href="$struct_ort_1_1_map_type_info.html" title="Wrapper around ::OrtMapTypeInfo." alt="" coords="517,461,638,486"/>
+<area shape="rect" id="node15" href="$struct_ort_1_1_memory_info.html" title="Wrapper around ::OrtMemoryInfo." alt="" coords="520,525,635,550"/>
+<area shape="rect" id="node17" href="$struct_ort_1_1_sequence_type_info.html" title="Wrapper around ::OrtSequenceTypeInfo." alt="" coords="500,589,655,614"/>
+<area shape="rect" id="node19" href="$struct_ort_1_1_tensor_type_and_shape_info.html" title="Wrapper around ::OrtTensorTypeAndShapeInfo." alt="" coords="480,650,675,675"/>
+<area shape="rect" id="node21" href="$struct_ort_1_1_type_info.html" title="Type information that may contain either TensorTypeAndShapeInfo or the information about contained se..." alt="" coords="529,699,625,725"/>
+<area shape="rect" id="node24" href="$struct_ort_1_1detail_1_1_io_binding_impl.html" title=" " alt="" coords="495,749,659,789"/>
+<area shape="rect" id="node26" href="$struct_ort_1_1detail_1_1_io_binding_impl.html" title=" " alt="" coords="480,814,675,839"/>
+<area shape="rect" id="node25" href="$struct_ort_1_1_io_binding.html" title="Wrapper around ::OrtIoBinding." alt="" coords="742,757,843,782"/>
+<area shape="rect" id="node28" href="$struct_ort_1_1detail_1_1_session_impl.html" title=" " alt="" coords="498,864,657,904"/>
+<area shape="rect" id="node30" href="$struct_ort_1_1detail_1_1_session_impl.html" title=" " alt="" coords="483,929,672,954"/>
+<area shape="rect" id="node29" href="$struct_ort_1_1_session.html" title="Wrapper around ::OrtSession." alt="" coords="745,871,840,897"/>
+<area shape="rect" id="node32" href="$struct_ort_1_1detail_1_1_session_options_impl.html" title=" " alt="" coords="487,979,667,1019"/>
+<area shape="rect" id="node34" href="$struct_ort_1_1detail_1_1_session_options_impl.html" title=" " alt="" coords="488,1043,667,1083"/>
+<area shape="rect" id="node33" href="$struct_ort_1_1_session_options.html" title="Wrapper around ::OrtSessionOptions." alt="" coords="723,986,863,1011"/>
+<area shape="rect" id="node36" href="$struct_ort_1_1detail_1_1_value_impl.html" title=" " alt="" coords="505,1107,649,1147"/>
+<area shape="rect" id="node38" href="$struct_ort_1_1detail_1_1_value_impl.html" title=" " alt="" coords="490,1171,665,1197"/>
+<area shape="rect" id="node37" href="$struct_ort_1_1_value.html" title="Wrapper around ::OrtValue." alt="" coords="752,1114,833,1139"/>
+</map>

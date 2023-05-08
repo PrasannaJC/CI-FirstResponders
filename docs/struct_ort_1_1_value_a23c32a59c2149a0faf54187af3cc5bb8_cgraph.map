@@ -1,0 +1,3 @@
+<map id="Ort::Value::CreateTensor" name="Ort::Value::CreateTensor">
+<area shape="rect" id="node1" title="Creates a tensor with a user supplied buffer. Wraps OrtApi::CreateTensorWithDataAsOrtValue." alt="" coords="5,29,172,55"/>
+</map>

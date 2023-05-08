@@ -1,0 +1,4 @@
+var dir_a336260fa06e26318a143c4a42e7205c =
+[
+    [ "onnxruntime_c_api.h", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_dispatchers_monitoring_tool_2_dispatchers_monita41e2ff9749491e8223e4481bd21be10.html", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_dispatchers_monitoring_tool_2_dispatchers_monita41e2ff9749491e8223e4481bd21be10" ]
+];

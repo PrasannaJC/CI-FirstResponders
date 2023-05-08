@@ -120,21 +120,22 @@ Collaboration diagram for MonitoringSuiteLibrary.Services.DataService:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e685df2a5340d3fe273519350cd5c3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a1e685df2a5340d3fe273519350cd5c3e">DataService</a> (IOptions&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_data_service_configuration.html">DataServiceConfiguration</a> &gt; options)</td></tr>
+<tr class="memdesc:a1e685df2a5340d3fe273519350cd5c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a DataService.  <br /></td></tr>
 <tr class="separator:a1e685df2a5340d3fe273519350cd5c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b934618248c7a2365312af8122e6446"><td class="memItemLeft" align="right" valign="top">async Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a1b934618248c7a2365312af8122e6446">GetFirstRespondersAsync</a> ()</td></tr>
-<tr class="memdesc:a1b934618248c7a2365312af8122e6446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous function that queries the database to retrieve all first responder's information from the workers table along with their corresponding vitals and location.  <br /></td></tr>
-<tr class="separator:a1b934618248c7a2365312af8122e6446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35434fa68088584f0a176959f9491e34"><td class="memItemLeft" align="right" valign="top">async Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a35434fa68088584f0a176959f9491e34">GetActiveFirstRespondersAsync</a> ()</td></tr>
+<tr class="memdesc:a35434fa68088584f0a176959f9491e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous function that queries the database to retrieve all active first responder's information from the workers table along with their corresponding vitals and location.  <br /></td></tr>
+<tr class="separator:a35434fa68088584f0a176959f9491e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90c6b694c7644ae4e9b5bbaf62b48c76"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a>?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76">GetFirstResponderAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:a90c6b694c7644ae4e9b5bbaf62b48c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous function that queries the database to retrieve a first responder's information from the workers table along with their corresponding vitals and location.  <br /></td></tr>
 <tr class="separator:a90c6b694c7644ae4e9b5bbaf62b48c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4850166f723ccbd57928497c94e747d4"><td class="memItemLeft" align="right" valign="top">async Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4">GetFirstRespondersAsync</a> (int eventId)</td></tr>
-<tr class="memdesc:a4850166f723ccbd57928497c94e747d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchrnous function that queries the database to retrieve all first responder's information from the workers table that responded to a particular event along with their corresponding vitals and location.  <br /></td></tr>
+<tr class="memdesc:a4850166f723ccbd57928497c94e747d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous function that queries the database to retrieve all first responder's information from the workers table that responded to a particular event along with their corresponding vitals and location.  <br /></td></tr>
 <tr class="separator:a4850166f723ccbd57928497c94e747d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60cfff6b23e9f9e3b8d2922668b012ad"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a>?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad">GetFirstResponderVitalsAsync</a> (int firstResponderId)</td></tr>
-<tr class="memdesc:a60cfff6b23e9f9e3b8d2922668b012ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchrnous function that queries the database to retrieve the vitals entry of a first responder.  <br /></td></tr>
+<tr class="memdesc:a60cfff6b23e9f9e3b8d2922668b012ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous function that queries the database to retrieve the vitals entry of a first responder.  <br /></td></tr>
 <tr class="separator:a60cfff6b23e9f9e3b8d2922668b012ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96bbf429145a02ebe73322b8776f0f98"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a>?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98">GetFirstResponderLocationAsync</a> (int firstResponderId)</td></tr>
-<tr class="memdesc:a96bbf429145a02ebe73322b8776f0f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchrnous function that queries the database to retrieve the location entry of a first responder.  <br /></td></tr>
+<tr class="memdesc:a96bbf429145a02ebe73322b8776f0f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous function that queries the database to retrieve the location entry of a first responder.  <br /></td></tr>
 <tr class="separator:a96bbf429145a02ebe73322b8776f0f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c46dd8aab6bba74ca306deb20887e7"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a00c46dd8aab6bba74ca306deb20887e7">SetFirstResponderInactiveAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:a00c46dd8aab6bba74ca306deb20887e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies a first responder's active status to false.  <br /></td></tr>
@@ -154,24 +155,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abaf4c4b58dab902264ab15e51cee9da4"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#abaf4c4b58dab902264ab15e51cee9da4">DeleteFirstResponderLocationAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:abaf4c4b58dab902264ab15e51cee9da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a first responder location. This is done when a first responder is changed to inactive.  <br /></td></tr>
 <tr class="separator:abaf4c4b58dab902264ab15e51cee9da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4c7fccb253448fb2d5c53e3cb05aa81"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#af4c7fccb253448fb2d5c53e3cb05aa81">CreateFirstResponderLocationAsync</a> (int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)</td></tr>
-<tr class="memdesc:af4c7fccb253448fb2d5c53e3cb05aa81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a location entry of a first responder.  <br /></td></tr>
-<tr class="separator:af4c7fccb253448fb2d5c53e3cb05aa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7639e03fdd679215bcf205fbc05bdec7"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a7639e03fdd679215bcf205fbc05bdec7">CreateFirstResponderVitalsAsync</a> (int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)</td></tr>
-<tr class="memdesc:a7639e03fdd679215bcf205fbc05bdec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vitals entry for a first responder.  <br /></td></tr>
-<tr class="separator:a7639e03fdd679215bcf205fbc05bdec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a633c1d0df9590a936868ea5ecff2bf17"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a633c1d0df9590a936868ea5ecff2bf17">UpdateFirstResponderLocationAsync</a> (int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)</td></tr>
-<tr class="memdesc:a633c1d0df9590a936868ea5ecff2bf17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the location of a first responder.  <br /></td></tr>
-<tr class="separator:a633c1d0df9590a936868ea5ecff2bf17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6673fa06e1a9896693aaaf7fe2bf3478"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a6673fa06e1a9896693aaaf7fe2bf3478">UpdateFirstResponderVitalsAsync</a> (int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)</td></tr>
-<tr class="memdesc:a6673fa06e1a9896693aaaf7fe2bf3478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the location of a first responder.  <br /></td></tr>
-<tr class="separator:a6673fa06e1a9896693aaaf7fe2bf3478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d688af45284c7a3a8f2202b3b3dba3"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a52d688af45284c7a3a8f2202b3b3dba3">CreateFirstResponderLocationAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a> location)</td></tr>
+<tr class="memdesc:a52d688af45284c7a3a8f2202b3b3dba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a location entry of a first responder.  <br /></td></tr>
+<tr class="separator:a52d688af45284c7a3a8f2202b3b3dba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595a8860b3ed380a611f8e49c1aa54ad"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a595a8860b3ed380a611f8e49c1aa54ad">CreateFirstResponderVitalsAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a> vitals)</td></tr>
+<tr class="memdesc:a595a8860b3ed380a611f8e49c1aa54ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vitals entry for a first responder.  <br /></td></tr>
+<tr class="separator:a595a8860b3ed380a611f8e49c1aa54ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5563cbb166264e88609e4c9cc80d05f6"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a5563cbb166264e88609e4c9cc80d05f6">UpdateFirstResponderLocationAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a> location)</td></tr>
+<tr class="memdesc:a5563cbb166264e88609e4c9cc80d05f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the location of a first responder.  <br /></td></tr>
+<tr class="separator:a5563cbb166264e88609e4c9cc80d05f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39aefce7d813df93787f8b1c2899775"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ab39aefce7d813df93787f8b1c2899775">UpdateFirstResponderVitalsAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a> vitals)</td></tr>
+<tr class="memdesc:ab39aefce7d813df93787f8b1c2899775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the vitals of a first responder.  <br /></td></tr>
+<tr class="separator:ab39aefce7d813df93787f8b1c2899775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad15039c5d58aeea66abaf60a7f1c0a3f"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f">FirstResponderExistsAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:ad15039c5d58aeea66abaf60a7f1c0a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder exists in the database based on worker ID.  <br /></td></tr>
 <tr class="separator:ad15039c5d58aeea66abaf60a7f1c0a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b98bad645be8fa0a8df599b0c8eeb94"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a7b98bad645be8fa0a8df599b0c8eeb94">GetFirstRespondersAsync</a> ()</td></tr>
-<tr class="memdesc:a7b98bad645be8fa0a8df599b0c8eeb94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a IEnumerable&lt;FirstResponder&gt; representing the first responders.  <br /></td></tr>
-<tr class="separator:a7b98bad645be8fa0a8df599b0c8eeb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2454cfb7628ab391d9afabef515e3cbf"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a2454cfb7628ab391d9afabef515e3cbf">FirstResponderIsActiveAsync</a> (int firstResponderId)</td></tr>
+<tr class="memdesc:a2454cfb7628ab391d9afabef515e3cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder is active.  <br /></td></tr>
+<tr class="separator:a2454cfb7628ab391d9afabef515e3cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d107108a41a96cb97cf2f59d14d7f8"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a40d107108a41a96cb97cf2f59d14d7f8">FirstResponderHasAlertAsync</a> (int firstResponderId)</td></tr>
+<tr class="memdesc:a40d107108a41a96cb97cf2f59d14d7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder has an active alert.  <br /></td></tr>
+<tr class="separator:a40d107108a41a96cb97cf2f59d14d7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a8e7e4d19f00b93b36a97b4591040d"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aa2a8e7e4d19f00b93b36a97b4591040d">GetActiveFirstRespondersAsync</a> ()</td></tr>
+<tr class="memdesc:aa2a8e7e4d19f00b93b36a97b4591040d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a IEnumerable&lt;FirstResponder&gt; representing the active first responders.  <br /></td></tr>
+<tr class="separator:aa2a8e7e4d19f00b93b36a97b4591040d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56ad670b68b650dd1b9857b01f7ef11a"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a>?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a56ad670b68b650dd1b9857b01f7ef11a">GetFirstResponderAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:a56ad670b68b650dd1b9857b01f7ef11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a FirstResponder.  <br /></td></tr>
 <tr class="separator:a56ad670b68b650dd1b9857b01f7ef11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,21 +209,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abed06128084c40da3d4bc726a3ac5bd7"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#abed06128084c40da3d4bc726a3ac5bd7">DeleteFirstResponderLocationAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:abed06128084c40da3d4bc726a3ac5bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a first responder location. This is done when a first responder is changed to inactive.  <br /></td></tr>
 <tr class="separator:abed06128084c40da3d4bc726a3ac5bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae461b65ba15ea750651c62143844455e"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ae461b65ba15ea750651c62143844455e">CreateFirstResponderLocationAsync</a> (int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)</td></tr>
-<tr class="memdesc:ae461b65ba15ea750651c62143844455e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a location entry of a first responder.  <br /></td></tr>
-<tr class="separator:ae461b65ba15ea750651c62143844455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff248b6bb3e8452d4b2db6264b494181"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aff248b6bb3e8452d4b2db6264b494181">CreateFirstResponderVitalsAsync</a> (int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)</td></tr>
-<tr class="memdesc:aff248b6bb3e8452d4b2db6264b494181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vitals entry for a first responder.  <br /></td></tr>
-<tr class="separator:aff248b6bb3e8452d4b2db6264b494181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a759ef5182a9028e96579dd114fe3c6ee"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a759ef5182a9028e96579dd114fe3c6ee">UpdateFirstResponderLocationAsync</a> (int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)</td></tr>
-<tr class="memdesc:a759ef5182a9028e96579dd114fe3c6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates first responder location.  <br /></td></tr>
-<tr class="separator:a759ef5182a9028e96579dd114fe3c6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7897bf14ece00d366d6c500bf30702f"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ae7897bf14ece00d366d6c500bf30702f">UpdateFirstResponderVitalsAsync</a> (int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)</td></tr>
-<tr class="memdesc:ae7897bf14ece00d366d6c500bf30702f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates first responder vitals.  <br /></td></tr>
-<tr class="separator:ae7897bf14ece00d366d6c500bf30702f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef19a3c7e6f878824b72692e77bb1d84"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aef19a3c7e6f878824b72692e77bb1d84">CreateFirstResponderLocationAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a> location)</td></tr>
+<tr class="memdesc:aef19a3c7e6f878824b72692e77bb1d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a location entry of a first responder.  <br /></td></tr>
+<tr class="separator:aef19a3c7e6f878824b72692e77bb1d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20914491f7eb88cc4bc2246b2ca8754"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ab20914491f7eb88cc4bc2246b2ca8754">CreateFirstResponderVitalsAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a> vitals)</td></tr>
+<tr class="memdesc:ab20914491f7eb88cc4bc2246b2ca8754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vitals entry for a first responder.  <br /></td></tr>
+<tr class="separator:ab20914491f7eb88cc4bc2246b2ca8754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba39bd71f838672d412b30819719748"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a6ba39bd71f838672d412b30819719748">UpdateFirstResponderLocationAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a> location)</td></tr>
+<tr class="memdesc:a6ba39bd71f838672d412b30819719748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the location of a first responder.  <br /></td></tr>
+<tr class="separator:a6ba39bd71f838672d412b30819719748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868843fd4abc8c9a2dea7c8039cde23a"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a868843fd4abc8c9a2dea7c8039cde23a">UpdateFirstResponderVitalsAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a> vitals)</td></tr>
+<tr class="memdesc:a868843fd4abc8c9a2dea7c8039cde23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the vitals of a first responder.  <br /></td></tr>
+<tr class="separator:a868843fd4abc8c9a2dea7c8039cde23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5376fab86da15136ba8ed7805a1fc6e5"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a5376fab86da15136ba8ed7805a1fc6e5">FirstResponderExistsAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:a5376fab86da15136ba8ed7805a1fc6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder exists in the database based on worker ID.  <br /></td></tr>
 <tr class="separator:a5376fab86da15136ba8ed7805a1fc6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4936bed6e5a5957d9eb26d3a211fb2"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aeb4936bed6e5a5957d9eb26d3a211fb2">FirstResponderIsActiveAsync</a> (int firstResponderId)</td></tr>
+<tr class="memdesc:aeb4936bed6e5a5957d9eb26d3a211fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder is active.  <br /></td></tr>
+<tr class="separator:aeb4936bed6e5a5957d9eb26d3a211fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a65093c131e22fdd9c264be7aeca1d6"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a6a65093c131e22fdd9c264be7aeca1d6">FirstResponderHasAlertAsync</a> (int firstResponderId)</td></tr>
+<tr class="memdesc:a6a65093c131e22fdd9c264be7aeca1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder has an active alert.  <br /></td></tr>
+<tr class="separator:a6a65093c131e22fdd9c264be7aeca1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concrete implementation of the first responder data service. </p>
@@ -237,11 +250,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates a DataService. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">options</td><td>The IOptions of type DataServiceConfiguration to use.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af4c7fccb253448fb2d5c53e3cb05aa81" name="af4c7fccb253448fb2d5c53e3cb05aa81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4c7fccb253448fb2d5c53e3cb05aa81">&#9670;&#160;</a></span>CreateFirstResponderLocationAsync()</h2>
+<a id="a52d688af45284c7a3a8f2202b3b3dba3" name="a52d688af45284c7a3a8f2202b3b3dba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d688af45284c7a3a8f2202b3b3dba3">&#9670;&#160;</a></span>CreateFirstResponderLocationAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,20 +276,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>xcoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>ycoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>zcoord</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a>&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -281,21 +290,21 @@ Public Member Functions</h2></td></tr>
 <p>Creates a location entry of a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
-    <tr><td class="paramname">xcoord</td><td></td></tr>
-    <tr><td class="paramname">ycoord</td><td></td></tr>
-    <tr><td class="paramname">zcoord</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder corresponding to the created location.</td></tr>
+    <tr><td class="paramname">location</td><td>A Location object.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the update was successful.</dd></dl>
 
-<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ae461b65ba15ea750651c62143844455e">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aef19a3c7e6f878824b72692e77bb1d84">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+
+<p class="reference">References <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html#a8b5b137e43830718f34e3359c2d8a5f3">MonitoringSuiteLibrary.Models.Location.XCoord</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html#ad63ec0d50ca6d22accdbea11cc4d3710">MonitoringSuiteLibrary.Models.Location.YCoord</a>, and <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html#ae62a835d70c6d8c6f818e110f0d08183">MonitoringSuiteLibrary.Models.Location.ZCoord</a>.</p>
 
 </div>
 </div>
-<a id="a7639e03fdd679215bcf205fbc05bdec7" name="a7639e03fdd679215bcf205fbc05bdec7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7639e03fdd679215bcf205fbc05bdec7">&#9670;&#160;</a></span>CreateFirstResponderVitalsAsync()</h2>
+<a id="a595a8860b3ed380a611f8e49c1aa54ad" name="a595a8860b3ed380a611f8e49c1aa54ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595a8860b3ed380a611f8e49c1aa54ad">&#9670;&#160;</a></span>CreateFirstResponderVitalsAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,38 +318,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bloodoxy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>heartrate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sysbp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>diabp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>resprate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>tempf</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a>&#160;</td>
+          <td class="paramname"><em>vitals</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -353,19 +332,16 @@ Public Member Functions</h2></td></tr>
 <p>Creates a vitals entry for a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
-    <tr><td class="paramname">bloodoxy</td><td></td></tr>
-    <tr><td class="paramname">heartrate</td><td></td></tr>
-    <tr><td class="paramname">sysbp</td><td></td></tr>
-    <tr><td class="paramname">diabp</td><td></td></tr>
-    <tr><td class="paramname">resprate</td><td></td></tr>
-    <tr><td class="paramname">tempf</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder corresponding to the created vitals.</td></tr>
+    <tr><td class="paramname">vitals</td><td>A Vitals object.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the update was successful.</dd></dl>
 
-<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aff248b6bb3e8452d4b2db6264b494181">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ab20914491f7eb88cc4bc2246b2ca8754">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+
+<p class="reference">References <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a46d4103b11d4b9880c4b2867278d7916">MonitoringSuiteLibrary.Models.Vitals.BloodOxy</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a4aa7707996d97b4f72a2484bb1b1f0ce">MonitoringSuiteLibrary.Models.Vitals.DiaBP</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a9d375bc79d27c37411f16103ed20ada3">MonitoringSuiteLibrary.Models.Vitals.HeartRate</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#afaffb1079bd87ee245aee80e1912c77c">MonitoringSuiteLibrary.Models.Vitals.RespRate</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a496318d0dbea5cddae7ba6d685e30c1f">MonitoringSuiteLibrary.Models.Vitals.SysBP</a>, and <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a8385601cf86eaba1ffef2e6050470602">MonitoringSuiteLibrary.Models.Vitals.TempF</a>.</p>
 
 </div>
 </div>
@@ -388,24 +364,13 @@ Public Member Functions</h2></td></tr>
 <p>Deletes a first responder location. This is done when a first responder is changed to inactive. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the target first responder.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not setting the first responder as inactive was successful.</dd></dl>
 
 <p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#abed06128084c40da3d4bc726a3ac5bd7">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a00c46dd8aab6bba74ca306deb20887e7">MonitoringSuiteLibrary.Services.DataService.SetFirstResponderInactiveAsync()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_abaf4c4b58dab902264ab15e51cee9da4_icgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_abaf4c4b58dab902264ab15e51cee9da4_icgraph" alt=""/></div>
-<map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_abaf4c4b58dab902264ab15e51cee9da4_icgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_abaf4c4b58dab902264ab15e51cee9da4_icgraph">
-<area shape="rect" title="Deletes a first responder location. This is done when a first responder is changed to inactive." alt="" coords="336,5,643,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a00c46dd8aab6bba74ca306deb20887e7" title="Modifies a first responder&#39;s active status to false." alt="" coords="5,5,288,45"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -428,24 +393,13 @@ Here is the caller graph for this function:</div>
 <p>Deletes a first responder vitals. This is done when a first responder is changed to inactive. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the target first responder.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not setting the first responder as inactive was successful.</dd></dl>
 
 <p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#af0976df9a7944910c77a80262db771df">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a00c46dd8aab6bba74ca306deb20887e7">MonitoringSuiteLibrary.Services.DataService.SetFirstResponderInactiveAsync()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a8b8d82eece8acba0a2bf6843f4677eb4_icgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a8b8d82eece8acba0a2bf6843f4677eb4_icgraph" alt=""/></div>
-<map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a8b8d82eece8acba0a2bf6843f4677eb4_icgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a8b8d82eece8acba0a2bf6843f4677eb4_icgraph">
-<area shape="rect" title="Deletes a first responder vitals. This is done when a first responder is changed to inactive." alt="" coords="336,5,627,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a00c46dd8aab6bba74ca306deb20887e7" title="Modifies a first responder&#39;s active status to false." alt="" coords="5,5,288,45"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -468,7 +422,7 @@ Here is the caller graph for this function:</div>
 <p>Checks if first responder exists in the database based on worker ID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to update.</td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to check.</td></tr>
   </table>
   </dd>
 </dl>
@@ -484,8 +438,126 @@ Here is the call graph for this function:</div>
 <map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_ad15039c5d58aeea66abaf60a7f1c0a3f_cgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_ad15039c5d58aeea66abaf60a7f1c0a3f_cgraph">
 <area shape="rect" title="Checks if first responder exists in the database based on worker ID." alt="" coords="5,37,263,77"/>
 <area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="311,37,552,77"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchrnous function that queries the database to retrieve the location entry of a first responder." alt="" coords="600,5,891,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchrnous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="608,69,883,109"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchronous function that queries the database to retrieve the location entry of a first responder." alt="" coords="600,5,891,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchronous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="608,69,883,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a40d107108a41a96cb97cf2f59d14d7f8" name="a40d107108a41a96cb97cf2f59d14d7f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d107108a41a96cb97cf2f59d14d7f8">&#9670;&#160;</a></span>FirstResponderHasAlertAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; bool &gt; MonitoringSuiteLibrary.Services.DataService.FirstResponderHasAlertAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>firstResponderId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if first responder has an active alert. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the worker's alert field is true in the database.</dd></dl>
+
+<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a6a65093c131e22fdd9c264be7aeca1d6">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+
+<p class="reference">References <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderAsync()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a40d107108a41a96cb97cf2f59d14d7f8_cgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a40d107108a41a96cb97cf2f59d14d7f8_cgraph" alt=""/></div>
+<map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a40d107108a41a96cb97cf2f59d14d7f8_cgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a40d107108a41a96cb97cf2f59d14d7f8_cgraph">
+<area shape="rect" title="Checks if first responder has an active alert." alt="" coords="5,37,276,77"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="324,37,565,77"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchronous function that queries the database to retrieve the location entry of a first responder." alt="" coords="613,5,904,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchronous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="621,69,896,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2454cfb7628ab391d9afabef515e3cbf" name="a2454cfb7628ab391d9afabef515e3cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2454cfb7628ab391d9afabef515e3cbf">&#9670;&#160;</a></span>FirstResponderIsActiveAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; bool &gt; MonitoringSuiteLibrary.Services.DataService.FirstResponderIsActiveAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>firstResponderId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if first responder is active. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the worker's active field is true in the database.</dd></dl>
+
+<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aeb4936bed6e5a5957d9eb26d3a211fb2">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+
+<p class="reference">References <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderAsync()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a2454cfb7628ab391d9afabef515e3cbf_cgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a2454cfb7628ab391d9afabef515e3cbf_cgraph" alt=""/></div>
+<map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a2454cfb7628ab391d9afabef515e3cbf_cgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a2454cfb7628ab391d9afabef515e3cbf_cgraph">
+<area shape="rect" title="Checks if first responder is active." alt="" coords="5,37,271,77"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="319,37,560,77"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchronous function that queries the database to retrieve the location entry of a first responder." alt="" coords="608,5,899,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchronous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="616,69,891,109"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35434fa68088584f0a176959f9491e34" name="a35434fa68088584f0a176959f9491e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35434fa68088584f0a176959f9491e34">&#9670;&#160;</a></span>GetActiveFirstRespondersAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt; MonitoringSuiteLibrary.Services.DataService.GetActiveFirstRespondersAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asynchronous function that queries the database to retrieve all active first responder's information from the workers table along with their corresponding vitals and location. </p>
+<dl class="section return"><dt>Returns</dt><dd>A collection of FirstResponder objects.</dd></dl>
+
+<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aa2a8e7e4d19f00b93b36a97b4591040d">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+
+<p class="reference">References <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderLocationAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderVitalsAsync()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a35434fa68088584f0a176959f9491e34_cgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a35434fa68088584f0a176959f9491e34_cgraph" alt=""/></div>
+<map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a35434fa68088584f0a176959f9491e34_cgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a35434fa68088584f0a176959f9491e34_cgraph">
+<area shape="rect" title="Asynchronous function that queries the database to retrieve all active first responder&#39;s information ..." alt="" coords="5,37,288,77"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchronous function that queries the database to retrieve the location entry of a first responder." alt="" coords="336,5,627,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchronous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="344,69,619,109"/>
 </map>
 </div>
 
@@ -510,25 +582,25 @@ Here is the call graph for this function:</div>
 <p>Asynchronous function that queries the database to retrieve a first responder's information from the workers table along with their corresponding vitals and location. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td>The unique id of the first responder</td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The unique id of the first responder.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A FirstResponder object </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The FirstResponder corresponding to the <em>firstResponderId</em> .</dd></dl>
 
 <p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a56ad670b68b650dd1b9857b01f7ef11a">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
 
 <p class="reference">References <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderLocationAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderVitalsAsync()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f">MonitoringSuiteLibrary.Services.DataService.FirstResponderExistsAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4">MonitoringSuiteLibrary.Services.DataService.GetFirstRespondersAsync()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f">MonitoringSuiteLibrary.Services.DataService.FirstResponderExistsAsync()</a>, <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a40d107108a41a96cb97cf2f59d14d7f8">MonitoringSuiteLibrary.Services.DataService.FirstResponderHasAlertAsync()</a>, <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a2454cfb7628ab391d9afabef515e3cbf">MonitoringSuiteLibrary.Services.DataService.FirstResponderIsActiveAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4">MonitoringSuiteLibrary.Services.DataService.GetFirstRespondersAsync()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a90c6b694c7644ae4e9b5bbaf62b48c76_cgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a90c6b694c7644ae4e9b5bbaf62b48c76_cgraph" alt=""/></div>
 <map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a90c6b694c7644ae4e9b5bbaf62b48c76_cgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a90c6b694c7644ae4e9b5bbaf62b48c76_cgraph">
 <area shape="rect" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="5,37,247,77"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchrnous function that queries the database to retrieve the location entry of a first responder." alt="" coords="295,5,585,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchrnous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="303,69,577,109"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchronous function that queries the database to retrieve the location entry of a first responder." alt="" coords="295,5,585,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchronous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="303,69,577,109"/>
 </map>
 </div>
 <div class="dynheader">
@@ -536,9 +608,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a90c6b694c7644ae4e9b5bbaf62b48c76_icgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a90c6b694c7644ae4e9b5bbaf62b48c76_icgraph" alt=""/></div>
 <map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a90c6b694c7644ae4e9b5bbaf62b48c76_icgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a90c6b694c7644ae4e9b5bbaf62b48c76_icgraph">
-<area shape="rect" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="311,37,552,77"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f" title="Checks if first responder exists in the database based on worker ID." alt="" coords="5,5,263,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4" title="Asynchrnous function that queries the database to retrieve all first responder&#39;s information from the..." alt="" coords="10,69,258,109"/>
+<area shape="rect" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="324,101,565,141"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f" title="Checks if first responder exists in the database based on worker ID." alt="" coords="12,5,269,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a40d107108a41a96cb97cf2f59d14d7f8" title="Checks if first responder has an active alert." alt="" coords="5,69,276,109"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a2454cfb7628ab391d9afabef515e3cbf" title="Checks if first responder is active." alt="" coords="8,133,273,173"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4" title="Asynchronous function that queries the database to retrieve all first responder&#39;s information from th..." alt="" coords="17,197,265,237"/>
 </map>
 </div>
 
@@ -560,69 +634,37 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Asynchrnous function that queries the database to retrieve the location entry of a first responder. </p>
+<p>Asynchronous function that queries the database to retrieve the location entry of a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td>The unique id of the first responder</td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The unique id of the first responder.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A location object </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The Location corresponding to the <em>firstResponderId</em> .</dd></dl>
 
 <p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ab3031e11c3cb4b474ad3fc9329443440">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a1b934618248c7a2365312af8122e6446">MonitoringSuiteLibrary.Services.DataService.GetFirstRespondersAsync()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a35434fa68088584f0a176959f9491e34">MonitoringSuiteLibrary.Services.DataService.GetActiveFirstRespondersAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderAsync()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a96bbf429145a02ebe73322b8776f0f98_icgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a96bbf429145a02ebe73322b8776f0f98_icgraph" alt=""/></div>
 <map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a96bbf429145a02ebe73322b8776f0f98_icgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a96bbf429145a02ebe73322b8776f0f98_icgraph">
-<area shape="rect" title="Asynchrnous function that queries the database to retrieve the location entry of a first responder." alt="" coords="607,69,897,109"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="314,37,555,77"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a1b934618248c7a2365312af8122e6446" title="Asynchronous function that queries the database to retrieve all first responder&#39;s information from th..." alt="" coords="311,101,559,141"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f" title="Checks if first responder exists in the database based on worker ID." alt="" coords="5,5,263,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4" title="Asynchrnous function that queries the database to retrieve all first responder&#39;s information from the..." alt="" coords="10,69,258,109"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1b934618248c7a2365312af8122e6446" name="a1b934618248c7a2365312af8122e6446"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b934618248c7a2365312af8122e6446">&#9670;&#160;</a></span>GetFirstRespondersAsync() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt; MonitoringSuiteLibrary.Services.DataService.GetFirstRespondersAsync </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Asynchronous function that queries the database to retrieve all first responder's information from the workers table along with their corresponding vitals and location. </p>
-<dl class="section return"><dt>Returns</dt><dd>A collection of FirstResponder objects </dd></dl>
-
-<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a7b98bad645be8fa0a8df599b0c8eeb94">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
-
-<p class="reference">References <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderLocationAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderVitalsAsync()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a1b934618248c7a2365312af8122e6446_cgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a1b934618248c7a2365312af8122e6446_cgraph" alt=""/></div>
-<map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a1b934618248c7a2365312af8122e6446_cgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a1b934618248c7a2365312af8122e6446_cgraph">
-<area shape="rect" title="Asynchronous function that queries the database to retrieve all first responder&#39;s information from th..." alt="" coords="5,37,253,77"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchrnous function that queries the database to retrieve the location entry of a first responder." alt="" coords="301,5,592,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchrnous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="309,69,584,109"/>
+<area shape="rect" title="Asynchronous function that queries the database to retrieve the location entry of a first responder." alt="" coords="655,69,945,109"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a35434fa68088584f0a176959f9491e34" title="Asynchronous function that queries the database to retrieve all active first responder&#39;s information ..." alt="" coords="324,37,607,77"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="345,101,586,141"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f" title="Checks if first responder exists in the database based on worker ID." alt="" coords="12,5,269,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a40d107108a41a96cb97cf2f59d14d7f8" title="Checks if first responder has an active alert." alt="" coords="5,69,276,109"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a2454cfb7628ab391d9afabef515e3cbf" title="Checks if first responder is active." alt="" coords="8,133,273,173"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4" title="Asynchronous function that queries the database to retrieve all first responder&#39;s information from th..." alt="" coords="17,197,265,237"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="a4850166f723ccbd57928497c94e747d4" name="a4850166f723ccbd57928497c94e747d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4850166f723ccbd57928497c94e747d4">&#9670;&#160;</a></span>GetFirstRespondersAsync() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4850166f723ccbd57928497c94e747d4">&#9670;&#160;</a></span>GetFirstRespondersAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,8 +679,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Asynchrnous function that queries the database to retrieve all first responder's information from the workers table that responded to a particular event along with their corresponding vitals and location. </p>
-<dl class="section return"><dt>Returns</dt><dd>A collection of FirstResponder objects </dd></dl>
+<p>Asynchronous function that queries the database to retrieve all first responder's information from the workers table that responded to a particular event along with their corresponding vitals and location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventId</td><td>The id of the event corresponding to the target first responders.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A collection of FirstResponder objects.</dd></dl>
 
 <p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#abfb34814db7b584b0230c007d893578e">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
 
@@ -648,10 +696,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a4850166f723ccbd57928497c94e747d4_cgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a4850166f723ccbd57928497c94e747d4_cgraph" alt=""/></div>
 <map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a4850166f723ccbd57928497c94e747d4_cgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a4850166f723ccbd57928497c94e747d4_cgraph">
-<area shape="rect" title="Asynchrnous function that queries the database to retrieve all first responder&#39;s information from the..." alt="" coords="5,37,253,77"/>
+<area shape="rect" title="Asynchronous function that queries the database to retrieve all first responder&#39;s information from th..." alt="" coords="5,37,253,77"/>
 <area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="301,37,543,77"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchrnous function that queries the database to retrieve the location entry of a first responder." alt="" coords="591,5,881,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchrnous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="599,69,873,109"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchronous function that queries the database to retrieve the location entry of a first responder." alt="" coords="591,5,881,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchronous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="599,69,873,109"/>
 </map>
 </div>
 
@@ -673,28 +721,30 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Asynchrnous function that queries the database to retrieve the vitals entry of a first responder. </p>
+<p>Asynchronous function that queries the database to retrieve the vitals entry of a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td>The unique id of the first responder</td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The unique id of the first responder.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A Vitals object </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The Vitals corresponding to the <em>firstResponderId</em> .</dd></dl>
 
 <p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a031e2a3cf2e89fbc6824641730314df0">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a1b934618248c7a2365312af8122e6446">MonitoringSuiteLibrary.Services.DataService.GetFirstRespondersAsync()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a35434fa68088584f0a176959f9491e34">MonitoringSuiteLibrary.Services.DataService.GetActiveFirstRespondersAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76">MonitoringSuiteLibrary.Services.DataService.GetFirstResponderAsync()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a60cfff6b23e9f9e3b8d2922668b012ad_icgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a60cfff6b23e9f9e3b8d2922668b012ad_icgraph" alt=""/></div>
 <map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a60cfff6b23e9f9e3b8d2922668b012ad_icgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a60cfff6b23e9f9e3b8d2922668b012ad_icgraph">
-<area shape="rect" title="Asynchrnous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="607,69,881,109"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="314,37,555,77"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a1b934618248c7a2365312af8122e6446" title="Asynchronous function that queries the database to retrieve all first responder&#39;s information from th..." alt="" coords="311,101,559,141"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f" title="Checks if first responder exists in the database based on worker ID." alt="" coords="5,5,263,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4" title="Asynchrnous function that queries the database to retrieve all first responder&#39;s information from the..." alt="" coords="10,69,258,109"/>
+<area shape="rect" title="Asynchronous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="655,69,929,109"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a35434fa68088584f0a176959f9491e34" title="Asynchronous function that queries the database to retrieve all active first responder&#39;s information ..." alt="" coords="324,37,607,77"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a90c6b694c7644ae4e9b5bbaf62b48c76" title="Asynchronous function that queries the database to retrieve a first responder&#39;s information from the ..." alt="" coords="345,101,586,141"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f" title="Checks if first responder exists in the database based on worker ID." alt="" coords="12,5,269,45"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a40d107108a41a96cb97cf2f59d14d7f8" title="Checks if first responder has an active alert." alt="" coords="5,69,276,109"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a2454cfb7628ab391d9afabef515e3cbf" title="Checks if first responder is active." alt="" coords="8,133,273,173"/>
+<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a4850166f723ccbd57928497c94e747d4" title="Asynchronous function that queries the database to retrieve all first responder&#39;s information from th..." alt="" coords="17,197,265,237"/>
 </map>
 </div>
 
@@ -719,7 +769,7 @@ Here is the caller graph for this function:</div>
 <p>Modifies a first responder's active status to true. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id corresponding to the first responder to modify.</td></tr>
   </table>
   </dd>
 </dl>
@@ -806,7 +856,7 @@ Here is the caller graph for this function:</div>
 <p>Modifies a first responder's active status to false. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id corresponding to the first responder to modify.</td></tr>
   </table>
   </dd>
 </dl>
@@ -814,22 +864,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ab411fc0a041d62d8bdf9391002a2548c">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
 
-<p class="reference">References <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#abaf4c4b58dab902264ab15e51cee9da4">MonitoringSuiteLibrary.Services.DataService.DeleteFirstResponderLocationAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a8b8d82eece8acba0a2bf6843f4677eb4">MonitoringSuiteLibrary.Services.DataService.DeleteFirstResponderVitalsAsync()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_monitoring_suite_library_1_1_services_1_1_data_service_a00c46dd8aab6bba74ca306deb20887e7_cgraph.png" border="0" usemap="#aclass_monitoring_suite_library_1_1_services_1_1_data_service_a00c46dd8aab6bba74ca306deb20887e7_cgraph" alt=""/></div>
-<map name="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a00c46dd8aab6bba74ca306deb20887e7_cgraph" id="aclass_monitoring_suite_library_1_1_services_1_1_data_service_a00c46dd8aab6bba74ca306deb20887e7_cgraph">
-<area shape="rect" title="Modifies a first responder&#39;s active status to false." alt="" coords="5,37,288,77"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#abaf4c4b58dab902264ab15e51cee9da4" title="Deletes a first responder location. This is done when a first responder is changed to inactive." alt="" coords="336,5,643,45"/>
-<area shape="rect" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a8b8d82eece8acba0a2bf6843f4677eb4" title="Deletes a first responder vitals. This is done when a first responder is changed to inactive." alt="" coords="344,69,635,109"/>
-</map>
-</div>
-
 </div>
 </div>
-<a id="a633c1d0df9590a936868ea5ecff2bf17" name="a633c1d0df9590a936868ea5ecff2bf17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a633c1d0df9590a936868ea5ecff2bf17">&#9670;&#160;</a></span>UpdateFirstResponderLocationAsync()</h2>
+<a id="a5563cbb166264e88609e4c9cc80d05f6" name="a5563cbb166264e88609e4c9cc80d05f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5563cbb166264e88609e4c9cc80d05f6">&#9670;&#160;</a></span>UpdateFirstResponderLocationAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -843,20 +881,8 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>xcoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>ycoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>zcoord</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a>&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -869,21 +895,21 @@ Here is the call graph for this function:</div>
 <p>Updates the location of a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
-    <tr><td class="paramname">xcoord</td><td></td></tr>
-    <tr><td class="paramname">ycoord</td><td></td></tr>
-    <tr><td class="paramname">zcoord</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to update.</td></tr>
+    <tr><td class="paramname">location</td><td>A Location object.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the update was successful.</dd></dl>
 
-<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a759ef5182a9028e96579dd114fe3c6ee">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a6ba39bd71f838672d412b30819719748">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+
+<p class="reference">References <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html#a8b5b137e43830718f34e3359c2d8a5f3">MonitoringSuiteLibrary.Models.Location.XCoord</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html#ad63ec0d50ca6d22accdbea11cc4d3710">MonitoringSuiteLibrary.Models.Location.YCoord</a>, and <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html#ae62a835d70c6d8c6f818e110f0d08183">MonitoringSuiteLibrary.Models.Location.ZCoord</a>.</p>
 
 </div>
 </div>
-<a id="a6673fa06e1a9896693aaaf7fe2bf3478" name="a6673fa06e1a9896693aaaf7fe2bf3478"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6673fa06e1a9896693aaaf7fe2bf3478">&#9670;&#160;</a></span>UpdateFirstResponderVitalsAsync()</h2>
+<a id="ab39aefce7d813df93787f8b1c2899775" name="ab39aefce7d813df93787f8b1c2899775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39aefce7d813df93787f8b1c2899775">&#9670;&#160;</a></span>UpdateFirstResponderVitalsAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -897,38 +923,8 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bloodoxy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>heartrate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sysbp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>diabp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>resprate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>tempf</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a>&#160;</td>
+          <td class="paramname"><em>vitals</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -938,22 +934,19 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the location of a first responder. </p>
+<p>Updates the vitals of a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
-    <tr><td class="paramname">bloodoxy</td><td></td></tr>
-    <tr><td class="paramname">heartrate</td><td></td></tr>
-    <tr><td class="paramname">sysbp</td><td></td></tr>
-    <tr><td class="paramname">diabp</td><td></td></tr>
-    <tr><td class="paramname">resprate</td><td></td></tr>
-    <tr><td class="paramname">tempf</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to update.</td></tr>
+    <tr><td class="paramname">vitals</td><td>A Vitals object.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the update was successful.</dd></dl>
 
-<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ae7897bf14ece00d366d6c500bf30702f">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+<p>Implements <a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a868843fd4abc8c9a2dea7c8039cde23a">MonitoringSuiteLibrary.Contracts.Services.IDataService</a>.</p>
+
+<p class="reference">References <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a46d4103b11d4b9880c4b2867278d7916">MonitoringSuiteLibrary.Models.Vitals.BloodOxy</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a4aa7707996d97b4f72a2484bb1b1f0ce">MonitoringSuiteLibrary.Models.Vitals.DiaBP</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a9d375bc79d27c37411f16103ed20ada3">MonitoringSuiteLibrary.Models.Vitals.HeartRate</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#afaffb1079bd87ee245aee80e1912c77c">MonitoringSuiteLibrary.Models.Vitals.RespRate</a>, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a496318d0dbea5cddae7ba6d685e30c1f">MonitoringSuiteLibrary.Models.Vitals.SysBP</a>, and <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a8385601cf86eaba1ffef2e6050470602">MonitoringSuiteLibrary.Models.Vitals.TempF</a>.</p>
 
 </div>
 </div>

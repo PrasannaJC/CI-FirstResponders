@@ -1,0 +1,5 @@
+<map id="MobileVitalsMonitoringTool.ViewModels.AlertViewModel" name="MobileVitalsMonitoringTool.ViewModels.AlertViewModel">
+<area shape="rect" id="node1" title="A class that represent the AlertViewModel. User is navigated here when they choose to send an SOS ale..." alt="" coords="5,152,192,192"/>
+<area shape="rect" id="node2" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_base_view_model.html" title="The base view model. This sets data that will be used in the app." alt="" coords="41,79,156,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="19,5,178,31"/>
+</map>

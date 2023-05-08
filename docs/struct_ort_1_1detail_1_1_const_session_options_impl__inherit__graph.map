@@ -1,0 +1,7 @@
+<map id="Ort::detail::ConstSessionOptionsImpl&lt; T &gt;" name="Ort::detail::ConstSessionOptionsImpl&lt; T &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="201,37,369,77"/>
+<area shape="rect" id="node3" href="$struct_ort_1_1detail_1_1_session_options_impl.html" title=" " alt="" coords="417,5,597,45"/>
+<area shape="rect" id="node5" href="$struct_ort_1_1detail_1_1_session_options_impl.html" title=" " alt="" coords="418,69,597,109"/>
+<area shape="rect" id="node2" href="$struct_ort_1_1detail_1_1_base.html" title="Used internally by the C++ API. C++ wrapper types inherit from this. This is a zero cost abstraction ..." alt="" coords="5,45,153,70"/>
+<area shape="rect" id="node4" href="$struct_ort_1_1_session_options.html" title="Wrapper around ::OrtSessionOptions." alt="" coords="645,13,785,38"/>
+</map>

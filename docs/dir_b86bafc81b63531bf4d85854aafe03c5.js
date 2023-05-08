@@ -1,0 +1,8 @@
+var dir_b86bafc81b63531bf4d85854aafe03c5 =
+[
+    [ "cpu_provider_factory.h", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_mcfa5dd9aa7e467bb36355e6e23ae67d1.html", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_mcfa5dd9aa7e467bb36355e6e23ae67d1" ],
+    [ "nnapi_provider_factory.h", "nnapi__provider__factory_8h.html", "nnapi__provider__factory_8h" ],
+    [ "onnxruntime_c_api.h", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_m384c1c8d9a2b2359dfdb923de0b72e83.html", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_m384c1c8d9a2b2359dfdb923de0b72e83" ],
+    [ "onnxruntime_cxx_api.h", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_mef839cbd10aa55ad8fef77a6f4861e59.html", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_mef839cbd10aa55ad8fef77a6f4861e59" ],
+    [ "onnxruntime_cxx_inline.h", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_m1f34c4d798e2b42669308d97a56869bc.html", "_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_m1f34c4d798e2b42669308d97a56869bc" ]
+];

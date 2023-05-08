@@ -1,0 +1,4 @@
+var _edit_text_preference___on_bind_edit_text_listener_implementor_8java =
+[
+    [ "mono.androidx.preference.EditTextPreference_OnBindEditTextListenerImplementor", "classmono_1_1androidx_1_1preference_1_1_edit_text_preference___on_bind_edit_text_listener_implementor.html", "classmono_1_1androidx_1_1preference_1_1_edit_text_preference___on_bind_edit_text_listener_implementor" ]
+];

@@ -1,4 +1,0 @@
-<map id="MonitoringSuiteLibrary.Services.DataService.DeleteFirstResponderVitalsAsync" name="MonitoringSuiteLibrary.Services.DataService.DeleteFirstResponderVitalsAsync">
-<area shape="rect" id="node1" title="Deletes a first responder vitals. This is done when a first responder is changed to inactive." alt="" coords="336,5,627,45"/>
-<area shape="rect" id="node2" href="$class_monitoring_suite_library_1_1_services_1_1_data_service.html#a00c46dd8aab6bba74ca306deb20887e7" title="Modifies a first responder&#39;s active status to false." alt="" coords="5,5,288,45"/>
-</map>

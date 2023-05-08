@@ -1,5 +1,30 @@
 var searchData=
 [
-  ['pageservice_2ecs_0',['PageService.cs',['../_page_service_8cs.html',1,'']]],
-  ['persistandrestoreservice_2ecs_1',['PersistAndRestoreService.cs',['../_persist_and_restore_service_8cs.html',1,'']]]
+  ['magnetometerlistener_2ejava_0',['MagnetometerListener.java',['../_magnetometer_listener_8java.html',1,'']]],
+  ['main_2ecs_1',['Main.cs',['../_main_8cs.html',1,'']]],
+  ['mainactivity_2ecs_2',['MainActivity.cs',['../_main_activity_8cs.html',1,'']]],
+  ['mainactivity_2ejava_3',['MainActivity.java',['../_main_activity_8java.html',1,'']]],
+  ['mainpage_2eg_2ecs_4',['MainPage.g.cs',['../net6_80-windows_2_views_2_main_page_8g_8cs.html',1,'(Global Namespace)'],['../net7_80-windows_2_views_2_main_page_8g_8cs.html',1,'(Global Namespace)']]],
+  ['mainpage_2eg_2ei_2ecs_5',['MainPage.g.i.cs',['../net6_80-windows_2_views_2_main_page_8g_8i_8cs.html',1,'(Global Namespace)'],['../net6_80-windows10_80_819041_80_2_views_2_main_page_8g_8i_8cs.html',1,'(Global Namespace)'],['../net7_80-windows_2_views_2_main_page_8g_8i_8cs.html',1,'(Global Namespace)']]],
+  ['mapmarker_2ecs_6',['MapMarker.cs',['../_map_marker_8cs.html',1,'']]],
+  ['masterdetailcontainer_2ejava_7',['MasterDetailContainer.java',['../_master_detail_container_8java.html',1,'']]],
+  ['masterdetailpagerenderer_2ejava_8',['MasterDetailPageRenderer.java',['../_master_detail_page_renderer_8java.html',1,'']]],
+  ['masterdetailrenderer_2ejava_9',['MasterDetailRenderer.java',['../_master_detail_renderer_8java.html',1,'']]],
+  ['materialbutton_5foncheckedchangelistenerimplementor_2ejava_10',['MaterialButton_OnCheckedChangeListenerImplementor.java',['../_material_button___on_checked_change_listener_implementor_8java.html',1,'']]],
+  ['materialbuttontogglegroup_5fonbuttoncheckedlistenerimplementor_2ejava_11',['MaterialButtonToggleGroup_OnButtonCheckedListenerImplementor.java',['../_material_button_toggle_group___on_button_checked_listener_implementor_8java.html',1,'']]],
+  ['materialcardview_5foncheckedchangelistenerimplementor_2ejava_12',['MaterialCardView_OnCheckedChangeListenerImplementor.java',['../_material_card_view___on_checked_change_listener_implementor_8java.html',1,'']]],
+  ['materialpickeronpositivebuttonclicklistenerimplementor_2ejava_13',['MaterialPickerOnPositiveButtonClickListenerImplementor.java',['../_material_picker_on_positive_button_click_listener_implementor_8java.html',1,'']]],
+  ['mediasessioncompat_5fonactivechangelistenerimplementor_2ejava_14',['MediaSessionCompat_OnActiveChangeListenerImplementor.java',['../_media_session_compat___on_active_change_listener_implementor_8java.html',1,'']]],
+  ['menuitemcompat_5fonactionexpandlistenerimplementor_2ejava_15',['MenuItemCompat_OnActionExpandListenerImplementor.java',['../_menu_item_compat___on_action_expand_listener_implementor_8java.html',1,'']]],
+  ['menuitemhoverlistenerimplementor_2ejava_16',['MenuItemHoverListenerImplementor.java',['../_menu_item_hover_listener_implementor_8java.html',1,'']]],
+  ['menuitemtemplateselector_2ecs_17',['MenuItemTemplateSelector.cs',['../_menu_item_template_selector_8cs.html',1,'']]],
+  ['messages_2ecs_18',['Messages.cs',['../_messages_8cs.html',1,'']]],
+  ['mltests_2ecs_19',['MLTests.cs',['../_m_l_tests_8cs.html',1,'']]],
+  ['mobilevitalsmonitoringtool_2eassemblyinfo_2ecs_20',['MobileVitalsMonitoringTool.AssemblyInfo.cs',['../_mobile_vitals_monitoring_tool_8_assembly_info_8cs.html',1,'']]],
+  ['modeltests_2ecs_21',['ModelTests.cs',['../_model_tests_8cs.html',1,'']]],
+  ['monitoringsuitelibrary_2eassemblyinfo_2ecs_22',['MonitoringSuiteLibrary.AssemblyInfo.cs',['../_monitoring_suite_library_8_assembly_info_8cs.html',1,'']]],
+  ['monoandroid_2cversion_3dv13_2e0_2eassemblyattributes_2ecs_23',['MonoAndroid,Version=v13.0.AssemblyAttributes.cs',['../_mono_android_00_version_0av13_80_8_assembly_attributes_8cs.html',1,'']]],
+  ['monopackagemanager_5fresources_2ejava_24',['MonoPackageManager_Resources.java',['../_mono_package_manager___resources_8java.html',1,'']]],
+  ['monoruntimeprovider_2ejava_25',['MonoRuntimeProvider.java',['../_mono_runtime_provider_8java.html',1,'']]],
+  ['motionlayout_5ftransitionlistenerimplementor_2ejava_26',['MotionLayout_TransitionListenerImplementor.java',['../_motion_layout___transition_listener_implementor_8java.html',1,'']]]
 ];

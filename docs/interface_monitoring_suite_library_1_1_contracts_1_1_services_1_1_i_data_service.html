@@ -110,9 +110,9 @@ Inheritance diagram for MonitoringSuiteLibrary.Contracts.Services.IDataService:<
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b98bad645be8fa0a8df599b0c8eeb94"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a7b98bad645be8fa0a8df599b0c8eeb94">GetFirstRespondersAsync</a> ()</td></tr>
-<tr class="memdesc:a7b98bad645be8fa0a8df599b0c8eeb94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a IEnumerable&lt;FirstResponder&gt; representing the first responders.  <br /></td></tr>
-<tr class="separator:a7b98bad645be8fa0a8df599b0c8eeb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a8e7e4d19f00b93b36a97b4591040d"><td class="memItemLeft" align="right" valign="top">Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aa2a8e7e4d19f00b93b36a97b4591040d">GetActiveFirstRespondersAsync</a> ()</td></tr>
+<tr class="memdesc:aa2a8e7e4d19f00b93b36a97b4591040d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a IEnumerable&lt;FirstResponder&gt; representing the active first responders.  <br /></td></tr>
+<tr class="separator:aa2a8e7e4d19f00b93b36a97b4591040d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56ad670b68b650dd1b9857b01f7ef11a"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a>?&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a56ad670b68b650dd1b9857b01f7ef11a">GetFirstResponderAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:a56ad670b68b650dd1b9857b01f7ef11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a FirstResponder.  <br /></td></tr>
 <tr class="separator:a56ad670b68b650dd1b9857b01f7ef11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,27 +143,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abed06128084c40da3d4bc726a3ac5bd7"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#abed06128084c40da3d4bc726a3ac5bd7">DeleteFirstResponderLocationAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:abed06128084c40da3d4bc726a3ac5bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a first responder location. This is done when a first responder is changed to inactive.  <br /></td></tr>
 <tr class="separator:abed06128084c40da3d4bc726a3ac5bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae461b65ba15ea750651c62143844455e"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ae461b65ba15ea750651c62143844455e">CreateFirstResponderLocationAsync</a> (int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)</td></tr>
-<tr class="memdesc:ae461b65ba15ea750651c62143844455e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a location entry of a first responder.  <br /></td></tr>
-<tr class="separator:ae461b65ba15ea750651c62143844455e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff248b6bb3e8452d4b2db6264b494181"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aff248b6bb3e8452d4b2db6264b494181">CreateFirstResponderVitalsAsync</a> (int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)</td></tr>
-<tr class="memdesc:aff248b6bb3e8452d4b2db6264b494181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vitals entry for a first responder.  <br /></td></tr>
-<tr class="separator:aff248b6bb3e8452d4b2db6264b494181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a759ef5182a9028e96579dd114fe3c6ee"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a759ef5182a9028e96579dd114fe3c6ee">UpdateFirstResponderLocationAsync</a> (int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord)</td></tr>
-<tr class="memdesc:a759ef5182a9028e96579dd114fe3c6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates first responder location.  <br /></td></tr>
-<tr class="separator:a759ef5182a9028e96579dd114fe3c6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7897bf14ece00d366d6c500bf30702f"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ae7897bf14ece00d366d6c500bf30702f">UpdateFirstResponderVitalsAsync</a> (int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, int tempf)</td></tr>
-<tr class="memdesc:ae7897bf14ece00d366d6c500bf30702f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates first responder vitals.  <br /></td></tr>
-<tr class="separator:ae7897bf14ece00d366d6c500bf30702f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef19a3c7e6f878824b72692e77bb1d84"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aef19a3c7e6f878824b72692e77bb1d84">CreateFirstResponderLocationAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a> location)</td></tr>
+<tr class="memdesc:aef19a3c7e6f878824b72692e77bb1d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a location entry of a first responder.  <br /></td></tr>
+<tr class="separator:aef19a3c7e6f878824b72692e77bb1d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20914491f7eb88cc4bc2246b2ca8754"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#ab20914491f7eb88cc4bc2246b2ca8754">CreateFirstResponderVitalsAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a> vitals)</td></tr>
+<tr class="memdesc:ab20914491f7eb88cc4bc2246b2ca8754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a vitals entry for a first responder.  <br /></td></tr>
+<tr class="separator:ab20914491f7eb88cc4bc2246b2ca8754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba39bd71f838672d412b30819719748"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a6ba39bd71f838672d412b30819719748">UpdateFirstResponderLocationAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a> location)</td></tr>
+<tr class="memdesc:a6ba39bd71f838672d412b30819719748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the location of a first responder.  <br /></td></tr>
+<tr class="separator:a6ba39bd71f838672d412b30819719748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868843fd4abc8c9a2dea7c8039cde23a"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a868843fd4abc8c9a2dea7c8039cde23a">UpdateFirstResponderVitalsAsync</a> (int firstResponderId, <a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a> vitals)</td></tr>
+<tr class="memdesc:a868843fd4abc8c9a2dea7c8039cde23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the vitals of a first responder.  <br /></td></tr>
+<tr class="separator:a868843fd4abc8c9a2dea7c8039cde23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5376fab86da15136ba8ed7805a1fc6e5"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a5376fab86da15136ba8ed7805a1fc6e5">FirstResponderExistsAsync</a> (int firstResponderId)</td></tr>
 <tr class="memdesc:a5376fab86da15136ba8ed7805a1fc6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder exists in the database based on worker ID.  <br /></td></tr>
 <tr class="separator:a5376fab86da15136ba8ed7805a1fc6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4936bed6e5a5957d9eb26d3a211fb2"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#aeb4936bed6e5a5957d9eb26d3a211fb2">FirstResponderIsActiveAsync</a> (int firstResponderId)</td></tr>
+<tr class="memdesc:aeb4936bed6e5a5957d9eb26d3a211fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder is active.  <br /></td></tr>
+<tr class="separator:aeb4936bed6e5a5957d9eb26d3a211fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a65093c131e22fdd9c264be7aeca1d6"><td class="memItemLeft" align="right" valign="top">Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html#a6a65093c131e22fdd9c264be7aeca1d6">FirstResponderHasAlertAsync</a> (int firstResponderId)</td></tr>
+<tr class="memdesc:a6a65093c131e22fdd9c264be7aeca1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if first responder has an active alert.  <br /></td></tr>
+<tr class="separator:a6a65093c131e22fdd9c264be7aeca1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for data first responder data services. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae461b65ba15ea750651c62143844455e" name="ae461b65ba15ea750651c62143844455e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae461b65ba15ea750651c62143844455e">&#9670;&#160;</a></span>CreateFirstResponderLocationAsync()</h2>
+<a id="aef19a3c7e6f878824b72692e77bb1d84" name="aef19a3c7e6f878824b72692e77bb1d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef19a3c7e6f878824b72692e77bb1d84">&#9670;&#160;</a></span>CreateFirstResponderLocationAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,20 +183,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>xcoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>ycoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>zcoord</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a>&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -203,21 +197,19 @@ Public Member Functions</h2></td></tr>
 <p>Creates a location entry of a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
-    <tr><td class="paramname">xcoord</td><td></td></tr>
-    <tr><td class="paramname">ycoord</td><td></td></tr>
-    <tr><td class="paramname">zcoord</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder corresponding to the created location.</td></tr>
+    <tr><td class="paramname">location</td><td>A Location object.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the update was successful.</dd></dl>
 
-<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#af4c7fccb253448fb2d5c53e3cb05aa81">MonitoringSuiteLibrary.Services.DataService</a>.</p>
+<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a52d688af45284c7a3a8f2202b3b3dba3">MonitoringSuiteLibrary.Services.DataService</a>.</p>
 
 </div>
 </div>
-<a id="aff248b6bb3e8452d4b2db6264b494181" name="aff248b6bb3e8452d4b2db6264b494181"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff248b6bb3e8452d4b2db6264b494181">&#9670;&#160;</a></span>CreateFirstResponderVitalsAsync()</h2>
+<a id="ab20914491f7eb88cc4bc2246b2ca8754" name="ab20914491f7eb88cc4bc2246b2ca8754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20914491f7eb88cc4bc2246b2ca8754">&#9670;&#160;</a></span>CreateFirstResponderVitalsAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,38 +223,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bloodoxy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>heartrate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sysbp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>diabp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>resprate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>tempf</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a>&#160;</td>
+          <td class="paramname"><em>vitals</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -275,19 +237,14 @@ Public Member Functions</h2></td></tr>
 <p>Creates a vitals entry for a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td></td></tr>
-    <tr><td class="paramname">bloodoxy</td><td></td></tr>
-    <tr><td class="paramname">heartrate</td><td></td></tr>
-    <tr><td class="paramname">sysbp</td><td></td></tr>
-    <tr><td class="paramname">diabp</td><td></td></tr>
-    <tr><td class="paramname">resprate</td><td></td></tr>
-    <tr><td class="paramname">tempf</td><td></td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder corresponding to the created vitals.</td></tr>
+    <tr><td class="paramname">vitals</td><td>A Vitals object.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the update was successful.</dd></dl>
 
-<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a7639e03fdd679215bcf205fbc05bdec7">MonitoringSuiteLibrary.Services.DataService</a>.</p>
+<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a595a8860b3ed380a611f8e49c1aa54ad">MonitoringSuiteLibrary.Services.DataService</a>.</p>
 
 </div>
 </div>
@@ -368,13 +325,93 @@ Public Member Functions</h2></td></tr>
 <p>Checks if first responder exists in the database based on worker ID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to update.</td></tr>
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to check.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the worker id exists in the worker table in the database.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ad15039c5d58aeea66abaf60a7f1c0a3f">MonitoringSuiteLibrary.Services.DataService</a>.</p>
+
+</div>
+</div>
+<a id="a6a65093c131e22fdd9c264be7aeca1d6" name="a6a65093c131e22fdd9c264be7aeca1d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a65093c131e22fdd9c264be7aeca1d6">&#9670;&#160;</a></span>FirstResponderHasAlertAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; bool &gt; MonitoringSuiteLibrary.Contracts.Services.IDataService.FirstResponderHasAlertAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>firstResponderId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if first responder has an active alert. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the worker's alert field is true in the database.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a40d107108a41a96cb97cf2f59d14d7f8">MonitoringSuiteLibrary.Services.DataService</a>.</p>
+
+</div>
+</div>
+<a id="aeb4936bed6e5a5957d9eb26d3a211fb2" name="aeb4936bed6e5a5957d9eb26d3a211fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb4936bed6e5a5957d9eb26d3a211fb2">&#9670;&#160;</a></span>FirstResponderIsActiveAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; bool &gt; MonitoringSuiteLibrary.Contracts.Services.IDataService.FirstResponderIsActiveAsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>firstResponderId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if first responder is active. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to check.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not the worker's active field is true in the database.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a2454cfb7628ab391d9afabef515e3cbf">MonitoringSuiteLibrary.Services.DataService</a>.</p>
+
+</div>
+</div>
+<a id="aa2a8e7e4d19f00b93b36a97b4591040d" name="aa2a8e7e4d19f00b93b36a97b4591040d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2a8e7e4d19f00b93b36a97b4591040d">&#9670;&#160;</a></span>GetActiveFirstRespondersAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt; MonitoringSuiteLibrary.Contracts.Services.IDataService.GetActiveFirstRespondersAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a IEnumerable&lt;FirstResponder&gt; representing the active first responders. </p>
+<dl class="section return"><dt>Returns</dt><dd>An IEnumerable of all active first responders.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a35434fa68088584f0a176959f9491e34">MonitoringSuiteLibrary.Services.DataService</a>.</p>
 
 </div>
 </div>
@@ -436,30 +473,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b98bad645be8fa0a8df599b0c8eeb94" name="a7b98bad645be8fa0a8df599b0c8eeb94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b98bad645be8fa0a8df599b0c8eeb94">&#9670;&#160;</a></span>GetFirstRespondersAsync() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Task&lt; IEnumerable&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt; &gt; MonitoringSuiteLibrary.Contracts.Services.IDataService.GetFirstRespondersAsync </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets a IEnumerable&lt;FirstResponder&gt; representing the first responders. </p>
-<dl class="section return"><dt>Returns</dt><dd>An IEnumerable of all first responders.</dd></dl>
-
-<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a1b934618248c7a2365312af8122e6446">MonitoringSuiteLibrary.Services.DataService</a>.</p>
-
-</div>
-</div>
 <a id="abfb34814db7b584b0230c007d893578e" name="abfb34814db7b584b0230c007d893578e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfb34814db7b584b0230c007d893578e">&#9670;&#160;</a></span>GetFirstRespondersAsync() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb34814db7b584b0230c007d893578e">&#9670;&#160;</a></span>GetFirstRespondersAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -632,8 +647,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a759ef5182a9028e96579dd114fe3c6ee" name="a759ef5182a9028e96579dd114fe3c6ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a759ef5182a9028e96579dd114fe3c6ee">&#9670;&#160;</a></span>UpdateFirstResponderLocationAsync()</h2>
+<a id="a6ba39bd71f838672d412b30819719748" name="a6ba39bd71f838672d412b30819719748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba39bd71f838672d412b30819719748">&#9670;&#160;</a></span>UpdateFirstResponderLocationAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -647,20 +662,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>xcoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>ycoord</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>zcoord</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html">Location</a>&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -670,24 +673,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates first responder location. </p>
+<p>Updates the location of a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to update.</td></tr>
-    <tr><td class="paramname">xcoord</td><td>The x coordinate of the location</td></tr>
-    <tr><td class="paramname">ycoord</td><td>The y coordinate of the location</td></tr>
-    <tr><td class="paramname">zcoord</td><td>The z coordinate of the location</td></tr>
+    <tr><td class="paramname">location</td><td>A Location object.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the update was successful.</dd></dl>
 
-<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a633c1d0df9590a936868ea5ecff2bf17">MonitoringSuiteLibrary.Services.DataService</a>.</p>
+<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a5563cbb166264e88609e4c9cc80d05f6">MonitoringSuiteLibrary.Services.DataService</a>.</p>
 
 </div>
 </div>
-<a id="ae7897bf14ece00d366d6c500bf30702f" name="ae7897bf14ece00d366d6c500bf30702f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7897bf14ece00d366d6c500bf30702f">&#9670;&#160;</a></span>UpdateFirstResponderVitalsAsync()</h2>
+<a id="a868843fd4abc8c9a2dea7c8039cde23a" name="a868843fd4abc8c9a2dea7c8039cde23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868843fd4abc8c9a2dea7c8039cde23a">&#9670;&#160;</a></span>UpdateFirstResponderVitalsAsync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -701,38 +702,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bloodoxy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>heartrate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>sysbp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>diabp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>resprate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>tempf</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_vitals.html">Vitals</a>&#160;</td>
+          <td class="paramname"><em>vitals</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -742,22 +713,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates first responder vitals. </p>
+<p>Updates the vitals of a first responder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">firstResponderId</td><td>The id of the first responder to update.</td></tr>
-    <tr><td class="paramname">bloodoxy</td><td>The blood oxygen level.</td></tr>
-    <tr><td class="paramname">heartrate</td><td>The heart rate level.</td></tr>
-    <tr><td class="paramname">sysbp</td><td>The Systolic blood pressure level.</td></tr>
-    <tr><td class="paramname">diabp</td><td>The diastolic blood pressure level.</td></tr>
-    <tr><td class="paramname">resprate</td><td>The respiratory rate.</td></tr>
-    <tr><td class="paramname">tempf</td><td>The body temperature in fahrenheit.</td></tr>
+    <tr><td class="paramname">vitals</td><td>A Vitals object.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether or not the update was successful.</dd></dl>
 
-<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a6673fa06e1a9896693aaaf7fe2bf3478">MonitoringSuiteLibrary.Services.DataService</a>.</p>
+<p>Implemented in <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#ab39aefce7d813df93787f8b1c2899775">MonitoringSuiteLibrary.Services.DataService</a>.</p>
 
 </div>
 </div>

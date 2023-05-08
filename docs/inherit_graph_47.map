@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_mobile_vitals_monitoring_tool_1_1_droid_1_1_resource_1_1_xml.html" title=" " alt="" coords="5,5,187,45"/>
+<area shape="rect" id="node1" href="$interface_mobile_vitals_monitoring_tool_1_1_contracts_1_1_services_1_1_i_vitals_data.html" title="An interface for getting vitals data." alt="" coords="5,5,204,45"/>
+<area shape="rect" id="node2" href="$class_mobile_vitals_monitoring_tool_1_1_services_1_1_generated_data.html" title="A class to generate vitals data to simulate sensors inputting real first responder vitals." alt="" coords="252,5,433,45"/>
 </map>

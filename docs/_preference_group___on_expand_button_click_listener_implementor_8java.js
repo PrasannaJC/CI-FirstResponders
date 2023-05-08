@@ -1,0 +1,4 @@
+var _preference_group___on_expand_button_click_listener_implementor_8java =
+[
+    [ "mono.androidx.preference.PreferenceGroup_OnExpandButtonClickListenerImplementor", "classmono_1_1androidx_1_1preference_1_1_preference_group___on_expand_button_click_listener_implementor.html", "classmono_1_1androidx_1_1preference_1_1_preference_group___on_expand_button_click_listener_implementor" ]
+];

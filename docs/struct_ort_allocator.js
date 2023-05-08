@@ -1,0 +1,26 @@
+var struct_ort_allocator =
+[
+    [ "Alloc", "struct_ort_allocator.html#a4d830c91d72e72fc4b5838484eefcddf", null ],
+    [ "Alloc", "struct_ort_allocator.html#a4d830c91d72e72fc4b5838484eefcddf", null ],
+    [ "Alloc", "struct_ort_allocator.html#a4d830c91d72e72fc4b5838484eefcddf", null ],
+    [ "Alloc", "struct_ort_allocator.html#a4d830c91d72e72fc4b5838484eefcddf", null ],
+    [ "Alloc", "struct_ort_allocator.html#a4d830c91d72e72fc4b5838484eefcddf", null ],
+    [ "Alloc", "struct_ort_allocator.html#a4d830c91d72e72fc4b5838484eefcddf", null ],
+    [ "Alloc", "struct_ort_allocator.html#a4d830c91d72e72fc4b5838484eefcddf", null ],
+    [ "Info", "struct_ort_allocator.html#a48d04f84c71d7158fd20f056ec885dd6", null ],
+    [ "Info", "struct_ort_allocator.html#a48d04f84c71d7158fd20f056ec885dd6", null ],
+    [ "Info", "struct_ort_allocator.html#a48d04f84c71d7158fd20f056ec885dd6", null ],
+    [ "Info", "struct_ort_allocator.html#a48d04f84c71d7158fd20f056ec885dd6", null ],
+    [ "Info", "struct_ort_allocator.html#a48d04f84c71d7158fd20f056ec885dd6", null ],
+    [ "Info", "struct_ort_allocator.html#a48d04f84c71d7158fd20f056ec885dd6", null ],
+    [ "Info", "struct_ort_allocator.html#a48d04f84c71d7158fd20f056ec885dd6", null ],
+    [ "void", "struct_ort_allocator.html#a52dd4faac2d58bd3b816b531e9bd8829", null ],
+    [ "void", "struct_ort_allocator.html#a52dd4faac2d58bd3b816b531e9bd8829", null ],
+    [ "void", "struct_ort_allocator.html#a52dd4faac2d58bd3b816b531e9bd8829", null ],
+    [ "void", "struct_ort_allocator.html#a52dd4faac2d58bd3b816b531e9bd8829", null ],
+    [ "void", "struct_ort_allocator.html#a52dd4faac2d58bd3b816b531e9bd8829", null ],
+    [ "void", "struct_ort_allocator.html#a52dd4faac2d58bd3b816b531e9bd8829", null ],
+    [ "void", "struct_ort_allocator.html#a52dd4faac2d58bd3b816b531e9bd8829", null ],
+    [ "p", "struct_ort_allocator.html#abc7a3c3aa66c47e38e6a31271924cba8", null ],
+    [ "version", "struct_ort_allocator.html#a508b90a31a7aec4f3ccd3d875c750b64", null ]
+];

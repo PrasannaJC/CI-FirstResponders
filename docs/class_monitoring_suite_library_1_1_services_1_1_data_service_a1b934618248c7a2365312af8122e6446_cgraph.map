@@ -1,5 +1,0 @@
-<map id="MonitoringSuiteLibrary.Services.DataService.GetFirstRespondersAsync" name="MonitoringSuiteLibrary.Services.DataService.GetFirstRespondersAsync">
-<area shape="rect" id="node1" title="Asynchronous function that queries the database to retrieve all first responder&#39;s information from th..." alt="" coords="5,37,253,77"/>
-<area shape="rect" id="node2" href="$class_monitoring_suite_library_1_1_services_1_1_data_service.html#a96bbf429145a02ebe73322b8776f0f98" title="Asynchrnous function that queries the database to retrieve the location entry of a first responder." alt="" coords="301,5,592,45"/>
-<area shape="rect" id="node3" href="$class_monitoring_suite_library_1_1_services_1_1_data_service.html#a60cfff6b23e9f9e3b8d2922668b012ad" title="Asynchrnous function that queries the database to retrieve the vitals entry of a first responder." alt="" coords="309,69,584,109"/>
-</map>
