@@ -397,7 +397,8 @@ var annotated_dup =
         ] ]
       ] ],
       [ "Converters", "namespace_dispatchers_monitoring_tool_1_1_converters.html", [
-        [ "EnumToBooleanConverter", "class_dispatchers_monitoring_tool_1_1_converters_1_1_enum_to_boolean_converter.html", "class_dispatchers_monitoring_tool_1_1_converters_1_1_enum_to_boolean_converter" ]
+        [ "EnumToBooleanConverter", "class_dispatchers_monitoring_tool_1_1_converters_1_1_enum_to_boolean_converter.html", "class_dispatchers_monitoring_tool_1_1_converters_1_1_enum_to_boolean_converter" ],
+        [ "RowStyleConverter", "class_dispatchers_monitoring_tool_1_1_converters_1_1_row_style_converter.html", "class_dispatchers_monitoring_tool_1_1_converters_1_1_row_style_converter" ]
       ] ],
       [ "Core", "namespace_dispatchers_monitoring_tool_1_1_core.html", [
         [ "Contracts", "namespace_dispatchers_monitoring_tool_1_1_core_1_1_contracts.html", [

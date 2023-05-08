@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"_dispatchers_monitoring_tool__yzeu4d1t__wpftmp_8_assembly_info_8cs.html":[7,0,2,0,5,0,1,60],
+"_dispatchers_monitoring_tool__yzeu4d1t__wpftmp_8_global_usings_8g_8cs.html":[7,0,2,0,5,0,1,61],
+"_distress_detector_8_assembly_info_8cs.html":[7,0,3,0,0,0,0,1],
+"_distress_detector_8_global_usings_8g_8cs.html":[7,0,3,0,0,0,0,2],
 "_distress_detector_8py.html":[7,0,3,1,1],
 "_distress_detector_8py.html#a2d22134ce7fab74ec2a9b521be69bee3":[7,0,3,1,1,15],
 "_distress_detector_8py.html#a355fb0805ac0aa49aecf36070e64e40a":[7,0,3,1,1,12],
@@ -245,9 +249,5 @@ var NAVTREEINDEX4 =
 "_search_bar_renderer_8java.html":[7,0,4,0,1,0,0,0,0,0,4,145],
 "_search_view___on_close_listener_implementor_8java.html":[7,0,4,0,1,0,0,0,0,0,10,1,1,1,6],
 "_search_view___on_query_text_listener_implementor_8java.html":[7,0,4,0,1,0,0,0,0,0,10,1,1,1,7],
-"_search_view___on_suggestion_listener_implementor_8java.html":[7,0,4,0,1,0,0,0,0,0,10,1,1,1,8],
-"_selectable_items_view_adapter__2_8java.html":[7,0,4,0,1,0,0,0,0,0,4,146],
-"_selectable_items_view_renderer__3_8java.html":[7,0,4,0,1,0,0,0,0,0,4,147],
-"_selectable_view_holder_8java.html":[7,0,4,0,1,0,0,0,0,0,4,148],
-"_sensor_listener_8java.html":[7,0,4,0,1,0,0,0,0,0,7,13]
+"_search_view___on_suggestion_listener_implementor_8java.html":[7,0,4,0,1,0,0,0,0,0,10,1,1,1,8]
 };

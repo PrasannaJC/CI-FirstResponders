@@ -858,7 +858,8 @@ var hierarchy =
       [ "DispatchersMonitoringTool.Services.ThemeSelectorService", "class_dispatchers_monitoring_tool_1_1_services_1_1_theme_selector_service.html", null ]
     ] ],
     [ "IValueConverter", null, [
-      [ "DispatchersMonitoringTool.Converters.EnumToBooleanConverter", "class_dispatchers_monitoring_tool_1_1_converters_1_1_enum_to_boolean_converter.html", null ]
+      [ "DispatchersMonitoringTool.Converters.EnumToBooleanConverter", "class_dispatchers_monitoring_tool_1_1_converters_1_1_enum_to_boolean_converter.html", null ],
+      [ "DispatchersMonitoringTool.Converters.RowStyleConverter", "class_dispatchers_monitoring_tool_1_1_converters_1_1_row_style_converter.html", null ]
     ] ],
     [ "MobileVitalsMonitoringTool.Contracts.Services.IVitalsData", "interface_mobile_vitals_monitoring_tool_1_1_contracts_1_1_services_1_1_i_vitals_data.html", [
       [ "MobileVitalsMonitoringTool.Services.GeneratedData", "class_mobile_vitals_monitoring_tool_1_1_services_1_1_generated_data.html", null ]

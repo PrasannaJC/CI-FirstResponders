@@ -15,5 +15,6 @@ var searchData=
   ['resource_12',['Resource',['../class_mobile_vitals_monitoring_tool_1_1_droid_1_1_resource.html',1,'MobileVitalsMonitoringTool::Droid']]],
   ['resources_13',['Resources',['../class_dispatchers_monitoring_tool_1_1_properties_1_1_resources.html',1,'DispatchersMonitoringTool::Properties']]],
   ['responseevent_14',['ResponseEvent',['../struct_monitoring_suite_library_1_1_models_1_1_response_event.html',1,'MonitoringSuiteLibrary::Models']]],
-  ['runoptions_15',['RunOptions',['../struct_ort_1_1_run_options.html',1,'Ort']]]
+  ['rowstyleconverter_15',['RowStyleConverter',['../class_dispatchers_monitoring_tool_1_1_converters_1_1_row_style_converter.html',1,'DispatchersMonitoringTool::Converters']]],
+  ['runoptions_16',['RunOptions',['../struct_ort_1_1_run_options.html',1,'Ort']]]
 ];
