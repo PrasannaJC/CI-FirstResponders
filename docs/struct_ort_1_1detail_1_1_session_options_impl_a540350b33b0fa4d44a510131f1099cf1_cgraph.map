@@ -1,0 +1,9 @@
+<map id="Ort::detail::SessionOptionsImpl::RegisterCustomOpsLibrary" name="Ort::detail::SessionOptionsImpl::RegisterCustomOpsLibrary">
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,216,82"/>
+<area shape="rect" id="node2" href="$namespace_ort.html#a8930fa08683b5153ee3aa4df63745ce3" title="This returns a reference to the OrtApi interface in use." alt="" coords="916,43,1004,68"/>
+<area shape="rect" id="node3" href="$struct_ort_1_1_custom_op_configs.html#ab19dd38318f6bd88b8cbf507ba5d52f0" title="Returns a flattened map of custom operator configuration entries and their values." alt="" coords="264,42,417,82"/>
+<area shape="rect" id="node4" href="$namespace_ort.html#a46abac49f0814465d931e0fea00095b8" title=" " alt="" coords="277,107,404,132"/>
+<area shape="rect" id="node5" href="$namespace_ort_1_1detail.html#a9abe48d6640cf4680ec232a80e200371" title=" " alt="" coords="465,107,624,132"/>
+<area shape="rect" id="node6" href="$struct_ort_1_1_status.html#a19a0d483b009e0188971ddc9823922b2" title=" " alt="" coords="683,43,857,68"/>
+<area shape="rect" id="node7" href="$struct_ort_1_1_status.html#a82e24c127b4b791a9075708a7b784f49" title=" " alt="" coords="672,116,868,141"/>
+</map>

@@ -23,14 +23,9 @@ namespace MobileVitalsMonitoringTool.Services
     public class LocationMessage
     {
         /// <summary>
-        /// Gets or sets the latitude in <see cref="LocationMessage"/>
+        /// Gets or sets the Location object in <see cref="LocationMessage"/>
         /// </summary>
-        public double Latitude { get; set; }
-
-        /// <summary>
-        /// Gets or sets the longitude in <see cref="LocationMessage"/>
-        /// </summary>
-        public double Longitude { get; set; }
+        public Location Location { get; set; }
     }
 
     /// <summary>
@@ -42,6 +37,17 @@ namespace MobileVitalsMonitoringTool.Services
         /// Gets or sets the Vitals object in <see cref="VitalsMessage"/>
         /// </summary>
         public Vitals Vitals { get; set; }
+    }
+
+    /// <summary>
+    /// A class to contain the first responder message.
+    /// </summary>
+    public class FirstResponderMessage
+    {
+        /// <summary>
+        /// Gets or sets the FirstResponder object in <see cref="FirstResponderMessage"/>
+        /// </summary>
+        public FirstResponder FirstResponder { get; set; }
     }
 
     /// <summary>

@@ -1,4 +1,0 @@
-var dir_59e07a4f175f7f69c334634e6ae35e68 =
-[
-    [ "net6.0-windows10.0.19041.0", "dir_37b30e77b36e019d5d371a8245cc45d3.html", "dir_37b30e77b36e019d5d371a8245cc45d3" ]
-];

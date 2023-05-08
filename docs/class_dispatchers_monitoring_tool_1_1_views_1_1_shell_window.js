@@ -5,5 +5,9 @@ var class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window =
     [ "GetNavigationFrame", "class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html#adbe825a7d0521b2530ae9457eab8edcf", null ],
     [ "InitializeComponent", "class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html#a3ffcb644dd4164b6f5f76d4e66651deb", null ],
     [ "InitializeComponent", "class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html#a3ffcb644dd4164b6f5f76d4e66651deb", null ],
+    [ "InitializeComponent", "class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html#a3ffcb644dd4164b6f5f76d4e66651deb", null ],
+    [ "InitializeComponent", "class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html#a3ffcb644dd4164b6f5f76d4e66651deb", null ],
+    [ "InitializeComponent", "class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html#a3ffcb644dd4164b6f5f76d4e66651deb", null ],
+    [ "InitializeComponent", "class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html#a3ffcb644dd4164b6f5f76d4e66651deb", null ],
     [ "ShowWindow", "class_dispatchers_monitoring_tool_1_1_views_1_1_shell_window.html#a76948508138af8fba8ddaa15474dd35d", null ]
 ];

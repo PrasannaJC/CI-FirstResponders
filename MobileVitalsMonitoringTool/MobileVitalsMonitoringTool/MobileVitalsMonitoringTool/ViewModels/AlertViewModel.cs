@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using MobileVitalsMonitoringTool.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using MobileVitalsMonitoringTool.Services;
 using System.Threading.Tasks;
-//using static System.Net.Mime.MediaTypeNames;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
@@ -16,19 +14,28 @@ namespace MobileVitalsMonitoringTool.ViewModels
     public class AlertViewModel : BaseViewModel
 	{
         private Timer _timer;
+        private bool timerStarted = false;
 
         /// <summary>
         /// Creates a <see cref="AlertViewModel"/> and starts the countdown timer.
         /// </summary>
         public AlertViewModel()
         {
-            Title = "Alert";
-
             SendAlertCommand = new Command(OnSendAlert);
             CancelAlertCommand = new Command(OnCancelAlert);
 
-            _timer = new Timer(TimeSpan.FromSeconds(1), CountDown);
-            _timer.Start();
+            if (Preferences.Get("hasAlert", false))
+            {
+                AlertMessage = "You have an active alert!";
+                TotalSeconds = new TimeSpan(0, 0, 0, 0);
+                SendAlertAllowed = false;
+            }
+            else
+            {
+                _timer = new Timer(TimeSpan.FromSeconds(1), CountDown);
+                _timer.Start();
+                timerStarted = true;
+            }
         }
 
         /// <summary>
@@ -47,9 +54,15 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnCancelAlert()
         {
-            if (await dataService.SetFirstResponderAlertFalseAsync(Preferences.Get("w_id", -1)))
+            WorkerId = Preferences.Get("w_id", -1);
+            if (await dataService.SetFirstResponderAlertFalseAsync(WorkerId))
             {
-                _timer.Stop();
+                if (timerStarted)
+                {
+                    _timer.Stop();
+                }
+                Preferences.Set("checkDistressFlag", true);
+                Preferences.Set("hasAlert", false);
                 // This will pop the current page off the navigation stack
                 await Shell.Current.GoToAsync("..");
             }
@@ -57,8 +70,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
             {
                 AlertMessage = "Error: unable to cancel alert.";
             }
-
-
         }
 
         /// <summary>
@@ -66,20 +77,20 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnSendAlert()
         {
-            if (await dataService.SetFirstResponderAlertTrueAsync(Preferences.Get("w_id", -1)))
+            WorkerId = Preferences.Get("w_id", -1);
+            if (await dataService.SetFirstResponderAlertTrueAsync(WorkerId))
             {
                 AlertMessage = "Alert Sent!";
                 TotalSeconds = new TimeSpan(0, 0, 0, 0);
                 _timer.Stop();
                 SendAlertAllowed = false;
+                Preferences.Set("hasAlert", true);
             }
             else
             {
                 AlertMessage = "Error: unable to send alert.";
                 TotalSeconds = new TimeSpan(0, 0, 0, 10);
             }
-
-
         }
 
         /// <summary>
@@ -89,7 +100,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
         private void CountDown()
         {
             if (TotalSeconds.TotalSeconds == 0)
-
             {
                 _timer.Stop();
                 OnSendAlert(); // send alert when timer hits 0

@@ -1,0 +1,7 @@
+<map id="Ort::detail::ConstValueImpl&lt; T &gt;" name="Ort::detail::ConstValueImpl&lt; T &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="65,79,274,104"/>
+<area shape="rect" id="node3" href="$struct_ort_1_1detail_1_1_value_impl.html" title=" " alt="" coords="5,152,149,192"/>
+<area shape="rect" id="node5" href="$struct_ort_1_1detail_1_1_value_impl.html" title=" " alt="" coords="174,159,349,185"/>
+<area shape="rect" id="node2" href="$struct_ort_1_1detail_1_1_base.html" title="Used internally by the C++ API. C++ wrapper types inherit from this. This is a zero cost abstraction ..." alt="" coords="95,5,243,31"/>
+<area shape="rect" id="node4" href="$struct_ort_1_1_value.html" title="Wrapper around ::OrtValue." alt="" coords="37,240,118,265"/>
+</map>

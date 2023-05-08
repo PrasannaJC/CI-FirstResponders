@@ -1,4 +1,0 @@
-var dir_869b15797369f74123021e8795f0728b =
-[
-    [ "MobileVitalsMonitoringTool", "dir_17c75b1230f3a91559998d437406354a.html", "dir_17c75b1230f3a91559998d437406354a" ]
-];

@@ -6,12 +6,18 @@ using AndroidX.Core.App;
 
 namespace MobileVitalsMonitoringTool.Droid
 {
+    /// <summary>
+    /// A class manage notifications on the device
+    /// </summary>
     internal class NotificationHelper
     {
         private static string foregroundChannelId = "9001";
         private static Context context = global::Android.App.Application.Context;
 
-
+        /// <summary>
+        /// Builds a notification
+        /// </summary>
+        /// <returns>A notification</returns>
         public Notification GetServiceStartedNotification()
         {
             var intent = new Intent(context, typeof(MainActivity));

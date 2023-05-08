@@ -1,0 +1,8 @@
+<map id="Ort::detail::SequenceTypeInfoImpl::GetSequenceElementType" name="Ort::detail::SequenceTypeInfoImpl::GetSequenceElementType">
+<area shape="rect" id="node1" title="Wraps OrtApi::GetSequenceElementType." alt="" coords="5,5,235,45"/>
+<area shape="rect" id="node2" href="$namespace_ort.html#a8930fa08683b5153ee3aa4df63745ce3" title="This returns a reference to the OrtApi interface in use." alt="" coords="908,38,996,63"/>
+<area shape="rect" id="node3" href="$namespace_ort.html#a46abac49f0814465d931e0fea00095b8" title=" " alt="" coords="283,38,409,63"/>
+<area shape="rect" id="node4" href="$namespace_ort_1_1detail.html#a9abe48d6640cf4680ec232a80e200371" title=" " alt="" coords="457,38,616,63"/>
+<area shape="rect" id="node5" href="$struct_ort_1_1_status.html#a19a0d483b009e0188971ddc9823922b2" title=" " alt="" coords="675,38,849,63"/>
+<area shape="rect" id="node6" href="$struct_ort_1_1_status.html#a82e24c127b4b791a9075708a7b784f49" title=" " alt="" coords="664,111,860,137"/>
+</map>

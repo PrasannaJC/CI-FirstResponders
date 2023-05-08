@@ -1,0 +1,7 @@
+<map id="Ort::Status::Status" name="Ort::Status::Status">
+<area shape="rect" id="node1" title="Creates status instance out of exception." alt="" coords="5,80,137,105"/>
+<area shape="rect" id="node2" href="$struct_ort_api.html#a63281437bf8c18cd1ac1f7c7cf57a1e3" title="Create an OrtStatus from a null terminated string." alt="" coords="219,5,362,31"/>
+<area shape="rect" id="node3" href="$namespace_ort.html#a8930fa08683b5153ee3aa4df63745ce3" title="This returns a reference to the OrtApi interface in use." alt="" coords="247,55,335,80"/>
+<area shape="rect" id="node4" href="$struct_ort_1_1_exception.html#ae6f688af3ca6b3f34a2b8f730cc4432d" title=" " alt="" coords="185,104,396,129"/>
+<area shape="rect" id="node5" href="$struct_ort_1_1_exception.html#a03570d5990b5a35c818e6cca3e7b26e7" title=" " alt="" coords="220,153,361,179"/>
+</map>

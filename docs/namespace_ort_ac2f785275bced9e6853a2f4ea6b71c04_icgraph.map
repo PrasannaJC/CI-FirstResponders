@@ -1,0 +1,3 @@
+<map id="Ort::GetAvailableProviders" name="Ort::GetAvailableProviders">
+<area shape="rect" id="node1" title="This is a C++ wrapper for OrtApi::GetAvailableProviders() and returns a vector of strings representin..." alt="" coords="5,29,179,55"/>
+</map>

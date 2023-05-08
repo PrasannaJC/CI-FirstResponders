@@ -1,7 +1,23 @@
 var searchData=
 [
-  ['resource_0',['Resource',['../class_mobile_vitals_monitoring_tool_1_1_droid_1_1_resource.html',1,'MobileVitalsMonitoringTool::Droid']]],
-  ['resources_1',['Resources',['../class_dispatchers_monitoring_tool_1_1_properties_1_1_resources.html',1,'DispatchersMonitoringTool::Properties']]],
-  ['responderrealtimedata_2',['ResponderRealtimeData',['../class_data_generator_1_1_responder_realtime_data.html',1,'DataGenerator']]],
-  ['responseevent_3',['ResponseEvent',['../struct_monitoring_suite_library_1_1_models_1_1_response_event.html',1,'MonitoringSuiteLibrary::Models']]]
+  ['objectjavabox_5f1_0',['ObjectJavaBox_1',['../classcrc643f46942d9dd1fff9_1_1_object_java_box__1.html',1,'crc643f46942d9dd1fff9']]],
+  ['onapplywindowinsetslistenerimplementor_1',['OnApplyWindowInsetsListenerImplementor',['../classmono_1_1androidx_1_1core_1_1view_1_1_on_apply_window_insets_listener_implementor.html',1,'mono::androidx::core::view']]],
+  ['oncontextavailablelistenerimplementor_2',['OnContextAvailableListenerImplementor',['../classmono_1_1androidx_1_1activity_1_1contextaware_1_1_on_context_available_listener_implementor.html',1,'mono::androidx::activity::contextaware']]],
+  ['onreceivecontentlistenerimplementor_3',['OnReceiveContentListenerImplementor',['../classmono_1_1androidx_1_1core_1_1view_1_1_on_receive_content_listener_implementor.html',1,'mono::androidx::core::view']]],
+  ['op_4',['Op',['../struct_ort_1_1_op.html',1,'Ort']]],
+  ['opattr_5',['OpAttr',['../struct_ort_1_1_op_attr.html',1,'Ort']]],
+  ['openglviewrenderer_6',['OpenGLViewRenderer',['../classcrc643f46942d9dd1fff9_1_1_open_g_l_view_renderer.html',1,'crc643f46942d9dd1fff9']]],
+  ['openglviewrenderer_5frenderer_7',['OpenGLViewRenderer_Renderer',['../classcrc643f46942d9dd1fff9_1_1_open_g_l_view_renderer___renderer.html',1,'crc643f46942d9dd1fff9']]],
+  ['orientationsensorlistener_8',['OrientationSensorListener',['../classcrc64a0e0a82d0db9a07d_1_1_orientation_sensor_listener.html',1,'crc64a0e0a82d0db9a07d']]],
+  ['ortallocator_9',['OrtAllocator',['../struct_ort_allocator.html',1,'']]],
+  ['ortapi_10',['OrtApi',['../struct_ort_api.html',1,'']]],
+  ['ortapibase_11',['OrtApiBase',['../struct_ort_api_base.html',1,'']]],
+  ['ortcudaprovideroptions_12',['OrtCUDAProviderOptions',['../struct_ort_c_u_d_a_provider_options.html',1,'']]],
+  ['ortcustomhandletype_13',['OrtCustomHandleType',['../struct_ort_custom_handle_type.html',1,'']]],
+  ['ortcustomop_14',['OrtCustomOp',['../struct_ort_custom_op.html',1,'']]],
+  ['ortmigraphxprovideroptions_15',['OrtMIGraphXProviderOptions',['../struct_ort_m_i_graph_x_provider_options.html',1,'']]],
+  ['ortopenvinoprovideroptions_16',['OrtOpenVINOProviderOptions',['../struct_ort_open_v_i_n_o_provider_options.html',1,'']]],
+  ['ortrocmprovideroptions_17',['OrtROCMProviderOptions',['../struct_ort_r_o_c_m_provider_options.html',1,'']]],
+  ['ortsparsevaluesparam_18',['OrtSparseValuesParam',['../struct_ort_1_1detail_1_1_ort_sparse_values_param.html',1,'Ort::detail']]],
+  ['orttensorrtprovideroptions_19',['OrtTensorRTProviderOptions',['../struct_ort_tensor_r_t_provider_options.html',1,'']]]
 ];

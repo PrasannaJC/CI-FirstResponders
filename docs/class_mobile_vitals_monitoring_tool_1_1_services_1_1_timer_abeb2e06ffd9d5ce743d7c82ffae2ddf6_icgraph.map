@@ -1,0 +1,4 @@
+<map id="MobileVitalsMonitoringTool.Services.Timer.Start" name="MobileVitalsMonitoringTool.Services.Timer.Start">
+<area shape="rect" id="node1" title="Starts the countdown timer." alt="" coords="271,13,452,53"/>
+<area shape="rect" id="node2" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_alert_view_model.html#a9c6f6826974e6d9baa031425cb80b611" title="Creates a AlertViewModel and starts the countdown timer." alt="" coords="5,5,223,60"/>
+</map>

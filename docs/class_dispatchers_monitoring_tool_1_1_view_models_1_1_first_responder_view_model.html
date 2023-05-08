@@ -126,9 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4f351462342fc36bd3b70930138d92a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a FirstResponderViewModel.  <br /></td></tr>
 <tr class="separator:a4f351462342fc36bd3b70930138d92a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ae6f58e346ad14a93528c11b7b65cc7"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#a7ae6f58e346ad14a93528c11b7b65cc7">OnNavigatedTo</a> (object parameter)</td></tr>
-<tr class="memdesc:a7ae6f58e346ad14a93528c11b7b65cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Occurs when the viemodel is navigated to.  <br /></td></tr>
+<tr class="memdesc:a7ae6f58e346ad14a93528c11b7b65cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Occurs when the viewmodel is navigated to.  <br /></td></tr>
 <tr class="separator:a7ae6f58e346ad14a93528c11b7b65cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49c305f2cba9f83cc44a2dacacc2226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#ae49c305f2cba9f83cc44a2dacacc2226">OnNavigatedFrom</a> ()</td></tr>
+<tr class="memdesc:ae49c305f2cba9f83cc44a2dacacc2226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Occurs when the viewmodel is navigated from.  <br /></td></tr>
 <tr class="separator:ae49c305f2cba9f83cc44a2dacacc2226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc2feb9958cbbb4c35251a87a682643e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_dispatchers_monitoring_tool_1_1_contracts_1_1_view_models_1_1_i_navigation_aware.html#abc2feb9958cbbb4c35251a87a682643e">OnNavigatedTo</a> (object parameter)</td></tr>
 <tr class="separator:abc2feb9958cbbb4c35251a87a682643e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a8cd133685529e0e6e111c7ba8a21c0f7"><td class="memItemLeft" align="right" valign="top">ObservableCollection&lt; <a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#a8cd133685529e0e6e111c7ba8a21c0f7">FirstResponders</a> = new ObservableCollection&lt;<a class="el" href="class_monitoring_suite_library_1_1_models_1_1_first_responder.html">FirstResponder</a>&gt;()<code> [get]</code></td></tr>
-<tr class="memdesc:a8cd133685529e0e6e111c7ba8a21c0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the given ObservableCollection&lt;FirstResponder&gt;.  <br /></td></tr>
+<tr class="memdesc:a8cd133685529e0e6e111c7ba8a21c0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the given ObservableCollection&lt;FirstResponder&gt;.  <br /></td></tr>
 <tr class="separator:a8cd133685529e0e6e111c7ba8a21c0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b97030c5feaf1826e4fda9ed95a947f"><td class="memItemLeft" align="right" valign="top">ObservableCollection&lt; <a class="el" href="class_dispatchers_monitoring_tool_1_1_models_1_1_map_marker.html">MapMarker</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#a2b97030c5feaf1826e4fda9ed95a947f">MapMarkers</a> = new ObservableCollection&lt;<a class="el" href="class_dispatchers_monitoring_tool_1_1_models_1_1_map_marker.html">MapMarker</a>&gt;()<code> [get]</code></td></tr>
 <tr class="memdesc:a2b97030c5feaf1826e4fda9ed95a947f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or sets the collection of MapMarkers representing first responders.  <br /></td></tr>
@@ -197,6 +198,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Occurs when the viewmodel is navigated from. </p>
+
 <p>Implements <a class="el" href="interface_dispatchers_monitoring_tool_1_1_contracts_1_1_view_models_1_1_i_navigation_aware.html#a6df353ee77d1011ce7bc527cc0295024">DispatchersMonitoringTool.Contracts.ViewModels.INavigationAware</a>.</p>
 
 </div>
@@ -217,7 +220,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Occurs when the viemodel is navigated to. </p>
+<p>Occurs when the viewmodel is navigated to. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">navigationContext</td><td>The NavigationContext.</td></tr>
@@ -226,8 +229,6 @@ Properties</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="interface_dispatchers_monitoring_tool_1_1_contracts_1_1_view_models_1_1_i_navigation_aware.html#abc2feb9958cbbb4c35251a87a682643e">DispatchersMonitoringTool.Contracts.ViewModels.INavigationAware</a>.</p>
-
-<p class="reference">References <a class="el" href="class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#a8cd133685529e0e6e111c7ba8a21c0f7">DispatchersMonitoringTool.ViewModels.FirstResponderViewModel.FirstResponders</a>, and <a class="el" href="class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#a2b97030c5feaf1826e4fda9ed95a947f">DispatchersMonitoringTool.ViewModels.FirstResponderViewModel.MapMarkers</a>.</p>
 
 </div>
 </div>
@@ -278,9 +279,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Stores the given ObservableCollection&lt;FirstResponder&gt;. </p>
-
-<p class="reference">Referenced by <a class="el" href="class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#a7ae6f58e346ad14a93528c11b7b65cc7">DispatchersMonitoringTool.ViewModels.FirstResponderViewModel.OnNavigatedTo()</a>.</p>
+<p>Gets or sets the given ObservableCollection&lt;FirstResponder&gt;. </p>
 
 </div>
 </div>
@@ -305,8 +304,6 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets or sets the collection of MapMarkers representing first responders. </p>
-
-<p class="reference">Referenced by <a class="el" href="class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#a7ae6f58e346ad14a93528c11b7b65cc7">DispatchersMonitoringTool.ViewModels.FirstResponderViewModel.OnNavigatedTo()</a>.</p>
 
 </div>
 </div>

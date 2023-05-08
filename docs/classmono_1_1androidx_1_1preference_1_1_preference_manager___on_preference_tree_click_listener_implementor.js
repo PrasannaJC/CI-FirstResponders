@@ -1,0 +1,7 @@
+var classmono_1_1androidx_1_1preference_1_1_preference_manager___on_preference_tree_click_listener_implementor =
+[
+    [ "PreferenceManager_OnPreferenceTreeClickListenerImplementor", "classmono_1_1androidx_1_1preference_1_1_preference_manager___on_preference_tree_click_listener_implementor.html#afdd29ff8d72afc01155c3b3adc35e40a", null ],
+    [ "monodroidAddReference", "classmono_1_1androidx_1_1preference_1_1_preference_manager___on_preference_tree_click_listener_implementor.html#ac64fae970627b20aefdeafa7d6a23f57", null ],
+    [ "monodroidClearReferences", "classmono_1_1androidx_1_1preference_1_1_preference_manager___on_preference_tree_click_listener_implementor.html#a4e3e09a2e46f5ff4d8e8ce914cedbf7e", null ],
+    [ "onPreferenceTreeClick", "classmono_1_1androidx_1_1preference_1_1_preference_manager___on_preference_tree_click_listener_implementor.html#a401c8db020a0a7d28f1e295587dbf3ce", null ]
+];

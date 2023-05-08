@@ -1,0 +1,3 @@
+<map id="Ort::ThreadingOptions::SetGlobalIntraOpNumThreads" name="Ort::ThreadingOptions::SetGlobalIntraOpNumThreads">
+<area shape="rect" id="node1" title="Wraps OrtApi::SetGlobalIntraOpNumThreads." alt="" coords="5,29,208,69"/>
+</map>

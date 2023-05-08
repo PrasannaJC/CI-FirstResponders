@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['layout_0',['Layout',['../class_mobile_vitals_monitoring_tool_1_1_droid_1_1_resource_1_1_layout.html',1,'MobileVitalsMonitoringTool::Droid::Resource']]],
-  ['location_1',['Location',['../struct_monitoring_suite_library_1_1_models_1_1_location.html',1,'MonitoringSuiteLibrary::Models']]],
-  ['loginpage_2',['LoginPage',['../class_mobile_vitals_monitoring_tool_1_1_views_1_1_login_page.html',1,'MobileVitalsMonitoringTool::Views']]],
-  ['loginviewmodel_3',['LoginViewModel',['../class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_login_view_model.html',1,'MobileVitalsMonitoringTool::ViewModels']]]
+  ['keepaliveservice_0',['KeepAliveService',['../classcrc64396a3fe5f8138e3f_1_1_keep_alive_service.html',1,'crc64396a3fe5f8138e3f']]],
+  ['kernelcontext_1',['KernelContext',['../struct_ort_1_1_kernel_context.html',1,'Ort']]],
+  ['kernelinfo_2',['KernelInfo',['../struct_ort_1_1_kernel_info.html',1,'Ort']]],
+  ['kernelinfoimpl_3',['KernelInfoImpl',['../struct_ort_1_1detail_1_1_kernel_info_impl.html',1,'Ort::detail']]],
+  ['kernelinfoimpl_3c_20ortkernelinfo_20_3e_4',['KernelInfoImpl&lt; OrtKernelInfo &gt;',['../struct_ort_1_1detail_1_1_kernel_info_impl.html',1,'Ort::detail']]]
 ];

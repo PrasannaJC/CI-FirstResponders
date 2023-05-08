@@ -92,55 +92,55 @@ namespace MonitoringSuiteLibrary.Contracts.Services
         /// <summary>
         /// Creates a location entry of a first responder.
         /// </summary>
-        /// <param name="firstResponderId"></param>
-        /// <param name="xcoord"></param>
-        /// <param name="ycoord"></param>
-        /// <param name="zcoord"></param>
+        /// <param name="firstResponderId">The id of the first responder corresponding to the created location.</param>
+        /// <param name="location">A <see cref="Location"/> object.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public Task<bool> CreateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord);
+        public Task<bool> CreateFirstResponderLocationAsync(int firstResponderId, Location location);
 
         /// <summary>
         /// Creates a vitals entry for a first responder.
         /// </summary>
-        /// <param name="firstResponderId"></param>
-        /// <param name="bloodoxy"></param>
-        /// <param name="heartrate"></param>
-        /// <param name="sysbp"></param>
-        /// <param name="diabp"></param>
-        /// <param name="resprate"></param>
-        /// <param name="tempf"></param>
+        /// <param name="firstResponderId">The id of the first responder corresponding to the created vitals.</param>
+        /// <param name="vitals">A <see cref="Vitals"/> object.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf);
+        public Task<bool> CreateFirstResponderVitalsAsync(int firstResponderId, Vitals vitals);
 
         /// <summary>
-        /// Updates first responder location.
+        /// Updates the location of a first responder.
         /// </summary>
         /// <param name="firstResponderId">The id of the first responder to update.</param>
-        /// <param name="xcoord">The x coordinate of the location</param>
-        /// <param name="ycoord">The y coordinate of the location</param>
-        /// <param name="zcoord">The z coordinate of the location</param>
+        /// <param name="location">A <see cref="Location"/> object.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, decimal xcoord, decimal ycoord, decimal zcoord);
+        public Task<bool> UpdateFirstResponderLocationAsync(int firstResponderId, Location location);
 
         /// <summary>
-        /// Updates first responder vitals.
+        /// Updates the vitals of a first responder.
         /// </summary>
         /// <param name="firstResponderId">The id of the first responder to update.</param>
-        /// <param name="bloodoxy">The blood oxygen level.</param>
-        /// <param name="heartrate">The heart rate level.</param>
-        /// <param name="sysbp">The Systolic blood pressure level.</param>
-        /// <param name="diabp">The diastolic blood pressure level.</param>
-        /// <param name="resprate">The respiratory rate.</param>
-        /// <param name="tempf">The body temperature in fahrenheit.</param>
+        /// <param name="vitals">A <see cref="Vitals"/> object.</param>
         /// <returns>Whether or not the update was successful.</returns>
-        public Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, int bloodoxy, int heartrate, int sysbp, int diabp, int resprate, float tempf);
+        public Task<bool> UpdateFirstResponderVitalsAsync(int firstResponderId, Vitals vitals);
 
         /// <summary>
         /// Checks if first responder exists in the database based on worker ID.
         /// </summary>
-        /// <param name="firstResponderId">The id of the first responder to update.</param>
+        /// <param name="firstResponderId">The id of the first responder to check.</param>
         /// <returns>Whether or not the worker id exists in the worker table in the database.</returns>
         public Task<bool> FirstResponderExistsAsync(int firstResponderId);
+
+        /// <summary>
+        /// Checks if first responder is active.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the first responder to check.</param>
+        /// <returns>Whether or not the worker's active field is true in the database.</returns>
+        public Task<bool> FirstResponderIsActiveAsync(int firstResponderId);
+
+        /// <summary>
+        /// Checks if first responder has an active alert.
+        /// </summary>
+        /// <param name="firstResponderId">The id of the first responder to check.</param>
+        /// <returns>Whether or not the worker's alert field is true in the database.</returns>
+        public Task<bool> FirstResponderHasAlertAsync(int firstResponderId);
 
         #endregion
     }

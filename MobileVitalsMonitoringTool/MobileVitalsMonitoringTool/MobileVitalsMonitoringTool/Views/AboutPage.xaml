@@ -23,7 +23,7 @@
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="FRSlogo.png" VerticalOptions="Center" HeightRequest="64" />
+                    <Image Source="FRSlogo.png" VerticalOptions="Center" HeightRequest="90" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
@@ -34,7 +34,8 @@
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Welcome Back " FontSize="Title"/>
-                                <Span Text="{Binding FirstResponder.FName}" FontSize="Title" FontAttributes="Bold"/>
+                                <Span Text="First Responder" FontSize="Title" FontAttributes="Bold"/>
+                                <!--<Span Text="{Binding FirstResponder.FName}" FontSize="Title" FontAttributes="Bold"/>-->
                                 <Span Text="!" FontSize="Title"/>
                             </FormattedString.Spans>
                         </FormattedString>
@@ -57,7 +58,6 @@
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         />
-                <Label Text="{Binding Location}" />
             </StackLayout>
         </ScrollView>
     </Grid>

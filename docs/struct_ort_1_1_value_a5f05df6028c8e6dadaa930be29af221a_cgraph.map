@@ -1,0 +1,4 @@
+<map id="Ort::Value::CreateSparseTensor" name="Ort::Value::CreateSparseTensor">
+<area shape="rect" id="node1" title="This is a simple forwarding method to the below CreateSparseTensor. This helps to specify data type e..." alt="" coords="5,29,173,69"/>
+<area shape="rect" id="node2" href="$struct_ort_1_1_value.html#a7d1841b3f7caadcb33711701cef97615" title="This is a simple forwarding method to the other overload that helps deducing data type enum value fro..." alt="" coords="221,29,389,69"/>
+</map>

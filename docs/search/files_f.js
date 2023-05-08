@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['vitals_2ecs_0',['Vitals.cs',['../_vitals_8cs.html',1,'']]]
+  ['r_2ejava_0',['R.java',['../androidx_2cardview_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2swiperefreshlayout_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2savedstate_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2recyclerview_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2navigation_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2navigation_2ui_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2annotation_2experimental_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2appcompat_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2appcompat_2resources_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2browser_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2preference_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2constraintlayout_2widget_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2coordinatorlayout_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2core_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2drawerlayout_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2fragment_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2lifecycle_2runtime_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2lifecycle_2viewmodel_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2media_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2navigation_2common_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2transition_2_r_8java.html',1,'(Global Namespace)'],['../androidx_2viewpager2_2_r_8java.html',1,'(Global Namespace)'],['../com_2frs_2mobilevitalsmonitoringtool_2_r_8java.html',1,'(Global Namespace)'],['../com_2google_2android_2material_2_r_8java.html',1,'(Global Namespace)']]],
+  ['radiobuttonrenderer_2ejava_1',['RadioButtonRenderer.java',['../_radio_button_renderer_8java.html',1,'']]],
+  ['readme_2emd_2',['README.md',['../_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../_dispatchers_monitoring_tool_2_dispatchers_monitoring_tool_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)']]],
+  ['rectanglerenderer_2ejava_3',['RectangleRenderer.java',['../_rectangle_renderer_8java.html',1,'']]],
+  ['rectevaluator_2ejava_4',['RectEvaluator.java',['../_rect_evaluator_8java.html',1,'']]],
+  ['rectview_2ejava_5',['RectView.java',['../_rect_view_8java.html',1,'']]],
+  ['recyclerview_5fitemanimator_5fitemanimatorfinishedlistenerimplementor_2ejava_6',['RecyclerView_ItemAnimator_ItemAnimatorFinishedListenerImplementor.java',['../_recycler_view___item_animator___item_animator_finished_listener_implementor_8java.html',1,'']]],
+  ['recyclerview_5fonchildattachstatechangelistenerimplementor_2ejava_7',['RecyclerView_OnChildAttachStateChangeListenerImplementor.java',['../_recycler_view___on_child_attach_state_change_listener_implementor_8java.html',1,'']]],
+  ['recyclerview_5fonitemtouchlistenerimplementor_2ejava_8',['RecyclerView_OnItemTouchListenerImplementor.java',['../_recycler_view___on_item_touch_listener_implementor_8java.html',1,'']]],
+  ['recyclerview_5frecyclerlistenerimplementor_2ejava_9',['RecyclerView_RecyclerListenerImplementor.java',['../_recycler_view___recycler_listener_implementor_8java.html',1,'']]],
+  ['recyclerviewcontainer_2ejava_10',['RecyclerViewContainer.java',['../_recycler_view_container_8java.html',1,'']]],
+  ['recyclerviewscrolllistener_5f2_2ejava_11',['RecyclerViewScrollListener_2.java',['../_recycler_view_scroll_listener__2_8java.html',1,'']]],
+  ['refreshviewrenderer_2ejava_12',['RefreshViewRenderer.java',['../_refresh_view_renderer_8java.html',1,'']]],
+  ['resource_2edesigner_2ecs_13',['Resource.designer.cs',['../obj_2_debug_2130_2designtime_2_resource_8designer_8cs.html',1,'(Global Namespace)'],['../_resources_2_resource_8designer_8cs.html',1,'(Global Namespace)']]],
+  ['resources_2edesigner_2ecs_14',['Resources.Designer.cs',['../_resources_8_designer_8cs.html',1,'']]],
+  ['responseevent_2ecs_15',['ResponseEvent.cs',['../_response_event_8cs.html',1,'']]],
+  ['rowstyleconverter_2ecs_16',['RowStyleConverter.cs',['../_row_style_converter_8cs.html',1,'']]]
 ];

@@ -1,0 +1,4 @@
+<map id="MobileVitalsMonitoringTool.Services.GeneratedData" name="MobileVitalsMonitoringTool.Services.GeneratedData">
+<area shape="rect" id="node1" title="A class to generate vitals data to simulate sensors inputting real first responder vitals." alt="" coords="5,79,187,119"/>
+<area shape="rect" id="node2" href="$interface_mobile_vitals_monitoring_tool_1_1_contracts_1_1_services_1_1_i_vitals_data.html" title="An interface for getting vitals data." alt="" coords="53,5,139,31"/>
+</map>

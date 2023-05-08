@@ -1,0 +1,52 @@
+<map id="Ort::Status::GetErrorMessage" name="Ort::Status::GetErrorMessage">
+<area shape="rect" id="node1" title=" " alt="" coords="683,1501,879,1527"/>
+<area shape="rect" id="node2" href="$namespace_ort_1_1detail.html#a9abe48d6640cf4680ec232a80e200371" title=" " alt="" coords="476,1501,635,1527"/>
+<area shape="rect" id="node3" href="$namespace_ort.html#a46abac49f0814465d931e0fea00095b8" title=" " alt="" coords="301,1501,428,1527"/>
+<area shape="rect" id="node4" href="$struct_ort_1_1_custom_op_domain.html#ac6aa6df0bc9a87247eddabc3087e99c0" title="Wraps CustomOpDomain_Add." alt="" coords="37,5,222,31"/>
+<area shape="rect" id="node5" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a1b1f8bd313dd81e62b61ac6a86442f35" title="Wraps OrtApi::AddCustomOpDomain." alt="" coords="40,55,219,95"/>
+<area shape="rect" id="node6" href="$struct_ort_1_1_run_options.html#ac752cfb944b9aa2621f626d3997b90d2" title="Wraps OrtApi::AddRunConfigEntry." alt="" coords="38,119,221,159"/>
+<area shape="rect" id="node7" href="$struct_ort_1_1detail_1_1_session_options_impl.html#ab8fcb673d872501cc2abb55a95275ac3" title="Wraps OrtApi::AddSessionConfigEntry." alt="" coords="40,183,219,223"/>
+<area shape="rect" id="node8" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a62d9790c64cdf6dcb2b4aa41b261bad4" title="Wraps OrtApi::AddExternalInitializers." alt="" coords="38,247,221,287"/>
+<area shape="rect" id="node9" href="$struct_ort_1_1detail_1_1_session_options_impl.html#afb578cf4c4abd7f294d86d8aeee42ebb" title="Wraps OrtApi::AddInitializer." alt="" coords="40,311,219,351"/>
+<area shape="rect" id="node10" href="$struct_ort_1_1detail_1_1_allocator_impl.html#a8f7c3025aec82a5938abbbb0ae0e5a62" title=" " alt="" coords="48,375,211,415"/>
+<area shape="rect" id="node11" href="$struct_ort_1_1_allocator.html#a53b0673e46add5d2cd4c171a4e87ac7c" title=" " alt="" coords="50,440,209,465"/>
+<area shape="rect" id="node12" href="$struct_ort_1_1_allocator_with_default_options.html#ad25e08123ae46e2202996d121e7d29e7" title=" " alt="" coords="10,490,249,530"/>
+<area shape="rect" id="node13" href="$struct_ort_1_1detail_1_1_session_options_impl.html#aa667eb89836cb9edb4de61f266078646" title="Wraps OrtApi::SessionOptionsAppendExecutionProvider. Currently supports SNPE and XNNPACK." alt="" coords="28,554,231,594"/>
+<area shape="rect" id="node14" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a88a4712d21348e8c1b995a195c0b95f1" title=" " alt="" coords="7,618,252,658"/>
+<area shape="rect" id="node15" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a0319488e6482bbc0a5f835837764d9b1" title="Wraps OrtApi::SessionOptionsAppendExecutionProvider_CUDA_V2." alt="" coords="28,683,231,737"/>
+<area shape="rect" id="node16" href="$struct_ort_1_1detail_1_1_session_options_impl.html#add86801f09af905833132603cfacef0d" title="Wraps OrtApi::SessionOptionsAppendExecutionProvider_CANN." alt="" coords="34,762,225,831"/>
+<area shape="rect" id="node17" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a4c0c277d4d1067a47f1bc000edfe23c2" title="Wraps OrtApi::SessionOptionsAppendExecutionProvider_OpenVINO." alt="" coords="28,856,231,911"/>
+<area shape="rect" id="node18" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a93bd179d86f43e9de29c210d52cebe7b" title="Wraps OrtApi::SessionOptionsAppendExecutionProvider_ROCM." alt="" coords="5,935,253,975"/>
+<area shape="rect" id="node19" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a4f9e3782d4a470d3a2f7a7ce014d833a" title="Wraps OrtApi::SessionOptionsAppendExecutionProvider_TensorRT." alt="" coords="28,1000,231,1055"/>
+<area shape="rect" id="node20" href="$struct_ort_1_1_arena_cfg.html#af5984643b2ec4748e45df6e50b9f2720" title=" " alt="" coords="48,1079,211,1104"/>
+<area shape="rect" id="node21" href="$struct_ort_1_1detail_1_1_value_impl.html#a657fe9ca6bd6e2dc09c0beb95ee3e1eb" title=" " alt="" coords="47,1128,212,1153"/>
+<area shape="rect" id="node22" href="$struct_ort_1_1detail_1_1_io_binding_impl.html#a2b865926b84147174ec138161f54fc32" title=" " alt="" coords="47,1178,211,1218"/>
+<area shape="rect" id="node23" href="$struct_ort_1_1detail_1_1_io_binding_impl.html#a004f59687c421698e52732a669cbd69c" title=" " alt="" coords="47,1242,211,1282"/>
+<area shape="rect" id="node24" href="$struct_ort_1_1detail_1_1_kernel_info_impl.html#a481ea24d380e077ba3bbaf6431467b5f" title=" " alt="" coords="45,1306,213,1346"/>
+<area shape="rect" id="node25" href="$struct_ort_1_1_custom_op_api.html#ae3a44fcc638eac544a0bc258b3583b9d" title=" " alt="" coords="17,1371,241,1396"/>
+<area shape="rect" id="node26" href="$struct_ort_1_1_op.html#a1149981f5f63b45778db75fd4a861a8c" title=" " alt="" coords="74,1420,185,1445"/>
+<area shape="rect" id="node27" href="$struct_ort_1_1_env.html#ace62e9a1fe461a42a0b1cc79ee40f421" title="Wraps OrtApi::CreateAndRegisterAllocator." alt="" coords="36,1494,223,1534"/>
+<area shape="rect" id="node28" href="$struct_ort_1_1_memory_info.html#a7ce7c37434db1b06ee95a53d460ab452" title=" " alt="" coords="37,1559,221,1584"/>
+<area shape="rect" id="node29" href="$struct_ort_1_1_value.html#a6b8285d4630300fcc313cd10a2acba30" title="Wraps OrtApi::CreateValue." alt="" coords="53,1608,205,1633"/>
+<area shape="rect" id="node30" href="$struct_ort_1_1_custom_op_api.html#a5f91d97d7dba768b120234ee2ee7a5f3" title=" " alt="" coords="33,1657,225,1683"/>
+<area shape="rect" id="node31" href="$struct_ort_1_1_value.html#a0c36d72cdbef90aa1213a9d2553dfff2" title="Wraps OrtApi::CreateOpaqueValue." alt="" coords="43,1707,215,1732"/>
+<area shape="rect" id="node32" href="$struct_ort_1_1_custom_op_api.html#a994f558bb2ccf53803ff3ac4a2c827c2" title=" " alt="" coords="42,1757,217,1797"/>
+<area shape="rect" id="node33" href="$struct_ort_1_1_value.html#aa3f882f8fa47dadd335c07b350db954d" title="Wraps OrtApi::CreateValue." alt="" coords="37,1821,222,1847"/>
+<area shape="rect" id="node34" href="$struct_ort_1_1_value.html#a69a8b95060c2a3a7c99178b5fc8bbd0d" title="Creates an OrtValue instance containing SparseTensor. This constructs a sparse tensor that makes use ..." alt="" coords="45,1871,213,1911"/>
+<area shape="rect" id="node35" href="$struct_ort_1_1_value.html#a30dfeeee6f819d5c9df530cb164e4626" title="Creates a tensor with a user supplied buffer. Wraps OrtApi::CreateTensorWithDataAsOrtValue." alt="" coords="46,1936,213,1961"/>
+<area shape="rect" id="node36" href="$namespace_ort.html#a67b954385311802b38787df8fad58f8c" title=" " alt="" coords="42,1986,217,2026"/>
+<area shape="rect" id="node37" href="$struct_ort_1_1_custom_op_domain.html#a71fe5d662c516259a8e9816abc48eecb" title="Wraps OrtApi::CreateCustomOpDomain." alt="" coords="52,2050,207,2090"/>
+<area shape="rect" id="node38" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a8a5f484e87f05cf9a938e709e65b388f" title="Wraps OrtApi::DisableCpuMemArena." alt="" coords="38,2114,221,2154"/>
+<area shape="rect" id="node39" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a69743a31a9f443f3dd304fba3bec5c66" title="Wraps OrtApi::DisableMemPattern." alt="" coords="40,2178,219,2218"/>
+<area shape="rect" id="node40" href="$struct_ort_1_1detail_1_1_session_options_impl.html#ae798e0b825892e0803f6aff0b284d6f6" title="Wraps OrtApi::DisablePerSessionThreads." alt="" coords="24,2242,235,2282"/>
+<area shape="rect" id="node41" href="$struct_ort_1_1detail_1_1_session_options_impl.html#acf0d1e71f84a1c45989094d3adf292ad" title="Wraps OrtApi::DisableProfiling." alt="" coords="40,2306,219,2346"/>
+<area shape="rect" id="node42" href="$struct_ort_1_1_env.html#afc9b2d44c9db7812787904d5e3018f24" title="Wraps OrtApi::DisableTelemetryEvents." alt="" coords="41,2394,218,2434"/>
+<area shape="rect" id="node43" href="$struct_ort_1_1detail_1_1_session_options_impl.html#aab960ed50df734f7474f3d8d8c4a812d" title="Wraps OrtApi::EnableCpuMemArena." alt="" coords="39,2458,219,2498"/>
+<area shape="rect" id="node44" href="$struct_ort_1_1detail_1_1_session_options_impl.html#ae15871f118affe4038b2fdf2762e6201" title="Wraps OrtApi::EnableMemPattern." alt="" coords="40,2522,219,2562"/>
+<area shape="rect" id="node45" href="$struct_ort_1_1detail_1_1_session_options_impl.html#a02a0c3b8e421da35a16c58a90930816e" title="Wraps OrtApi::EnableOrtCustomOps." alt="" coords="39,2586,220,2626"/>
+<area shape="rect" id="node46" href="$struct_ort_1_1detail_1_1_session_options_impl.html#acadd3069919298fcbbf7c9ce2f4fff8e" title="Wraps OrtApi::EnableProfiling." alt="" coords="40,2650,219,2690"/>
+<area shape="rect" id="node47" href="$struct_ort_1_1_env.html#a251b84b1a06a0d5f3f1cfa0d2591c033" title="Wraps OrtApi::EnableTelemetryEvents." alt="" coords="42,2738,217,2778"/>
+<area shape="rect" id="node48" href="$struct_ort_1_1detail_1_1_session_impl.html#a562e086b82b3b756a2b60ca8930cf98a" title="End profiling and return a copy of the profiling file name." alt="" coords="50,2802,209,2842"/>
+<area shape="rect" id="node49" href="$struct_ort_1_1_env.html#a3fc03a8a74a0888102f76896fadd0025" title="Wraps OrtApi::CreateEnv." alt="" coords="80,2867,179,2892"/>
+<area shape="rect" id="node50" href="$struct_ort_1_1detail_1_1_value_impl.html#a7a57d606a608abda7df7b9b23a301a3e" title="The API will allocate memory using the allocator instance supplied to the CreateSparseTensor() API an..." alt="" coords="29,2917,230,2957"/>
+</map>

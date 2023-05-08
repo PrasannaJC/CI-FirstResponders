@@ -6,11 +6,9 @@ namespace UnitTests
 {
     public class MLTests
     {
-
         [Fact]
-        public void Test_NOT_Distress()
+        public void TestNotDistress()
         {
-
             Vitals v = new Vitals()
             {
                 BloodOxy = 94,
@@ -23,14 +21,18 @@ namespace UnitTests
 
             char g = 'M';
             int a = 39;
+            string path = "MachineLearning\\DistressONNXModel.onnx";
+            
+            // string path = "data\\user\\0\\com.frs.mobilevitalsmonitoringtool\\files\\.local\\share\\DistressONNXModel.onnx";
+            bool z = CheckDistressONNX.GetDistressStatus(a, g, v, path);
 
-            bool k = CheckDistress.GetDistressStatus(a, g, v);
+            // bool k = CheckDistress.GetDistressStatus(a, g, v);
 
-            Assert.False(k);
+            Assert.False(z);
         }
 
         [Fact]
-        public void Test_IN_Distress()
+        public void TestInDistress()
         {
 
             Vitals v = new Vitals()
@@ -46,9 +48,11 @@ namespace UnitTests
             char g = 'F';
             int a = 59;
 
-            bool k = CheckDistress.GetDistressStatus(a, g, v);
+            // bool k = CheckDistress.GetDistressStatus(a, g, v);
+            string path = "MachineLearning\\DistressONNXModel.onnx";
+            bool z = CheckDistressONNX.GetDistressStatus(a, g, v, path);
 
-            Assert.True(k);
+            Assert.True(z);
 
         }
     }

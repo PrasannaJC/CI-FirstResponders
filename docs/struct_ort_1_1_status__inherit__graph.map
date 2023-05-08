@@ -1,0 +1,4 @@
+<map id="Ort::Status" name="Ort::Status">
+<area shape="rect" id="node1" title="The Status that holds ownership of OrtStatus received from C API Use it to safely destroy OrtStatus* ..." alt="" coords="25,93,111,119"/>
+<area shape="rect" id="node2" href="$struct_ort_1_1detail_1_1_base.html" title=" " alt="" coords="5,5,131,45"/>
+</map>

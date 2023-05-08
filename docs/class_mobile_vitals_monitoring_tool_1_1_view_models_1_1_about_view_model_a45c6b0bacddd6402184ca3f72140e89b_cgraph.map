@@ -1,4 +1,5 @@
 <map id="MobileVitalsMonitoringTool.ViewModels.AboutViewModel.AboutViewModel" name="MobileVitalsMonitoringTool.ViewModels.AboutViewModel.AboutViewModel">
-<area shape="rect" id="node1" title="Creates a AboutViewModel." alt="" coords="5,5,236,60"/>
-<area shape="rect" id="node2" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_about_view_model.html#aa26ef908fede753179e9d3f40a857345" title="Pulls first responder information from the database." alt="" coords="284,13,568,53"/>
+<area shape="rect" id="node1" title="Creates a AboutViewModel." alt="" coords="5,41,236,96"/>
+<area shape="rect" id="node2" href="$class_monitoring_suite_library_1_1_machine_learning_1_1_check_distress_o_n_n_x.html#a9faeccb9de509008bddc297cda7b1ba1" title="Check the distress status of a First Responder object using it&#39;s age, gender, and vitals data." alt="" coords="284,5,552,60"/>
+<area shape="rect" id="node3" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_base_view_model.html#a2504add3ce60e730d1cf760f24c0770f" title="Starts the location background service." alt="" coords="287,85,549,125"/>
 </map>

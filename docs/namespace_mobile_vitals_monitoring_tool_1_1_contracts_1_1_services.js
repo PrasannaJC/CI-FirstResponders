@@ -1,0 +1,4 @@
+var namespace_mobile_vitals_monitoring_tool_1_1_contracts_1_1_services =
+[
+    [ "IVitalsData", "interface_mobile_vitals_monitoring_tool_1_1_contracts_1_1_services_1_1_i_vitals_data.html", "interface_mobile_vitals_monitoring_tool_1_1_contracts_1_1_services_1_1_i_vitals_data" ]
+];

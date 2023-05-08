@@ -1,0 +1,4 @@
+<map id="MobileVitalsMonitoringTool.ViewModels.LoginViewModel.OnSubmit" name="MobileVitalsMonitoringTool.ViewModels.LoginViewModel.OnSubmit">
+<area shape="rect" id="node1" title="Checks whether the specified worker ID exists in the database and logs in user if it does...." alt="" coords="5,5,257,45"/>
+<area shape="rect" id="node2" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_base_view_model.html#a2504add3ce60e730d1cf760f24c0770f" title="Starts the location background service." alt="" coords="305,5,568,45"/>
+</map>

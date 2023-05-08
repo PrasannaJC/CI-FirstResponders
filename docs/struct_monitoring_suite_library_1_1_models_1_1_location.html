@@ -105,6 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32648f8bad8829bcd2a39db576c39d20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html#a32648f8bad8829bcd2a39db576c39d20">Location</a> (DateTime timestamp, decimal xcoord, decimal ycoord, decimal zcoord)</td></tr>
 <tr class="memdesc:a32648f8bad8829bcd2a39db576c39d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Location object.  <br /></td></tr>
 <tr class="separator:a32648f8bad8829bcd2a39db576c39d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b12fbf872ba4fbecea364b8a06bdfa3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_monitoring_suite_library_1_1_models_1_1_location.html#a9b12fbf872ba4fbecea364b8a06bdfa3">Location</a> (decimal xcoord, decimal ycoord, decimal zcoord)</td></tr>
+<tr class="memdesc:a9b12fbf872ba4fbecea364b8a06bdfa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Location object without specifying the timestamp.  <br /></td></tr>
+<tr class="separator:a9b12fbf872ba4fbecea364b8a06bdfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -125,7 +128,7 @@ Properties</h2></td></tr>
 <div class="textblock"><p>The struct that represents vitals. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a32648f8bad8829bcd2a39db576c39d20" name="a32648f8bad8829bcd2a39db576c39d20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32648f8bad8829bcd2a39db576c39d20">&#9670;&#160;</a></span>Location()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32648f8bad8829bcd2a39db576c39d20">&#9670;&#160;</a></span>Location() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,9 +166,53 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a Location object. </p>
-<p>&lt; </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">timestamp</td><td>The location's timestamp.</td></tr>
+    <tr><td class="paramname">xcoord</td><td>The x coordinates of the location.</td></tr>
+    <tr><td class="paramname">ycoord</td><td>The y coordinates of the location.</td></tr>
+    <tr><td class="paramname">zcoord</td><td>The z coordinates of the location.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b12fbf872ba4fbecea364b8a06bdfa3" name="a9b12fbf872ba4fbecea364b8a06bdfa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b12fbf872ba4fbecea364b8a06bdfa3">&#9670;&#160;</a></span>Location() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MonitoringSuiteLibrary.Models.Location.Location </td>
+          <td>(</td>
+          <td class="paramtype">decimal&#160;</td>
+          <td class="paramname"><em>xcoord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">decimal&#160;</td>
+          <td class="paramname"><em>ycoord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">decimal&#160;</td>
+          <td class="paramname"><em>zcoord</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a Location object without specifying the timestamp. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">xcoord</td><td>The x coordinates of the location.</td></tr>
     <tr><td class="paramname">ycoord</td><td>The y coordinates of the location.</td></tr>
     <tr><td class="paramname">zcoord</td><td>The z coordinates of the location.</td></tr>
@@ -222,6 +269,8 @@ Properties</h2></td></tr>
 
 <p>Gets or sets the x coordinate of the location. </p>
 
+<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a52d688af45284c7a3a8f2202b3b3dba3">MonitoringSuiteLibrary.Services.DataService.CreateFirstResponderLocationAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a5563cbb166264e88609e4c9cc80d05f6">MonitoringSuiteLibrary.Services.DataService.UpdateFirstResponderLocationAsync()</a>.</p>
+
 </div>
 </div>
 <a id="ad63ec0d50ca6d22accdbea11cc4d3710" name="ad63ec0d50ca6d22accdbea11cc4d3710"></a>
@@ -246,6 +295,8 @@ Properties</h2></td></tr>
 
 <p>Gets or sets the y coordinate of the location. </p>
 
+<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a52d688af45284c7a3a8f2202b3b3dba3">MonitoringSuiteLibrary.Services.DataService.CreateFirstResponderLocationAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a5563cbb166264e88609e4c9cc80d05f6">MonitoringSuiteLibrary.Services.DataService.UpdateFirstResponderLocationAsync()</a>.</p>
+
 </div>
 </div>
 <a id="ae62a835d70c6d8c6f818e110f0d08183" name="ae62a835d70c6d8c6f818e110f0d08183"></a>
@@ -269,6 +320,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets or sets the z coordinate of the location. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a52d688af45284c7a3a8f2202b3b3dba3">MonitoringSuiteLibrary.Services.DataService.CreateFirstResponderLocationAsync()</a>, and <a class="el" href="class_monitoring_suite_library_1_1_services_1_1_data_service.html#a5563cbb166264e88609e4c9cc80d05f6">MonitoringSuiteLibrary.Services.DataService.UpdateFirstResponderLocationAsync()</a>.</p>
 
 </div>
 </div>

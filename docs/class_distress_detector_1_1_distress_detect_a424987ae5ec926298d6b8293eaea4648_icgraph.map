@@ -1,4 +1,0 @@
-<map id="DistressDetector.DistressDetect.BuildPipeline" name="DistressDetector.DistressDetect.BuildPipeline">
-<area shape="rect" id="node1" title="build the pipeline that is used from model builder. Use this function to retrain model." alt="" coords="224,5,395,45"/>
-<area shape="rect" id="node2" href="$class_distress_detector_1_1_distress_detect.html#abd3071cdf368e2ee8455557b9f06a89a" title="Retrains model using the pipeline generated as part of the training process. For more information on ..." alt="" coords="5,5,176,45"/>
-</map>

@@ -1,4 +1,6 @@
 <map id="MobileVitalsMonitoringTool.ViewModels.BaseViewModel" name="MobileVitalsMonitoringTool.ViewModels.BaseViewModel">
-<area shape="rect" id="node1" title="The base view model. This sets data that will be used in the app." alt="" coords="5,79,195,119"/>
-<area shape="rect" id="node2" title=" " alt="" coords="21,5,179,31"/>
+<area shape="rect" id="node1" title="The base view model. This sets data that will be used in the app." alt="" coords="11,183,201,223"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,87,164,113"/>
+<area shape="rect" id="node3" href="$class_monitoring_suite_library_1_1_services_1_1_data_service.html" title="Concrete implementation of the first responder data service." alt="" coords="189,80,397,120"/>
+<area shape="rect" id="node4" href="$interface_monitoring_suite_library_1_1_contracts_1_1_services_1_1_i_data_service.html" title="Interface for data first responder data services." alt="" coords="245,5,340,31"/>
 </map>

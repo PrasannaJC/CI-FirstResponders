@@ -1,8 +1,8 @@
 <map id="MobileVitalsMonitoringTool.ViewModels.BaseViewModel" name="MobileVitalsMonitoringTool.ViewModels.BaseViewModel">
 <area shape="rect" id="node1" title="The base view model. This sets data that will be used in the app." alt="" coords="212,101,401,141"/>
-<area shape="rect" id="node3" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_about_view_model.html" title="The viewmodel that represents that main page of app. Only logged in users can access it." alt="" coords="461,5,655,45"/>
-<area shape="rect" id="node4" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_item_detail_view_model.html" title=" " alt="" coords="449,69,667,109"/>
-<area shape="rect" id="node5" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_items_view_model.html" title=" " alt="" coords="463,133,653,173"/>
-<area shape="rect" id="node6" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_new_item_view_model.html" title=" " alt="" coords="453,197,663,237"/>
+<area shape="rect" id="node3" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_about_view_model.html" title="A class that represents the AboutViewModel. This is the main page of the application and only logged ..." alt="" coords="452,5,645,45"/>
+<area shape="rect" id="node4" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_alert_view_model.html" title="A class that represent the AlertViewModel. User is navigated here when they choose to send an SOS ale..." alt="" coords="455,69,642,109"/>
+<area shape="rect" id="node5" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_login_view_model.html" title="The viewmodel to log into the app." alt="" coords="453,133,644,173"/>
+<area shape="rect" id="node6" href="$class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_logout_view_model.html" title="The viewmodel to log out of the app." alt="" coords="449,197,648,237"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,109,164,134"/>
 </map>

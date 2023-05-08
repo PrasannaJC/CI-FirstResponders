@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "CI-FirstResponders", "index.html", [
+    [ "C & C++ APIs", "index.html", null ],
     [ "README", "md__dispatchers_monitoring_tool__dispatchers_monitoring_tool__r_e_a_d_m_e.html", null ],
     [ "CI-FirstResponders", "md__r_e_a_d_m_e.html", [
       [ "DistressML", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
@@ -38,11 +39,15 @@ var NAVTREE =
         [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md12", null ]
       ] ]
     ] ],
+    [ "Deprecated List", "deprecated.html", null ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ],
       [ "Package Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
@@ -52,26 +57,106 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Typedefs", "functions_type.html", "functions_type" ],
         [ "Properties", "functions_prop.html", null ],
         [ "Events", "functions_evnt.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", "globals_type" ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", "globals_eval" ],
+        [ "Macros", "globals_defs.html", "globals_defs" ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_8_n_e_t_core_app_00_version_0av7_80_8_assembly_attributes_8cs.html",
-"_i_system_service_8cs.html",
-"class_dispatchers_monitoring_tool_1_1_views_1_1_first_responder_page.html#a5149eb03e64c38d4c888cdb6839f92ae",
-"class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_new_item_view_model.html#ad01d11e1176df3f46a89e60a6c604374",
-"hierarchy.html",
-"struct_monitoring_suite_library_1_1_models_1_1_location.html#a32648f8bad8829bcd2a39db576c39d20"
+"_1_2bak_2_github_repos_2_c_i-_first_responders_2_dispatchers_monitoring_tool_2_dispatchers_monit37d8f17db62528738da178a7aceaabe9.html",
+"_1_2bak_2_github_repos_2_c_i-_first_responders_2_mobile_vitals_monitoring_tool_2_mobile_vitals_m384c1c8d9a2b2359dfdb923de0b72e83.html#a426d5a15005fd795e24c36ecfd198ae5",
+"_1_2bak_2_github_repos_2_c_i-_first_responders_2_monitoring_suite_library_2_unit_tests_2bin_2_deb5b8617809abfc9b62ce6570a1a307a0.html#a292e46960a6c08a53e4f9a196f3d6156ae09c06fc89886bf79ea0625b160e2c39",
+"_2_04_2_d_1_2bak_2_github_repos_2_c_i-_first_responders_2_dispatchers_monitoring_tool_2_dispatchcaaa8d2576d66d9e0ac851a813be3b36.html#ab53af7eab59f26dc5cb5de6ee11eb9be",
+"_distress_detector_8py.html",
+"_settings_page_8xaml_8cs.html",
+"class_dispatchers_monitoring_tool_1_1_view_models_1_1_first_responder_view_model.html#a3bd26ab992476a3e9ea3dbfe44e3e2cf",
+"class_mobile_vitals_monitoring_tool_1_1_view_models_1_1_base_view_model.html#a6223d8e89d9364e318417a38f6d5dd2a",
+"classcrc6414252951f3f66c67_1_1_recycler_view_scroll_listener__2.html#a62d0af94c11b6a0b118a2eaec9f23f89",
+"classcrc643f46942d9dd1fff9_1_1_carousel_spacing_item_decoration.html",
+"classcrc643f46942d9dd1fff9_1_1_data_change_observer.html#aff8d4cfb160325ce6787b48e32a89e6d",
+"classcrc643f46942d9dd1fff9_1_1_entry_cell_app_compat_view.html#a5d110a29c1cc2a46499dd1e89a64285f",
+"classcrc643f46942d9dd1fff9_1_1_forms_app_compat_edit_text.html#a01293340e168089943e8f467dff8f72e",
+"classcrc643f46942d9dd1fff9_1_1_generic_animator_listener.html#a779f87f1ba2bbafb1ec69aa3cba38a9a",
+"classcrc643f46942d9dd1fff9_1_1_items_view_adapter__2.html",
+"classcrc643f46942d9dd1fff9_1_1_navigation_renderer.html#a11fbaa22607b96fed6c9b2d5690c588c",
+"classcrc643f46942d9dd1fff9_1_1_platform_renderer.html#abb5e61b89267f785a1e3714ecfc6f048",
+"classcrc643f46942d9dd1fff9_1_1_search_bar_app_compat_renderer.html#a4473b1dd741ce281696bacc58c356962",
+"classcrc643f46942d9dd1fff9_1_1_shell_item_renderer.html#ae6f43fe4fe3388d67824cb5539e609e1",
+"classcrc643f46942d9dd1fff9_1_1_start_snap_helper.html#a28363ee63ccf53572c25217a868aa631",
+"classcrc643f46942d9dd1fff9_1_1_view_cell_renderer___view_cell_container.html#a0767b5d76f7a707d570b255437ce3211",
+"classcrc64720bb2db43a66fe9_1_1_forms_view_pager.html#a934cfad3bf5b64be145bdaa601c2cc2a",
+"classcrc64720bb2db43a66fe9_1_1_view_renderer__2.html#aa393285c20976d8f4668b1d516e27f21",
+"classcrc64a0e0a82d0db9a07d_1_1_web_authenticator_callback_activity.html#a0dcca8acc17095409c6839de99c83726",
+"classmono_1_1androidx_1_1appcompat_1_1widget_1_1_search_view___on_close_listener_implementor.html",
+"classmono_1_1androidx_1_1slidingpanelayout_1_1widget_1_1_sliding_pane_layout___panel_slide_listener_implementor.html#ae7698398c7ad504462457eda684c8a72",
+"dir_5db12f3dc419ece48ebbbe08691b90dd.html",
+"functions_vars_q.html",
+"group___global.html#gab17c394b0ccb15261dfcf51704159a2c",
+"group___global.html#gga1c0fbcf614dbd0e2c272ae1cc04c629ca3ae03acd3802ae7c0dbb8054ed8efe8c",
+"group___global.html#gga1e39271d4a47f765694d86e5a7d27565a7af4a596ebed00b39945d72479c50bcb",
+"group___global.html#gga43f32dc7d75b0c13fd64ca5792e63a62a5501900c84a6aeaf766fc7bc22e28857",
+"group___global.html#gga43f32dc7d75b0c13fd64ca5792e63a62aebd19fc077f40b392f20ebb5b40a2225",
+"group___global.html#gga5b765504a386db304d59e999de9bd1d6a0260ff3f6a393889bae51c1ffc460b25",
+"group___global.html#gga881a44a5c3499f92d7caa4d7707b5807abb0da892fd6f350dce8e2073198655d0",
+"group___global.html#ggab7805016f4b26871e899a3cf4114ee0da1029fcb3f1ca7a371dbe8baeb0aa8a28",
+"group___global.html#ggaba2697542109e4ab6b24a8fbb847812da670c612f85d2f0a948a78a69fa117e30",
+"group___global.html#ggaba5b3718087699f596432d5649b9a28da2c1949c09090abee33fb94309ad884be",
+"group___global.html#ggabab5349c294603a9eac437fdafd40a3da0722d7e5bd7c08094064c7eebf12f33f",
+"group___global.html#ggabab5349c294603a9eac437fdafd40a3da44d061fd9418e3856673d82d16f8f78c",
+"group___global.html#ggabab5349c294603a9eac437fdafd40a3dad2665166d66d0cbbdec8fa7c6045fd03",
+"group___global.html#ggad2d78682b8468cfbfbbc20563a2424cca257e3e12fed79c23e379eba033e7c878",
+"group___global.html#ggaec63cdda46c29b8183997f38930ce38ea019d001a36bcc9604275aec1225f827c",
+"group___global.html#ggaec63cdda46c29b8183997f38930ce38ea3fa5a682e8a59d896a532fb16835bce6",
+"group___global.html#ggaec63cdda46c29b8183997f38930ce38eab4bf56692387d4a9f295d8499f59000f",
+"group___global.html#ggaec63cdda46c29b8183997f38930ce38ead94d34dfaed069311babb1005c41deba",
+"namespace_check_distress.html#af0cb64c3252d88edb6031d9eb0be4e54",
+"struct_ort_1_1_allocator.html#a53b0673e46add5d2cd4c171a4e87ac7c",
+"struct_ort_1_1_custom_op_api.html#a42981ee288830f4b60683bbd4a21627d",
+"struct_ort_1_1_custom_op_api.html#addcc02e67760a08e9019b0b0a4bc4dae",
+"struct_ort_1_1_custom_op_configs.html#a96e12c7a48728d7f551e8c683837b5b9",
+"struct_ort_1_1_env.html#afc9b2d44c9db7812787904d5e3018f24",
+"struct_ort_1_1_kernel_context.html#aac4e8ec24fb1f67147ffed82f973fd30",
+"struct_ort_1_1_memory_info.html#a4f517caf94801d72a8a0dc306e78747b",
+"struct_ort_1_1_op_attr.html#aaeb83ec334cc3b89ac27400cdea3f4da",
+"struct_ort_1_1_session.html#aa00fe03af6e9b33399aff3571f5a7d9e",
+"struct_ort_1_1_tensor_type_and_shape_info.html#a3d8e30e6f410d181be73a7f9d9f24297",
+"struct_ort_1_1_value.html#a488c55bbedb38c3f505a4fe6accc36bf",
+"struct_ort_1_1detail_1_1_base.html#a8f197409cc84018ee2fe04844f188959",
+"struct_ort_1_1detail_1_1_const_io_binding_impl.html#a937a0cf0a42523e4a3113725b2dca021",
+"struct_ort_1_1detail_1_1_const_session_options_impl.html#acc17d6821ec06e6040c5d640553bc912",
+"struct_ort_1_1detail_1_1_const_value_impl.html#ab541b268a2aad607ceec3a3da7be8ba0",
+"struct_ort_1_1detail_1_1_io_binding_impl.html#ac51e35ad743c61a9351d17e669e1d673",
+"struct_ort_1_1detail_1_1_memory_info_impl.html#a1d07e265933ca4d857de6273afc08d83",
+"struct_ort_1_1detail_1_1_session_impl.html#adb55fd0cac7394b4f0a51e1e14535188",
+"struct_ort_1_1detail_1_1_session_options_impl.html#a428f112a11d6f0240fb32217e682685e",
+"struct_ort_1_1detail_1_1_session_options_impl.html#abda4765e9add8a3e536ca49b40ffbe7e",
+"struct_ort_1_1detail_1_1_type_info_impl.html#a7379ced5d9630d56c7bb16bac787a2df",
+"struct_ort_1_1detail_1_1_value_impl.html#ab80f19abb74be8f5a489ae95eaa13905",
+"struct_ort_api.html#a169e0445183527de69a73d33ce9e5324",
+"struct_ort_api.html#a431db7784780b2806f03ebb8880c72a4",
+"struct_ort_api.html#a6ddfaadb77a6c541adb3f04a9794723c",
+"struct_ort_api.html#a945398339d9bd5ff9f3ea47112e5a8f1",
+"struct_ort_api.html#ab6f61f0c912881be52fe28f9d298d614",
+"struct_ort_api.html#ad6f8db0e60e8388bac9509e2818f6ad1",
+"struct_ort_api.html#af8c576841b5d805637f985e71b4ce655"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

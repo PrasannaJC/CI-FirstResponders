@@ -1,0 +1,7 @@
+<map id="Ort::ThrowOnError" name="Ort::ThrowOnError">
+<area shape="rect" id="node1" title=" " alt="" coords="5,43,132,68"/>
+<area shape="rect" id="node2" href="$namespace_ort_1_1detail.html#a9abe48d6640cf4680ec232a80e200371" title=" " alt="" coords="180,43,339,68"/>
+<area shape="rect" id="node3" href="$struct_ort_1_1_status.html#a19a0d483b009e0188971ddc9823922b2" title=" " alt="" coords="398,5,571,31"/>
+<area shape="rect" id="node5" href="$struct_ort_1_1_status.html#a82e24c127b4b791a9075708a7b784f49" title=" " alt="" coords="387,79,583,104"/>
+<area shape="rect" id="node4" href="$namespace_ort.html#a8930fa08683b5153ee3aa4df63745ce3" title="This returns a reference to the OrtApi interface in use." alt="" coords="631,43,719,68"/>
+</map>

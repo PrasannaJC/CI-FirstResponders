@@ -5,7 +5,6 @@ using System.Runtime.CompilerServices;
 
 using Xamarin.Forms;
 
-using MobileVitalsMonitoringTool.Models;
 using MobileVitalsMonitoringTool.Services;
 using MonitoringSuiteLibrary.Models;
 using Xamarin.Essentials;
@@ -19,8 +18,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
     /// </summary>
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-
         public DataService dataService;
         private DataServiceConfiguration dataServiceConfiguration;
 
@@ -33,17 +30,6 @@ namespace MobileVitalsMonitoringTool.ViewModels
             dataServiceConfiguration.ConnectionString = "PUT CONNECTION STRING HERE";
 
             dataService = new DataService(Options.Create<DataServiceConfiguration>(dataServiceConfiguration));
-        }
-
-        bool isBusy = false;
-
-        /// <summary>
-        /// Gets or sets the IsBusy variable.
-        /// </summary>
-        public bool IsBusy
-        {
-            get { return isBusy; }
-            set { SetProperty(ref isBusy, value); }
         }
 
         string title = string.Empty;

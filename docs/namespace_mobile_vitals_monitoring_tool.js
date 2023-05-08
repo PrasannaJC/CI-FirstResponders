@@ -1,8 +1,8 @@
 var namespace_mobile_vitals_monitoring_tool =
 [
+    [ "Contracts", "namespace_mobile_vitals_monitoring_tool_1_1_contracts.html", "namespace_mobile_vitals_monitoring_tool_1_1_contracts" ],
     [ "Droid", "namespace_mobile_vitals_monitoring_tool_1_1_droid.html", "namespace_mobile_vitals_monitoring_tool_1_1_droid" ],
     [ "iOS", "namespace_mobile_vitals_monitoring_tool_1_1i_o_s.html", "namespace_mobile_vitals_monitoring_tool_1_1i_o_s" ],
-    [ "Models", "namespace_mobile_vitals_monitoring_tool_1_1_models.html", "namespace_mobile_vitals_monitoring_tool_1_1_models" ],
     [ "Services", "namespace_mobile_vitals_monitoring_tool_1_1_services.html", "namespace_mobile_vitals_monitoring_tool_1_1_services" ],
     [ "ViewModels", "namespace_mobile_vitals_monitoring_tool_1_1_view_models.html", "namespace_mobile_vitals_monitoring_tool_1_1_view_models" ],
     [ "Views", "namespace_mobile_vitals_monitoring_tool_1_1_views.html", "namespace_mobile_vitals_monitoring_tool_1_1_views" ],

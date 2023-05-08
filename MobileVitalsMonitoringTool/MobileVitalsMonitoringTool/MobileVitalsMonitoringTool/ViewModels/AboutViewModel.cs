@@ -14,6 +14,9 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using MobileVitalsMonitoringTool.Views;
 using MonitoringSuiteLibrary.MachineLearning;
+using System.Reflection;
+using System.IO;
+using System.Security.Cryptography;
 
 namespace MobileVitalsMonitoringTool.ViewModels
 {
@@ -23,18 +26,28 @@ namespace MobileVitalsMonitoringTool.ViewModels
     /// </summary>
     public class AboutViewModel : BaseViewModel
     {
+        bool disableSOSButton = false;
+        string fname;
+        string ONNXModelPath = Path.Combine("data", "user", "0", "com.frs.mobilevitalsmonitoringtool", "files", ".local", "share", "DistressONNXModel.onnx");
 
         /// <summary>
         /// Creates a <see cref="AboutViewModel"/>.
         /// </summary>
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Home";
+            Preferences.Set("checkDistressFlag", true);
+            Preferences.Set("hasAlert", false);
+            WorkerId = Preferences.Get("w_id", -1);
+            bool isLoggedIn = Preferences.Get("isLogin", false);
+
+            // Take user to login page if not logged in
+            if (WorkerId == -1 || !isLoggedIn)
+            {
+                Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            }
 
             SOSCommand = new Command(OnSOS);
-
-            // get FirstResponder info
-            OnNavigatedTo();
 
             // subscribe to messaging center and start location and vitals service (only set for Android)
             if (Device.RuntimePlatform == Device.Android)
@@ -42,11 +55,13 @@ namespace MobileVitalsMonitoringTool.ViewModels
                 // get location message from GetLocationVitalsService
                 MessagingCenter.Subscribe<LocationMessage>(this, "Location", message => {
                     Device.BeginInvokeOnMainThread(() => {
-                        Location = $"{Environment.NewLine}{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}";
 
-                        Console.WriteLine($"{message.Latitude}, {message.Longitude}, {DateTime.Now.ToLongTimeString()}");
+                        // for debugging:
+                        //Location = $"{Environment.NewLine}{message.Location.YCoord}, {message.Location.XCoord}, {DateTime.Now.ToLongTimeString()}";
+                        //Console.WriteLine($"{message.Location.YCoord}, {message.Location.XCoord}, {DateTime.Now.ToLongTimeString()}");
 
-                        UpdateDBLocation((decimal)message.Longitude, (decimal)message.Latitude, 0); //Altitude is always 0
+                        UpdateDBLocation(message.Location);
+                        GetFirstResponder();
                     });
                 });
 
@@ -56,10 +71,21 @@ namespace MobileVitalsMonitoringTool.ViewModels
 
                         UpdateDBVitals(message.Vitals);
 
-                        //if (CheckDistress.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals))
-                        //{
-                        //    OnSOS();
-                        //}
+                        // checkDistressFlag prevents multiple alert pages to open
+                        if (Preferences.Get("checkDistressFlag", true))
+                        {
+                            Console.WriteLine($"ML CHECKED!!!");
+                            if (CheckDistressONNX.GetDistressStatus(FirstResponder.Age, FirstResponder.Sex, message.Vitals, ONNXModelPath))
+                            {
+                                OnSOS();
+                            }
+
+                            // check alert status only if hasAlert is false
+                            if (!Preferences.Get("hasAlert", false))
+                            {
+                                CheckAlertStatus();
+                            }
+                        }
                     });
                 });
 
@@ -77,7 +103,7 @@ namespace MobileVitalsMonitoringTool.ViewModels
                     });
                 });
 
-                if (Preferences.Get("LocationVitalsServiceRunning", false) == true && Preferences.Get("isLogin", false) == true)
+                if (Preferences.Get("LocationVitalsServiceRunning", false) == true)
                 {
                     StartService();
                 }
@@ -95,51 +121,76 @@ namespace MobileVitalsMonitoringTool.ViewModels
         /// </summary>
         private async void OnSOS()
         {
+            // to prevent double taps
+            if (disableSOSButton)
+            {
+                return;
+            }
+
+            disableSOSButton = true;
+
+            Preferences.Set("checkDistressFlag", false);
             await Shell.Current.GoToAsync(nameof(AlertPage));
+
+            disableSOSButton = false;
         }
 
         /// <summary>
         /// Pulls first responder information from the database.
         /// </summary>
-        public async void OnNavigatedTo()
+        private async void GetFirstResponder()
         {
-            FirstResponder = await dataService.GetFirstResponderAsync(Preferences.Get("w_id", -1));
+            WorkerId = Preferences.Get("w_id", -1);
+            if (FirstResponder == null || FirstResponder.FirstResponderId != WorkerId)
+            {
+                FirstResponder = await dataService.GetFirstResponderAsync(WorkerId);
+                fname = FirstResponder.FName;
+            }
+        }
+
+        /// <summary>
+        /// Checks if the first responder has an active alert status and if they do they are navigated to AlertPage.
+        /// </summary>
+        private async void CheckAlertStatus()
+        {
+            WorkerId = Preferences.Get("w_id", -1);
+            if (await dataService.FirstResponderHasAlertAsync(WorkerId))
+            {
+                Preferences.Set("hasAlert", true);
+                OnSOS();
+            }
         }
 
         /// <summary>
         /// Updates the location entry of the first responder in the database.
         /// </summary>
-        public async void UpdateDBLocation(decimal x, decimal y, decimal z)
+        private async void UpdateDBLocation(MonitoringSuiteLibrary.Models.Location location)
         {
-            if (await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1)) == null)
+            WorkerId = Preferences.Get("w_id", -1);
+            if (await dataService.GetFirstResponderLocationAsync(WorkerId) == null)
             {
-                await dataService.CreateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
+                await dataService.CreateFirstResponderLocationAsync(WorkerId, location);
             }
             else
             {
-                await dataService.UpdateFirstResponderLocationAsync(Preferences.Get("w_id", -1), x, y, z);
+                await dataService.UpdateFirstResponderLocationAsync(WorkerId, location);
             }
-
-            //update FirstResponder object with new location entry
-            FirstResponder.Location = await dataService.GetFirstResponderLocationAsync(Preferences.Get("w_id", -1));
         }
 
         /// <summary>
         /// Updates the vitals entry of the first responder in the database.
         /// </summary>
-        public async void UpdateDBVitals(Vitals vitals)
+        private async void UpdateDBVitals(Vitals vitals)
         {
-            if (await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1)) == null)
+            WorkerId = Preferences.Get("w_id", -1);
+            if (await dataService.GetFirstResponderVitalsAsync(WorkerId) == null)
             {
-                await dataService.CreateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals.BloodOxy, vitals.HeartRate, vitals.SysBP, vitals.DiaBP, vitals.RespRate, vitals.TempF);
+                await dataService.CreateFirstResponderVitalsAsync(WorkerId, vitals);
             }
             else
             {
-                await dataService.UpdateFirstResponderVitalsAsync(Preferences.Get("w_id", -1), vitals.BloodOxy, vitals.HeartRate, vitals.SysBP, vitals.DiaBP, vitals.RespRate, vitals.TempF);
+                await dataService.UpdateFirstResponderVitalsAsync(WorkerId, vitals);
             }
-
-            //update FirstResponder object with new vitals entry
-            FirstResponder.Vitals = await dataService.GetFirstResponderVitalsAsync(Preferences.Get("w_id", -1));
         }
     }
 }

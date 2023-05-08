@@ -90,33 +90,23 @@ $(document).ready(function(){initNavTree('namespace_distress_detector.html','');
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">DistressDetector Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_distress_detector_1_1_distress_detect.html">DistressDetect</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_distress_detector_1_1_status.html">Status</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_distress_detector_1_1_test_cases.html">TestCases</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a52e53a99ba714ff693fcf7af89ba74e8"><td class="memItemLeft" align="right" valign="top">pds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a52e53a99ba714ff693fcf7af89ba74e8">dataset</a> = pds.read_csv('DataSet.csv')</td></tr>
+<tr class="memitem:a52e53a99ba714ff693fcf7af89ba74e8"><td class="memItemLeft" align="right" valign="top">pds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a52e53a99ba714ff693fcf7af89ba74e8">dataset</a> = pds.read_csv('DataSet_x1200.csv')</td></tr>
 <tr class="separator:a52e53a99ba714ff693fcf7af89ba74e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8839c0e629e3c34256044c0649d9851"><td class="memItemLeft" align="right" valign="top">pds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#ae8839c0e629e3c34256044c0649d9851">X</a> = dataset.iloc[:, :-1].values</td></tr>
 <tr class="separator:ae8839c0e629e3c34256044c0649d9851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a355fb0805ac0aa49aecf36070e64e40a"><td class="memItemLeft" align="right" valign="top">pds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a355fb0805ac0aa49aecf36070e64e40a">y</a> = dataset.iloc[:, -1].values</td></tr>
 <tr class="separator:a355fb0805ac0aa49aecf36070e64e40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e0c4b7536013edd413012075f9cbf39"><td class="memItemLeft" align="right" valign="top">ColumnTransformer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a9e0c4b7536013edd413012075f9cbf39">ct</a> = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], remainder='passthrough')</td></tr>
+<tr class="memitem:aecb5d59c772a69336bda66948f3f854f"><td class="memItemLeft" align="right" valign="top">LabelEncoder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#aecb5d59c772a69336bda66948f3f854f">le</a> = LabelEncoder()</td></tr>
+<tr class="separator:aecb5d59c772a69336bda66948f3f854f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0c4b7536013edd413012075f9cbf39"><td class="memItemLeft" align="right" valign="top">ColumnTransformer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a9e0c4b7536013edd413012075f9cbf39">ct</a> = ColumnTransformer(transformers=[('encoder', LabelEncoder(), [0])], remainder='passthrough')</td></tr>
 <tr class="separator:a9e0c4b7536013edd413012075f9cbf39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23c872739103e43495e437e4a7d0ef00"><td class="memItemLeft" align="right" valign="top">LabelEncoder&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a23c872739103e43495e437e4a7d0ef00">le</a> = LabelEncoder()</td></tr>
-<tr class="separator:a23c872739103e43495e437e4a7d0ef00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95d989988037e89edfe5e1cf2b517284"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a95d989988037e89edfe5e1cf2b517284">X_train</a> = sc.fit_transform(X_train)</td></tr>
 <tr class="separator:a95d989988037e89edfe5e1cf2b517284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a773015b6edd2a404ecf432ee9942300f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a773015b6edd2a404ecf432ee9942300f">X_test</a> = sc.transform(X_test)</td></tr>
@@ -137,10 +127,10 @@ Variables</h2></td></tr>
 <tr class="separator:abe87d64d049a5835b21b490f68594877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d4d3852f775e6c20d08ed8421675cbf"><td class="memItemLeft" align="right" valign="top">confusion_matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a9d4d3852f775e6c20d08ed8421675cbf">cm</a> = confusion_matrix(<a class="el" href="namespace_distress_detector.html#a39e2d7662636020340aa6573160a401d">y_test</a>, <a class="el" href="namespace_distress_detector.html#abe87d64d049a5835b21b490f68594877">y_pred</a>)</td></tr>
 <tr class="separator:a9d4d3852f775e6c20d08ed8421675cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97590a89ce4e59fefb5327ac40176b9a"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_distress_detector.html#a97590a89ce4e59fefb5327ac40176b9a">fr</a> = ['M',55,95,197,153,69,9,100.21]</td></tr>
+<tr class="separator:a97590a89ce4e59fefb5327ac40176b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Author =&gt; Prasanna J Chandrasekar Start Date =&gt; 03/12/2023 Objective: This is a C# Project that forms the core of the ML application. </p>
-</div><h2 class="groupheader">Variable Documentation</h2>
+<h2 class="groupheader">Variable Documentation</h2>
 <a id="a3a2a939ebe85db6282ffc75cb51f2fa8" name="a3a2a939ebe85db6282ffc75cb51f2fa8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3a2a939ebe85db6282ffc75cb51f2fa8">&#9670;&#160;</a></span>classifier</h2>
 
@@ -176,7 +166,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ColumnTransformer DistressDetector.ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], remainder='passthrough')</td>
+          <td class="memname">ColumnTransformer DistressDetector.ct = ColumnTransformer(transformers=[('encoder', LabelEncoder(), [0])], remainder='passthrough')</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,15 +180,29 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pds DistressDetector.dataset = pds.read_csv('DataSet.csv')</td>
+          <td class="memname">pds DistressDetector.dataset = pds.read_csv('DataSet_x1200.csv')</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a23c872739103e43495e437e4a7d0ef00" name="a23c872739103e43495e437e4a7d0ef00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23c872739103e43495e437e4a7d0ef00">&#9670;&#160;</a></span>le</h2>
+<a id="a97590a89ce4e59fefb5327ac40176b9a" name="a97590a89ce4e59fefb5327ac40176b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97590a89ce4e59fefb5327ac40176b9a">&#9670;&#160;</a></span>fr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list DistressDetector.fr = ['M',55,95,197,153,69,9,100.21]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecb5d59c772a69336bda66948f3f854f" name="aecb5d59c772a69336bda66948f3f854f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb5d59c772a69336bda66948f3f854f">&#9670;&#160;</a></span>le</h2>
 
 <div class="memitem">
 <div class="memproto">
