@@ -1,34 +1,34 @@
+## Program to build the dataset needed to train the machine learning model to detect distress.
+# Note that for this project, we manually assign the Distress status as we do not have access to actual first responders from whom we can compile data.
 import random
 import random as rand
 import pandas as pds
-# import sklearn as skl
 import numpy as npy
 import matplotlib as mpl
 
-'''
-G = [rand.choice(["M", "F"])]
-Age = [npy.random.randint(21, 69)]
-BloodOxy = [npy.random.randint(92, 100)]
-HeartRate = [npy.random.randint(75, 185)]
-sbp = [npy.random.randint(75, 200)]
-dbp = [npy.random.randint(40, 110)]
-rr = [npy.random.randint(5, 28)] # range btwn 5 and 29
-Temperature = [round(npy.random.uniform(96.51, 103.19), 2)]
-'''
-
+'''The arrays below are meant to store the elements of the dataset before they are put together into a dataframe. '''
+'''@G An array to store the Gender of first responder instances.'''
 G = []
+'''@Age An array to store the Age of first responder instances.'''
 Age = []
+'''@BloodOxy An array to store the Blood Oxygen levels of first responder instances.'''
 BloodOxy = []
+'''@HeartRate An array to store the Heartrate of first responder instances.'''
 HeartRate = []
+'''@sbp An array to store the Systolic Blood Pressure of first responder instances.'''
 sbp = []
+'''@dbp An array to store the Diastolic Blood Pressure of first responder instances.'''
 dbp = []
+'''@rr An array to store the Respiratory rate of first responder instances.'''
 rr = []
+'''@Temperature An array to store the Temperature of first responder instances.'''
 Temperature = []
+'''@Distress An array to store the Distress status of first responder instances.'''
 Distress = []
 
 hRange = []
 sysRange = []
-A = []  # age
+A = []
 bo = []
 
 for i in range(85, 205):
@@ -80,17 +80,8 @@ for i in range(4500):
     Age.append(rand.choice(A))
     BloodOxy.append(rand.choice(bo))
 
-    # Heartrate
     HeartRate.append(rand.choice(hRange))
-    '''
-    if 21 <= Age[i] <= 36:
-        sbp.append(npy.random.randint(55, 74))
-    elif 37 <= Age[i] <= 49:
-        HeartRate.append(rand.choice(hRange))
-    elif 50 <= Age[i] <= 69:
-        HeartRate.append(rand.choice(hRange))
-    '''
-    # Blood pressure - both systolic and diastolic
+
     sbp.append(rand.choice(sysRange))
 
     if 21 <= Age[i] <= 40:
@@ -115,8 +106,6 @@ for i in range(4500):
         else:
             dbp.append(npy.random.randint(83, 99))
 
-    # rr.append(npy.random.randint(5, 28))
-
     if BloodOxy[i] > 98:
         rr.append(npy.random.randint(19,28))
     if 98 >= BloodOxy[i] >= 95:
@@ -127,6 +116,7 @@ for i in range(4500):
     Temperature.append(round(npy.random.uniform(98.71, 103.19), 2))
     Distress.append(0)
 
+## DataFrame representing the first responder data, namely thier age, their sex, and their vitals data.
 BodyStats = {
     'Gender': G,
     'Age': Age,
@@ -138,20 +128,7 @@ BodyStats = {
     'Temperature': Temperature,
     'Distress': Distress
 }
-'''
-print(len(G))
-print(len(Age))
-print(len(BloodOxy))
-print(len(HeartRate))
-print(len(sbp))
-print(len(dbp))
-print(len(rr))
-print(len(Temperature))
-'''
-df = pds.DataFrame(BodyStats)
 
+df = pds.DataFrame(BodyStats)
 print(df)
-# df.to_csv('D:\GitHubDesktopRepos\CI-FirstResponders\DistressML\DataSet.csv')
-df.to_csv('Data5.csv')
-# data = pds.read_csv('Data2.csv')
-# data.drop(data.columns[0], axis=1)
+df.to_csv('DataSet_x1200.csv')

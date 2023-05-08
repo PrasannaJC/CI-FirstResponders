@@ -1,6 +1,5 @@
-# Original Distress Detection machine learning application.
-# This program was the basis for the initial machine learning implementation,
-# from where different classification models were tested to determine the most accurate model.
+## Original Distress Detection machine learning application.
+# This program was the basis for the initial machine learning implementation, from where different classification models were tested to determine the most accurate model.
 
 import random as rand
 import pandas as pds

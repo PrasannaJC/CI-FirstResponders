@@ -21,6 +21,7 @@ namespace MonitoringSuiteLibrary.MachineLearning
         /// <param name="age">The first responders age id.</param>
         /// <param name="sex">The first responders gender.</param>
         /// <param name="v">The first responders Vitals data.</param>
+        /// <param name="path">The path to the ONNX file containing the machine learning implementation..</param>
         /// <returns>Returns a boolean representing the distress status of a first responder.</returns>
         public static bool GetDistressStatus(int age, char sex, Vitals v, string path)
         {

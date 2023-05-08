@@ -1,7 +1,8 @@
-# This is the revised CheckDistress program that contains the final implementation of the machine learning model for
-# the Mobile App.
+## Base program to get the distress status of first responders.
+# This is the revised CheckDistress program that contains the final implementation of the machine learning model for the Mobile Application.
 # This also contains the implementation for porting the SVM model below using ONNX to apply for the Mobile App.
 # The output for this program is a newly generated .ONNX file that contains the processed Machine learning model.
+
 import numpy as np
 import pandas as pd
 import numpy as npy
@@ -11,7 +12,7 @@ from skl2onnx import convert_sklearn
 from skl2onnx.common.data_types import FloatTensorType
 import onnxruntime as rt
 
-# Importing the dataset
+## Dataset for traing and testing the model.
 dataset = pd.read_csv('DataSet_x1200.csv')
 
 # Here we'll encode the categorical data - that being Gender and Distress Status.
@@ -52,7 +53,8 @@ cm = confusion_matrix(y_test, y_pred)
 print("SVM")
 print(accuracy_score(y_test, y_pred))
 
-# Setup for the ONNX model file
+## Setup for the ONNX model file
+# @ONNXModelPath Reference to the ONNX file that we will create to store the processed ONNX model.
 ONNXModelPath = "DistressONNXModel.onnx"
 
 num_features = 8

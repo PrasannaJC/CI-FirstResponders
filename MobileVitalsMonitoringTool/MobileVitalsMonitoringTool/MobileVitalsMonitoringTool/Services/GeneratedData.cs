@@ -5,7 +5,7 @@ using System;
 namespace MobileVitalsMonitoringTool.Services
 {
     /// <summary>
-    /// A  class to generate vitals data to simulate sensors inputting real first responder vitals.
+    /// A class to generate vitals data to simulate sensors inputting real first responder vitals.
     /// </summary>
     public class GeneratedData : IVitalsData
     {
