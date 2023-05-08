@@ -33,10 +33,35 @@ var NAVTREE =
       [ "DispatchersMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
       [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
       [ "Release Notes", "md__r_e_a_d_m_e.html#autotoc_md8", [
-        [ "DistressML", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
-        [ "DataGenerator", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
-        [ "DispatchersMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md11", null ],
-        [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md12", null ]
+        [ "Milestone 1", "md__r_e_a_d_m_e.html#autotoc_md9", [
+          [ "DistressML and DataGenerator", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
+          [ "DispatchersMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md11", null ],
+          [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md12", null ]
+        ] ],
+        [ "Milestone 2", "md__r_e_a_d_m_e.html#autotoc_md13", [
+          [ "DistressML and DataGenerator", "md__r_e_a_d_m_e.html#autotoc_md14", null ],
+          [ "DispatchersMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md15", null ],
+          [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md16", null ]
+        ] ],
+        [ "Milestone 3", "md__r_e_a_d_m_e.html#autotoc_md17", [
+          [ "DistressML and DataGenerator", "md__r_e_a_d_m_e.html#autotoc_md18", null ],
+          [ "DispatchersMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md19", null ],
+          [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md20", null ]
+        ] ],
+        [ "Milestone 4", "md__r_e_a_d_m_e.html#autotoc_md21", [
+          [ "DistressML and DataGenerator", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
+          [ "DispatchersMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md23", null ],
+          [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md24", null ]
+        ] ],
+        [ "Milestone 5", "md__r_e_a_d_m_e.html#autotoc_md25", [
+          [ "DistressML and DataGenerator", "md__r_e_a_d_m_e.html#autotoc_md26", null ],
+          [ "DispatchersMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md27", null ]
+        ] ],
+        [ "To be sorted", "md__r_e_a_d_m_e.html#autotoc_md28", [
+          [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md29", null ],
+          [ "DistressML and DataGenerator", "md__r_e_a_d_m_e.html#autotoc_md30", null ],
+          [ "MobileVitalsMonitoringTool", "md__r_e_a_d_m_e.html#autotoc_md31", null ]
+        ] ]
       ] ]
     ] ],
     [ "Deprecated List", "deprecated.html", null ],
@@ -127,36 +152,36 @@ var NAVTREEINDEX =
 "group___global.html#ggaec63cdda46c29b8183997f38930ce38ea3fa5a682e8a59d896a532fb16835bce6",
 "group___global.html#ggaec63cdda46c29b8183997f38930ce38eab4bf56692387d4a9f295d8499f59000f",
 "group___global.html#ggaec63cdda46c29b8183997f38930ce38ead94d34dfaed069311babb1005c41deba",
-"namespace_check_distress.html#af0cb64c3252d88edb6031d9eb0be4e54",
-"struct_ort_1_1_allocator.html#a53b0673e46add5d2cd4c171a4e87ac7c",
-"struct_ort_1_1_custom_op_api.html#a42981ee288830f4b60683bbd4a21627d",
-"struct_ort_1_1_custom_op_api.html#addcc02e67760a08e9019b0b0a4bc4dae",
-"struct_ort_1_1_custom_op_configs.html#a96e12c7a48728d7f551e8c683837b5b9",
-"struct_ort_1_1_env.html#afc9b2d44c9db7812787904d5e3018f24",
-"struct_ort_1_1_kernel_context.html#aac4e8ec24fb1f67147ffed82f973fd30",
-"struct_ort_1_1_memory_info.html#a4f517caf94801d72a8a0dc306e78747b",
-"struct_ort_1_1_op_attr.html#aaeb83ec334cc3b89ac27400cdea3f4da",
-"struct_ort_1_1_session.html#aa00fe03af6e9b33399aff3571f5a7d9e",
-"struct_ort_1_1_tensor_type_and_shape_info.html#a3d8e30e6f410d181be73a7f9d9f24297",
-"struct_ort_1_1_value.html#a488c55bbedb38c3f505a4fe6accc36bf",
-"struct_ort_1_1detail_1_1_base.html#a8f197409cc84018ee2fe04844f188959",
-"struct_ort_1_1detail_1_1_const_io_binding_impl.html#a937a0cf0a42523e4a3113725b2dca021",
-"struct_ort_1_1detail_1_1_const_session_options_impl.html#acc17d6821ec06e6040c5d640553bc912",
-"struct_ort_1_1detail_1_1_const_value_impl.html#ab541b268a2aad607ceec3a3da7be8ba0",
-"struct_ort_1_1detail_1_1_io_binding_impl.html#ac51e35ad743c61a9351d17e669e1d673",
-"struct_ort_1_1detail_1_1_memory_info_impl.html#a1d07e265933ca4d857de6273afc08d83",
+"namespace_check_distress.html#a4d5876593ad8696997b12e68cd9e44b6",
+"struct_monitoring_suite_library_1_1_models_1_1_vitals.html#a9d375bc79d27c37411f16103ed20ada3",
+"struct_ort_1_1_custom_op_api.html#a348b525767f73808fa81a40864e89311",
+"struct_ort_1_1_custom_op_api.html#ad99f3c2b72eac5b30b4897647b6ac065",
+"struct_ort_1_1_custom_op_configs.html#a57d2195c6dca14d991dd3df4dc390c05",
+"struct_ort_1_1_env.html#ae86a59c3a431a31081bf62e46aa29425",
+"struct_ort_1_1_kernel_context.html#a9b6d52cd982f7684db27f97905e3871e",
+"struct_ort_1_1_memory_info.html",
+"struct_ort_1_1_op.html#adb82cf8dbb13a397bab27505595576fb",
+"struct_ort_1_1_session.html#a6b40a8f155c1d920876b08d716fcfbfa",
+"struct_ort_1_1_tensor_type_and_shape_info.html#a3692d5eca3b1d5426cd709df40a6519b",
+"struct_ort_1_1_value.html#a233d9a9878a69295ad504ea2b22b4d1f",
+"struct_ort_1_1detail_1_1_base.html#a7f40aacd24f0ba79db2dae8165930498",
+"struct_ort_1_1detail_1_1_const_io_binding_impl.html#a8f761bbfea27b9498fc5be73779ec99b",
+"struct_ort_1_1detail_1_1_const_session_options_impl.html#a84310957c29d756fc540fc0f15c5907a",
+"struct_ort_1_1detail_1_1_const_value_impl.html#ab0589e1f752d7b18a850699be24c8c84",
+"struct_ort_1_1detail_1_1_io_binding_impl.html#aab42e1313e913a8ebfb27620dbadd998",
+"struct_ort_1_1detail_1_1_memory_info_impl.html#a0132e1cebee88bef416cdc9f0361f4a4",
 "struct_ort_1_1detail_1_1_session_impl.html#adb55fd0cac7394b4f0a51e1e14535188",
-"struct_ort_1_1detail_1_1_session_options_impl.html#a428f112a11d6f0240fb32217e682685e",
-"struct_ort_1_1detail_1_1_session_options_impl.html#abda4765e9add8a3e536ca49b40ffbe7e",
-"struct_ort_1_1detail_1_1_type_info_impl.html#a7379ced5d9630d56c7bb16bac787a2df",
+"struct_ort_1_1detail_1_1_session_options_impl.html#a3a7ee0dd4cddab7bcfe4bfb2e94f91fd",
+"struct_ort_1_1detail_1_1_session_options_impl.html#abb9fdc6432272b32842813dfd2beaee0",
+"struct_ort_1_1detail_1_1_type_info_impl.html#a4567504274044ce5cb18744d15a315f5",
 "struct_ort_1_1detail_1_1_value_impl.html#ab80f19abb74be8f5a489ae95eaa13905",
-"struct_ort_api.html#a169e0445183527de69a73d33ce9e5324",
-"struct_ort_api.html#a431db7784780b2806f03ebb8880c72a4",
-"struct_ort_api.html#a6ddfaadb77a6c541adb3f04a9794723c",
-"struct_ort_api.html#a945398339d9bd5ff9f3ea47112e5a8f1",
-"struct_ort_api.html#ab6f61f0c912881be52fe28f9d298d614",
-"struct_ort_api.html#ad6f8db0e60e8388bac9509e2818f6ad1",
-"struct_ort_api.html#af8c576841b5d805637f985e71b4ce655"
+"struct_ort_api.html#a13b34352baff373e5cec847047a3e3cd",
+"struct_ort_api.html#a3fd6e984c92ee29af05686c72f950958",
+"struct_ort_api.html#a6bf6968d159c2d87cbf789182e4f7bfe",
+"struct_ort_api.html#a92b20d99f50ee4cb01216dc195362a41",
+"struct_ort_api.html#ab37f65b8f910b2e4722b6a390bd1aa55",
+"struct_ort_api.html#ad4bed34c8ae8e69a09839e9178567a0f",
+"struct_ort_api.html#af53593e29cb41b2c40b697bcf182eb2e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
