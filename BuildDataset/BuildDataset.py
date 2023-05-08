@@ -7,23 +7,23 @@ import numpy as npy
 import matplotlib as mpl
 
 '''The arrays below are meant to store the elements of the dataset before they are put together into a dataframe. '''
-'''@G An array to store the Gender of first responder instances.'''
+## An array to store the Gender of first responder instances.
 G = []
-'''@Age An array to store the Age of first responder instances.'''
+## An array to store the Age of first responder instances.
 Age = []
-'''@BloodOxy An array to store the Blood Oxygen levels of first responder instances.'''
+## An array to store the Blood Oxygen levels of first responder instances.
 BloodOxy = []
-'''@HeartRate An array to store the Heartrate of first responder instances.'''
+## An array to store the Heartrate of first responder instances.
 HeartRate = []
-'''@sbp An array to store the Systolic Blood Pressure of first responder instances.'''
+## An array to store the Systolic Blood Pressure of first responder instances.
 sbp = []
-'''@dbp An array to store the Diastolic Blood Pressure of first responder instances.'''
+## An array to store the Diastolic Blood Pressure of first responder instances.
 dbp = []
-'''@rr An array to store the Respiratory rate of first responder instances.'''
+## An array to store the Respiratory rate of first responder instances.
 rr = []
-'''@Temperature An array to store the Temperature of first responder instances.'''
+## An array to store the Temperature of first responder instances.
 Temperature = []
-'''@Distress An array to store the Distress status of first responder instances.'''
+## An array to store the Distress status of first responder instances.
 Distress = []
 
 hRange = []
