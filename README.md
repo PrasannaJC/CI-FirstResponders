@@ -17,6 +17,10 @@ The dispatcher's monitoring tool interfaces with the results from the vitals and
 ## MobileVitalsMonitoringTool
 The mobile application monitoring tool is responsible for reporting the location of the device where it is running from, first responder vitals information, and creating SOS alerts. This is the main interface that first responders will have access to request aid. The application will also use a system to automatically send out SOS alerts based on the first responder's vitals information. (Note that vitals information will come from the data generator described above).
 
+<p align="center">
+  <img alt="MobileAppScreens" src="Resources/MobileAppScreenshot.png">
+</p>
+
 # Release Notes
 
 ## Milestone 1
