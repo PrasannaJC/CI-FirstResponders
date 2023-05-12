@@ -76,7 +76,7 @@ The mobile application monitoring tool is responsible for reporting the location
 
 ### MobileVitalsMonitoringTool
 * Mobile application has background service to get the user's location every couple of seconds while the user is logged in. (Android specific)
-* Mobile applicatino has log-out feature. Log-in and log-out are also no directly tied with the active field in the database. A logged in user will have active=true and logged out users will have active=false;
+* Mobile applicatino has log-out feature. Log-in and log-out are also now directly tied with the active field in the database. A logged in user will have active=true and logged out users will have active=false;
 * Mobile application has an alert page where users are navigated to after clicking the SOS button. This page includes a timer that will send the alert automatically if no action is taken.
 * Mobile application updates vitals entry in the database for the logged in user. Vitals are being received by the data generator.
 
@@ -93,4 +93,4 @@ The mobile application monitoring tool is responsible for reporting the location
 * Mobile application is able to call the machine learning component to decide if an automatic alert is needed or not.
 * Mobile application frequently checks if the logged in user has an active alert, and will take them to the alert page if this is the case.
 * Basic UI changes completed.
-* Thoroughly tested and the following bugs fixed: mobile app no longer spams user with multiple alert pages, only one alert page can be open at a time, eliminated the ability for users to double tap the SOS button which was causing undefined behaviour, prevented already logged in users from being able to log in. 
+* Thoroughly tested and the following bugs fixed: mobile app no longer spams user with multiple alert pages, only one alert page can be open at a time, eliminated the ability for users to double tap the SOS button which was causing undefined behavior, prevented already logged in users from being able to log in. 
